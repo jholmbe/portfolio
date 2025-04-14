@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    padding: 2.5rem;
+    justify-content: space-between;
+}
+header {
+    font-family: 'notable', sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    border: 1px solid #3f3f3f;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0%;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-img {
+    border: 1px solid #3f3f3f;
+}
+.project-desc {
+    padding-top: .75rem;
+}
