@@ -1,3 +1,2 @@
 Hello Everyone, my name is Justin Holmberg
-
-This portfolio showcases my projects, skills, and experiences as a developer. Feel free to explore and reach out if you have any questions or opportunities!
+This portfolio showcases my projects, skills, and experiences as a designer and developer! Feel free to explore or reach out with any questions, concerns, or opportunities!
