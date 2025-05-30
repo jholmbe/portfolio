@@ -1,45 +1,89 @@
 body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
     display: flex;
     background-color: #2a2a2a;
-    padding: 1.5rem;
     justify-content: space-between;
+    padding: 1.2rem;
 }
 header {
-    font-family: 'roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: 1px solid #3f3f3f;
-    width: 30vw;
+    width: 25%;
+}
+.sidebar {
+    position: sticky;
+    top: 1rem;
+}
+main {
+    width: 75%;
+    color: white;
 }
 a {
     text-decoration: none;
     color: #ffffff;
 }
+img {
+    max-width: 100%;
+    padding-bottom: 1rem;
+}
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    margin: 0;
+}
 ul {
     list-style-type: none;
-    padding-left: 0%;
+    padding-left: 0;
 }
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+ul li {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .1rem;
+    margin-bottom: .5rem;
 }
-.project-img {
-    border: 1px solid #3f3f3f;
+.title-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
 }
-.project-desc {
-    padding-top: .75rem;
-    color: #ffffff;
+.projects {
+    padding-bottom: 4rem;
+}
+.oneliner {
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+.divider {
+    background-color: white;
+    height: .1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.content-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-bottom: 4rem;
 }
 .about {
-    color: #ffffff;
-    max-width: 50%;
-    margin-bottom: 100px;
+    flex: 1;
+    min-width: 50%;
 }
 .contact {
-    color: #ffffff;
-    max-width: 50%; 
-    margin-bottom: 100px;
+    flex: 1;
+}
+@media (max-width: 768px) {
+    header {
+        display: none; /* Hides the sidebar */
+    }
+    main {
+        width: 100%; /* Makes the main content take full width */
+    }
+    .about {
+        min-width: 75%;
+    }
 }
