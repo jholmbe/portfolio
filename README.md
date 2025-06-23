@@ -1,0 +1,1 @@
+This project is to learn a static-site generator software called eleventy and migrate my career portfolio. 
