@@ -1,0 +1,35 @@
+---
+layout: 'base.njk'
+--- 
+<body>
+  <header> <!-- header and site nav -->
+    <div class="title-name"><a href="/">Justin Holmberg</a></div>
+    <nav>
+        <ul>
+        <li><a href="#work-link">Projects</a></li>
+        <li><a href="#about-link">About Me</a></li>
+        <li><a href="#contact-link">Connect</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="project-summary">
+      <img src="{{ coverImg }}" alt="{{ altText }}"/>
+      <h1><a href="{{ liveDemo }}">{{ title }}</a></h1>
+      <div class="oneliner">{{ oneLiner }}</div>
+      <div class="repo-link"><a href="{{ projectRepository }}">Repository</a></div>
+      <div class="description">{{ projectDescription | safe }}</div>
+      <ul class="tag-list">
+        {% for tag in tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      {{ content | safe }}
+    </div>
+    <footer>
+      <a href="/">← Back to Projects</a>
+    </footer>
+  </main>
+</body>

@@ -1,23 +1,22 @@
 ---
 layout: 'base.njk'
 --- 
-
-  <header> <!-- sidebar nav with links -->
-    <div class="sidebar">
-      <div class="title-name"><a href="">Justin Holmberg</a></div>
+  <div class="sidebar"> <!-- header and site nav -->
+    <header>
+      <div class="title-name"><a href="/">Justin Holmberg</a></div>
       <nav>
-        <ul>
-          <li><a href="#work-link">Work</a></li>
-          <li><a href="#about-link">About</a></li>
-          <li><a href="#contact-link">Contact</a></li>
-        </ul>
+          <ul>
+          <li><a href="#work-link">Projects</a></li>
+          <li><a href="#about-link">About Me</a></li>
+          <li><a href="#contact-link">Connect</a></li>
+          </ul>
       </nav>
-    </div>
-  </header>
-  <main>
+    </header>
+  </div>
+  <main class="main-content">
     <div class="projects" id="work-link">
-      <a href="project-kilter.html">
-        <div class="card"> <!-- project cards: this contains "kilter" -->
+      <a href="/projects/project-kilter/">
+        <div class="card"> <!-- project card: PROJECT: KILTER-->
           <img src="assets/kilter-cover-img.png" alt="Project Kilter UI Landing Page"/>
           <div class="desc">
             <div>UX & UI</div>
@@ -28,16 +27,42 @@ layout: 'base.njk'
         </div>
       </a>
     </div>
+    <div class="projects" id="work-link">
+      <a href="/projects/snake-game/">
+        <div class="card"> <!-- project card: Snake Game-->
+          <img src="assets/snake-cover-img.png" alt="Snake Game Thumbnail"/>
+          <div class="desc">
+            <div>Front-End Dev & UI</div>
+            <h1>Snake Game</h1>
+            <div class="oneliner">browser-based game with custom UI</div>
+            <div class="divider"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="projects" id="work-link">
+      <a href="/projects/faithselects/">
+        <div class="card"> <!-- project card: FaithSelects.com -->
+          <img src="assets/FS-cover-img.png" alt="FaithSelects.com Landing Page"/>
+          <div class="desc">
+            <div>UX & UI</div>
+            <h1>FaithSelects.com</h1>
+            <div class="oneliner">website redesign for FaithSelects, a small herbal business.</div>
+            <div class="divider"></div>
+          </div>
+        </div>
+      </a>
+    </div>
     <div class="content-footer">
       <div class="about"> <!-- about section, who I am, what I do. -->
         <h1 id="about-link">about</h1>
         <p>
           I'm a UX engineer and UMD design student. I'm passionate about building products and solving user-centric 
-          problems. Empathy and my love of building drives my process —designing, coding, collaborating, and planning with 
+          problems. Empathy and a passion for building drives my process—designing, coding, collaborating, and planning with 
           purpose. Every problem is a project and an opportunity to grow. In my free time, I'm a cat dad and like to climb.
         </p>
         <div class="oneliner"><i>website</i></div>
-        <p>This site was built by me as method to learn front-end development. The design was deeply inspired by <em>Olga Gelentina.</em></p>
+        <p>This site was built by me as method to learn front-end development and <em>Eleventy/11ty.</em></p>
       </div>
       <div class="contact"> <!-- all sorts of contact links, gmail, linkedin, github -->
         <h1 id="contact-link">contact</h1>
