@@ -14,16 +14,25 @@ layout: 'base.njk'
   </header>
   <main>
     <div class="project-summary">
-      <img src="{{ coverImg }}" alt="{{ altText }}"/>
-      <h1><a href="{{ liveDemo }}">{{ title }}</a></h1>
-      <div class="oneliner">{{ oneLiner }}</div>
-      <div class="repo-link"><a href="{{ projectRepository }}">Repository</a></div>
-      <div class="description">{{ projectDescription | safe }}</div>
-      <ul class="tag-list">
-        {% for tag in tags %}
-          <li>{{ tag }}</li>
-        {% endfor %}
-      </ul>
+      <img src="{{ coverImg }}" alt="{{ altText }}"/> <!-- cover img -->
+      <div class="project-intro">
+        <div>
+          <h1><a href="{{ liveDemo }}">{{ title }}</a></h1> 
+          <div class="oneliner">{{ oneLiner }}</div>
+        </div>
+        <div class="repo-link">
+          <a href="{{ projectRepository }}" target="_blank" rel="noopener noreferrer">Repository</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="project-desc-tags">
+        <div class="project-desc">{{ projectDescription | safe }}</div>
+        <ul class="tag-list">
+          {% for tag in tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
     <div>
       {{ content | safe }}
