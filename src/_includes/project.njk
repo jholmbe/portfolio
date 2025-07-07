@@ -1,44 +1,48 @@
 ---
 layout: 'base.njk'
 --- 
-<body>
-  <header> <!-- header and site nav -->
-    <div class="title-name"><a href="/">Justin Holmberg</a></div>
-    <nav>
-        <ul>
-        <li><a href="#work-link">Projects</a></li>
-        <li><a href="#about-link">About Me</a></li>
-        <li><a href="#contact-link">Connect</a></li>
-        </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="project-summary">
-      <img src="{{ coverImg }}" alt="{{ altText }}"/> <!-- cover img -->
-      <div class="project-intro">
-        <div>
-          <h1><a href="{{ liveDemo }}">{{ title }}</a></h1> 
-          <div class="oneliner">{{ oneLiner }}</div>
+<body id="block-container">
+  <div class="content-flex-container">
+    <header> <!-- header and site nav -->
+      <div class="title-name"><a href="/">Justin Holmberg</a></div>
+      <nav>
+          <ul>
+          <li><a href="#work-link">Projects</a></li>
+          <li><a href="#about-link">About Me</a></li>
+          <li><a href="#contact-link">Connect</a></li>
+          </ul>
+      </nav>
+    </header>
+    <div class="project-desc">
+      <div>
+        <img src="{{ coverImg }}" alt="{{ altText }}"/> <!-- cover img -->
+        <div class="project-intro">
+          <div>
+            <h1><a href="{{ liveDemo }}">{{ title }}</a></h1> 
+            <div class="oneliner">{{ oneLiner }}</div>
+          </div>
+          <div class="repo-link">
+            <a href="{{ projectRepository }}" target="_blank" rel="noopener noreferrer">Repository</a>
+          </div>
         </div>
-        <div class="repo-link">
-          <a href="{{ projectRepository }}" target="_blank" rel="noopener noreferrer">Repository</a>
+        <div class="divider"></div>
+        <div class="project-desc-tags">
+          <div class="project-desc">{{ projectDescription | safe }}</div>
+          <ul class="tag-list">
+            {% for tag in tags %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
         </div>
-      </div>
-      <div class="divider"></div>
-      <div class="project-desc-tags">
-        <div class="project-desc">{{ projectDescription | safe }}</div>
-        <ul class="tag-list">
-          {% for tag in tags %}
-            <li>{{ tag }}</li>
-          {% endfor %}
-        </ul>
       </div>
     </div>
+  </div>
     <div>
       {{ content | safe }}
     </div>
     <footer>
-      <a href="/">← Back to Projects</a>
+      <div class="divider"></div>
+      <div class="title-name"><a href="/">← BACK TO PROJECTS</a></div>
     </footer>
-  </main>
+  
 </body>
