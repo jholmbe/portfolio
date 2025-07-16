@@ -136,7 +136,6 @@ img {
 }
 .repo-link {
     font-weight: 200;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
 }
@@ -179,12 +178,25 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        display: none; /* Hides the sidebar */
+        display: none;
     }
     main {
-        width: 100%; /* Makes the main content take full width */
+        width: 100%;
     }
     .about {
         min-width: 75%;
+    }
+    .oneliner {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    body {
+        padding: 3rem;
+        gap: 2rem;
+    }
+    .content-flex-container, .stacked-container {
+        gap: 2rem;
     }
 }
