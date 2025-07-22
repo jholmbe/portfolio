@@ -159,6 +159,20 @@ video.desktop {
     height: auto;
     padding-bottom: 0;
 }
+.img-square {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+}
+pre {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 700px;
+    font-size: .9rem !important;
+    overflow: hidden auto !important;
+    border: 1px solid rgb(125, 125, 125) !important;
+    margin: 0 !important;
+  }
 .tag-list {
     display: flex;
     flex-direction: column;
