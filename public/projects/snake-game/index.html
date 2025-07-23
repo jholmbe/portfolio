@@ -31,7 +31,7 @@
         <div class="project-intro">
           <div>
             <h1><a href="https://jholmbe.github.io/snake-game/">Snake Game</a></h1> 
-            <div class="oneliner">browser-based game with custom UI</div>
+            <div class="oneliner">browser-based arcade classic with custom UI</div>
           </div>
           <div class="repo-link">
             <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
@@ -66,8 +66,7 @@ so I thought—why not give it personality?
     <div>
       <!-- context -->
 <!-- summary -->
-
-<!-- final UI design -->
+<!-- how did you make the design decisions?  -->
 <section class="stacked-container">
     <div class="hidden">
     </div>
@@ -76,20 +75,22 @@ so I thought—why not give it personality?
 </section>
 <section class="content-flex-container">
     <div class="content">
-        <h1>FINAL UI</h1>
+        <h1>UI DESIGN</h1>
         <p>
             Snake game is an arcade classic with some age to it. For the visual framing, I leaned into that nostalgia and 
             retro vibe—using a 2000s-era TV model (e.g., Toshiba) as the base. The color scheme was pulled from a mix of 
             vintage-styled photos I found on Pinterest. For the logo, I mimicked the metallic, embossed brand tags commonly 
-            found on those models. I added interactive elements because I wanted feedback from the interface beyond just 
+            found on those models. 
+            <br>
+            <br>
+            I added interactive elements because I wanted feedback from the interface beyond just 
             the snake. Obviously, a score counter was necessary, but I also thought it'd be more engaging to include a 
             speed-up mechanic and a pause function to match our ever decreasing attention spans. For the snake and apple, 
-            I pulled ideas and colors from online sprite sheets and assets, then recreated them in my own way. Not the 
-            most efficient tool for sprite work, but it was a fun process.
+            I pulled ideas and colors from online sprite assets, then recreated them in my own way. Figma isn't the 
+            most efficient tool for sprite work, but it was a fun process..
         </p>
     </div>
-    <img class="img-square" src="/assets/snake-imgs/components.png" alt="x"/>
-    <img class="img-square" src="/assets/snake-imgs/snake-display.png" alt="x"/>
+    <iframe id="snake-figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/n2ibPSi47JYkUkFZc334xo/Snake-Design?node-id=0-1&t=a2KOMuhDsIpzszlD-1" allowfullscreen></iframe>
 </section>
 <!-- how did you get to the final code design? -->
 <section class="content-flex-container ">
@@ -97,12 +98,13 @@ so I thought—why not give it personality?
         <h1>THE CODE</h1>
         <p>
             Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS modules (minus the React section). 
-            I'm more comfortable in Python so programming logic isn't new to me, however, JavaScript syntax definitely was. 
-            I intentionally avoided guides and AI tools to maximize learning. That said, I hit a wall while trying to figure 
-            out snake velocity logic. In that case, I used Copilot to help structure the logic. Occasionally, I would use 
-            it to quickly translate ideas into working code. I do appreciate clean, organized, and efficient code so I 
-            made an effort to group elements and be concise/descriptive with names. AI has been especially helpful when 
-            it comes to discovering coding conventions and common practices.
+            I'm more comfortable in Python so programming logic isn't new to me, however, JavaScript syntax definitely still is. I do appreciate 
+            clean, organized, and efficient code so I made an effort to group elements and be concise/descriptive with names.
+            <br>
+            <br>
+            Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to practice my critical 
+            thinking skills and maximize learning. On the other, AI was helpful for discovering JavaScript-specific concepts, coding conventions, 
+            common practices, and for debugging my code.
         </p>
     </div>
     <!-- code editor containing snake-game js file -->
@@ -314,25 +316,31 @@ window.addEventListener('keyup', function(e) {
 startGameLoop();
 </code></pre>
 </section>
-<!-- process -->
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>THE PROCESS</h1>
-        <p>
-            Throughout the project, I had reoccuring interviews with 5 intermediate-advanced weight lifters. In the initial 
-            phase I had them all answer a google survey I put together. I made conclusions on primary motivations, important 
-            values, and adding specific features, like an AI chatbot. The data from the discussions allowed me to create a 
-            user persona, journey maps, compare competitors in the current market. 
-        </p>
+<!-- anything else you'd like to mention? -->
+<section class="stacked-container">
+    <div class="hidden">
     </div>
-    <img class="project-desc" src="/assets/kilter-cover-img.png" alt="x"/>
+    <video class="desktop" src="/assets/snake-imgs/snake-progress-day6.mp4" autoplay loop muted playsinline>
+        Your browser does not support the video tag.
+    </video>
 </section>
-<!-- styling guide -->
 <section class="content-flex-container ">
     <div class="content">
-        <h1>STYLING GUIDE</h1>
+        <h1>RETROSPECTIVE</h1>
+        <p>
+           I wasn't very comfortable using Git when I started this project, so I kept the documentation in a text file. 
+           As I've contributed more to this website, I've become more confident with Git and wish I took full 
+           advantage of the commit history. 
+           <br><br>
+           All the files are public, so feel free to dive into them yourself.
+        </p>
+        <div class="repo-link">
+            <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
+        </div>
     </div>
-    <img id="style-guide" src="/assets/style-guide-img.png" alt="x"/>
+    <video class="desktop" src="/assets/snake-imgs/snake-progress-day3.mp4" autoplay loop muted playsinline>
+        Your browser does not support the video tag.
+    </video>
 </section>
     </div>
     <footer>

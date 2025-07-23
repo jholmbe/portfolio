@@ -173,6 +173,12 @@ pre {
     border: 1px solid rgb(125, 125, 125) !important;
     margin: 0 !important;
   }
+#snake-figma-embed {
+    width: 100%;
+    max-width: 1000px;
+    height: 700px;
+    border: 1px solid rgb(125, 125, 125);
+}
 .tag-list {
     display: flex;
     flex-direction: column;
