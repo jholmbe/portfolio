@@ -31,7 +31,7 @@
         <div class="project-intro">
           <div>
             <h1><a href="https://live-demo-link.com">project: kilter</a></h1> 
-            <div class="oneliner">minimalist spreadsheet application for fitness</div>
+            <div class="oneliner">minimalist spreadsheet application for weightlifting</div>
           </div>
           <div class="repo-link">
             <a href="https://www.figma.com/design/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&amp;t=SR4SdEa6JczO4nUM-1" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
@@ -39,15 +39,11 @@
         </div>
         <div class="divider"></div>
         <div class="project-desc-tags">
-          <div class="project-desc"><em>project: kilter</em> is a design project for UMD's INST451 class. The professor requested the class to design for a
-personal passion; my focus was weightlifting. Also, teaching staff provided mentorship during our 5
-design sprints in the semester (~12 weeks). The objective of the class was UI/UX and not the programming of the interfaces.
-<br>
-<br>
-Weightlifters with 2+ years experience lack tools truly optimized for their workflow. Spreadsheets and plain-text 
-methods are functional and customizable, but weren't designed with weightlifters in mind.
-<em>project: kilter</em> seeks to optimize current methods of tracking personal fitness by offering a user-friendly 
-interface, modular features, and leveraging the community through the plugins system.
+          <div class="project-desc"><em>project: kilter</em> is a 15-week solo design project for a UMD course, where I focused on my personal passion for weightlifting. 
+I designed a modular spreadsheet application to give seasoned lifters the streamlined control missing from traditional training tools. 
+The product centers on a plugin system and an intuitive interface that lets lifters customize their workflow to train more efficiently. 
+The scope was limited to interface design without coding requirements. Final deliverables included 12-14 polished Figma screens or a 
+project equal in effort.
 </div>
           <ul class="tag-list">
             
@@ -63,75 +59,78 @@ interface, modular features, and leveraging the community through the plugins sy
     <div>
       <!-- context -->
 <!-- summary -->
-
+<!-- research -->
+<section class="content-flex-container ">
+    <div class="content">
+        <h1>USER VALIDATION</h1>
+        <p>
+            Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback validated my 
+            hypothesis to design simple and adaptable interfaces. 
+        </p>
+    </div>
+    <img class="project-desc" src="/assets/kilter-user-research-summary.png" alt="x"/>
+</section>
 <!-- final UI design -->
-<section class="stacked-container">
-    <div class="hidden">
+<section class="content-flex-container">
+    <div class="content">
+        <h1>MOBILE UI</h1>
+        <p>
+            Most interactions happen during workouts, making mobile the priority. As lifters progress, they require less structure and 
+            more freedom, often favoring simple note-taking tools over rigid fitness apps. A <em>project: kilter</em> file starts as a
+            single column with no grid lines. Users can add columns to define their own spreadsheet size.
+        </p>
     </div>
     <video class="mobile" src="/assets/kilter-demo.mp4" autoplay loop muted playsinline>
         Your browser does not support the video tag.
     </video>
-    <img id="style-guide" src="/assets/style-guide-img.png" alt="x"/>
+    <iframe id="kilter-figma-embed" class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1" allowfullscreen></iframe>
 </section>
 <section class="content-flex-container">
     <div class="content">
-        <h1>FINAL UI</h1>
+        <h1>DESKTOP UI</h1>
         <p>
-            This was an independent project. I developed a lightweight spreadsheet application with the guidance of real
-            users. The product niche is the modularity of the plugins system, enabling lifters to choose their workflow.
-            In combination, there is cross-platform compatibility (desktop & mobile), 3 included togglable plugins, and
-            developer support. The minimalist design is inspired by my desire to declutter modern fitness interfaces, 
-            and I like the color green. 
+            Weightlifters often build routines while referencing multiple mediums. A desktop environment allows them to organize 
+            information and structure programs more efficiently compared to mobile. Cross-platform syncing ensures a seamless workflow 
+            between planning and execution.
         </p>
     </div>
     <video class="desktop" src="/assets/kilter-desktop-demo.mp4" autoplay loop muted playsinline>
         Your browser does not support the video tag.
     </video>
 </section>
-<!-- research -->
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>USERS, TRENDS, AND EXPLORATION</h1>
-        <p>
-            The first two sprints were exploratory. In Sprint 1, I focused on defining the scope: identifying a real problem,
-            speaking directly with potential users, and conducting market research to understand both user pain points and 
-            competitor trends. I synthesized this input into clear project goals and design principles. Sprint 2 was about 
-            translating these insights into structure. I sketched early ideas, mapped out the user journey, and built the
-            information architecture. This gave me a foundation to test assumptions early and establish a strong direction
-            going into later iterations.
 
-        </p>
-    </div>
-    <img class="project-desc" src="/assets/kilter-cover-img.png" alt="x"/>
-</section>
-<!-- process -->
+<!-- PLUGINS -->
 <section class="content-flex-container ">
     <div class="content">
-        <h1>ITERATIVE PRACTICE</h1>
+        <h1>PLUGIN SYSTEM</h1>
         <p>
-            With a clear direction, Sprints 3-5 were dedicated to testing, refining, and improving. Biweekly, I
-            gathered feedback from users and mentors on usability and UI details. Every design decision was based
-            on values from the users, such as simplicity, efficiency, and usability. I stuck to a defined feature
-            list to stay user-centric. Throughout the process, I held my work to a high personal standard, 
-            continually asking: <em>Does this design solve the problem in the most intuitive way possible?</em>
+            Weightlifting goals are highly individual, much like programming or productivity. Accessed via a floating action button,
+            plugins appear in a separate space. However, their functionality can be integrated into the spreadsheet itself — such as
+            context-specific prompting or generating workouts.
         </p>
     </div>
-    <img class="project-desc" src="/assets/improving-fidelity.png" alt="x"/>
+    <img class="project-desc" src="/assets/plugins-system-img.png" alt="x"/>
 </section>
-<!-- lessons learned -->
+
+<!-- STYLE GUIDE -->
+<section class="stacked-container">
+    <div class="content">
+    </div>
+    <img class="project-desc" src="/assets/style-guide-horizontal.png" alt="x"/>
+</section>
+
+<!-- REFLECTION-->
 <section class="content-flex-container ">
     <div class="content">
         <h1>REFLECTION</h1>
         <p>
-            The project is public so feel free to take a look at my work. This was my first Figma project so
-            I was learning the software itself alongside design practices. I'm incredibly happy with this project
-            however if I had to do it again, I'd define a smaller scope instead of re-invent the wheel. This sort 
-            of turned out as a productivity tool and might be hard to implement with my amatuer programming skills.
+            If you're curious, you can explore the Figma file. This project taught me Figma, core UX practices, and the importance of keeping 
+            scope narrow for efficient implementation. It ultimately evolved into a productivity tool that would be too challenging to build with 
+            my current programming skills.
         </p>
-        <div class="repo-link">
-            <a href="https://www.figma.com/design/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&amp;t=SR4SdEa6JczO4nUM-1" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
-        </div>
+        
     </div>
+    <img class="project-desc" src="/assets/wireframes.png" alt="x"/>
 </section>
     </div>
     <footer>
