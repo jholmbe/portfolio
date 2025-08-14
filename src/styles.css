@@ -126,6 +126,11 @@ img {
     width: 75%;
     padding-bottom: 0;
 }
+.project-desc img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
 .content img {
     padding-bottom: 0;
 }
