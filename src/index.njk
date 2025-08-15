@@ -1,7 +1,10 @@
 ---
 layout: 'base.njk'
 --- 
-  <header>
+
+{# NAVIGATION links #}
+<header>
+  <div class="header-container"> 
     <div class="title-name"><a href="/">Justin Holmberg</a></div>
     <nav>
         <ul>
@@ -10,68 +13,83 @@ layout: 'base.njk'
         <li><a href="#contact-link">Connect</a></li>
         </ul>
     </nav>
-  </header>
-  <main class="main-content">
-    <div class="projects" id="work-link">
-      <a href="/projects/project-kilter/">
-        <div class="card"> <!-- project card: PROJECT: KILTER-->
-          <img src="assets/kilter-cover-img.png" alt="Project Kilter UI Landing Page"/>
-          <div class="desc">
-            <div>UX & UI</div>
-            <h1>PROJECT: KILTER</h1>
-            <div class="oneliner">minimalist spreadsheet application</div>
-            <div class="divider"></div>
-          </div>
+  </div>
+</header>
+
+{# MAIN contains all the projects and footer #}
+<main class="main-content">
+
+  {# PROJECT: "project: kilter" #}
+  <div class="projects" id="work-link">
+    <a href="/projects/project-kilter/">
+      <div class="card">
+        <img src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page"/>
+        <div class="desc">
+          <div>UX & UI</div>
+          <h1>PROJECT: KILTER</h1>
+          <div class="oneliner">minimalist spreadsheet application</div>
+          <div class="divider"></div>
         </div>
-      </a>
-    </div>
-    <div class="projects" id="work-link">
-      <a href="/projects/snake-game/">
-        <div class="card"> <!-- project card: Snake Game-->
-          <img src="assets/snake-cover-img.png" alt="Snake Game Thumbnail"/>
-          <div class="desc">
-            <div>Front-End Dev & UI</div>
-            <h1>Snake Game</h1>
-            <div class="oneliner">browser-based arcade classic with custom UI</div>
-            <div class="divider"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="projects" id="work-link">
-      <a href="/projects/faithselects/">
-        <div class="card"> <!-- project card: FaithSelects.com -->
-          <img src="assets/FS-cover-img.png" alt="FaithSelects.com Landing Page"/>
-          <div class="desc">
-            <div>UX & UI</div>
-            <h1>FaithSelects.com</h1>
-            <div class="oneliner">website redesign for FaithSelects, a small herbal business</div>
-            <div class="divider"></div>
-          </div>
-        </div>
-      </a>
-    </div>
-    {# footer section #}
-    <div class="content-footer">
-      <div class="about"> <!-- about section, who I am, what I do. -->
-        <h1 id="about-link">about</h1>
-        <p>
-          I'm a UX engineer and UMD design student. I'm passionate about building products and solving user-centric 
-          problems. My process is driven by my empathy and passion for building—designing, coding, collaborating, and planning with 
-          purpose. Every problem is a project and an opportunity to grow. In my free time, I'm a cat dad and like to rock climb.
-        </p>
-        <div class="oneliner"><i>website</i></div>
-        <p>This site was built by me as method to learn front-end development and <em>Eleventy/11ty.</em></p>
       </div>
-      {# contact links #}
-      <div class="contact">
-        <h1>contact</h1>
-        <ul id="contact-links">
-          <li><div><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></div></li>
-          <li><div><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a></div></li>
-          <li><div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div></li>
-        </ul>
+    </a>
+  </div>
+
+  {# PROJECT: "Snake Game" #}
+  <div class="projects" id="work-link">
+    <a href="/projects/snake-game/">
+      <div class="card">
+        <img src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail"/>
+        <div class="desc">
+          <div>Front-End Dev & UI</div>
+          <h1>Snake Game</h1>
+          <div class="oneliner">browser-based arcade classic with custom UI</div>
+          <div class="divider"></div>
+        </div>
       </div>
+    </a>
+  </div>
+
+  {# PROJECT: "FaithSelects.com" #}
+  <div class="projects" id="work-link">
+    <a href="/projects/faithselects/">
+      <div class="card">
+        <img src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page"/>
+        <div class="desc">
+          <div>UX & UI</div>
+          <h1>FaithSelects.com</h1>
+          <div class="oneliner">website redesign for FaithSelects, a small herbal business</div>
+          <div class="divider"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  {# FOOTER contains the ABOUT and WEBSITE description, and the CONTACT links #}
+  <div class="content-footer">
+
+    {# ABOUT description #}
+    <div class="about">
+      <h1 id="about-link">about</h1>
+      <p>
+        I'm a UX engineer and UMD design student. I'm passionate about building products and solving user-centric 
+        problems. My process is driven by my empathy and passion for building—designing, coding, collaborating, and planning with 
+        purpose. Every problem is a project and an opportunity to grow. In my free time, I'm a cat dad and like to rock climb.
+      </p>
+
+      {# WEBSITE description #}
+      <div class="oneliner"><i>website</i></div>
+      <p>This site was built by me as method to learn front-end development and <em>Eleventy/11ty.</em></p>
     </div>
-  </main>
-  <script src="script.js"></script>
+
+    {# CONTACT links #}
+    <div class="contact">
+      <h1>connect</h1>
+      <ul id="contact-link">
+        <li><div><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></div></li>
+        <li><div><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a></div></li>
+        <li><div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div></li>
+      </ul>
+    </div>
+  </div>
+</main>
+<script src="script.js"></script>

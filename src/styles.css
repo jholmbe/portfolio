@@ -26,10 +26,13 @@ ul {
 /* ! header section  ! */
 header {
     width: 25%;
-    position: sticky;
-    top: 1rem;
     text-transform: uppercase;
     white-space: nowrap;
+    position: relative;
+}
+.header-container {
+    position: sticky;
+    top: 2rem;
 }
 h1 {
     font-weight: 600;
@@ -40,6 +43,22 @@ h1 {
 nav ul li {
     letter-spacing: .1rem;
     margin: .5rem 0;
+}
+.header-container a {
+    position: relative;
+}
+.header-container a::after {
+    content: '';
+    position: absolute;
+    bottom: -.1rem;
+    left: 0;
+    width: 0%;
+    height: 0.1rem;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
+.header-container a:hover::after {
+    width: 100%;
 }
 .title-name {
     font-size: 1.5rem;
@@ -73,10 +92,10 @@ img {
 .contact {
     flex: 1;
 }
-#contact-links {
+#contact-link {
     margin: 1rem 0;
 }
-#contact-links li {
+#contact-link li {
     margin: .5rem 0;
 }
 .footer-content {
@@ -101,9 +120,15 @@ img {
 .divider {
     background-color: white;
     height: .1rem;
-    width: 100%;
+    width: 0%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    animation: expandWidth 2s ease-in-out forwards;
+}
+
+@keyframes expandWidth {
+    from { width: 0%; }
+    to { width: 100%; }
 }
 /* ONLY project pages */
 .content-flex-container {
