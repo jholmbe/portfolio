@@ -73,6 +73,22 @@ img {
 .contact {
     flex: 1;
 }
+#contact-links {
+    margin: 1rem 0;
+}
+#contact-links li {
+    margin: .5rem 0;
+}
+.footer-content {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+.footer-content-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 
 /* ! projects summary section ! */
 
@@ -126,10 +142,14 @@ img {
     width: 75%;
     padding-bottom: 0;
 }
-.project-desc img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
+.product-imgs {
+    width: 75%;
+    padding-bottom: 0;
+    display: flex;
+    gap: 1rem;
+}
+.product-img-child {
+    max-width: 49%;
 }
 .content img {
     padding-bottom: 0;
@@ -142,6 +162,7 @@ img {
     font-weight: 200;
     display: flex;
     align-items: center;
+    gap: .3rem;
 }
 .project-desc-tags {
     display: flex;
