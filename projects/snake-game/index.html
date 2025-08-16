@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Holmberg</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    </head>
+    <body>
+         
+<body id="block-container">
+  <div class="content-flex-container">
+    
+    
+    <header>
+      <div class="header-container">
+        <div class="title-name"><a href="/">Justin Holmberg</a></div>
+        <nav>
+            <ul>
+            <li><a href="/index.html/#work-link">Projects</a></li>
+            <li><a href="/index.html/#about-link">About Me</a></li>
+            <li><a href="/index.html/#contact-link">Connect</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    
+    <div class="project-desc">
+      <div>
+
+        
+        <img src="/assets/snake-cover-img.png" alt="Snake Game interface"/>
+
+        <div class="project-intro">
+          <div>
+
+            
+            <h1><a href="https://jholmbe.github.io/snake-game/">Snake Game</a></h1>
+
+            
+            <div class="oneliner">browser-based arcade classic with custom UI</div>
+          </div>
+
+          
+          <div class="repo-link">
+            <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 24 24" width="1.2rem" fill="white">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+            </svg>
+          </div>
+        </div>
+        <div class="divider"></div>
+
+        
+        <div class="project-desc-tags">
+          <div class="project-desc">The classic Snake game, built using HTML, CSS, and Vanilla JavaScript, with a fully custom, responsive UI designed from
+scratch in Figma.
+I created this project independently, inspired by a 
+<a href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank">project-based learning repository</a> 
+that I found. My main objective was to learn javascript fundamentals and produce something tangible. The initial version of the game was rather rudimentary,
+so I thought—why not give it personality?
+</div>
+
+          
+          <ul class="tag-list">
+            
+              <li>HTML/CSS</li>
+            
+              <li>Vanilla JS</li>
+            
+              <li>Figma DevTools</li>
+            
+              <li>Git</li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div>
+    <!-- context -->
+<!-- summary -->
+<!-- how did you make the design decisions?  -->
+<section class="stacked-container">
+    <div class="hidden">
+    </div>
+    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x"/>
+    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x"/>
+</section>
+<section class="content-flex-container">
+    <div class="content">
+        <h1>UI DESIGN</h1>
+        <p>
+            I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix of 
+            vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those models. 
+            The interactive keys, quicker snake, and pause function were added for more feedback and to match
+            our ever decreasing attention spans. The snake and apple pixel art was inspired by other sprite media.
+        </p>
+    </div>
+    <iframe id="snake-figma-embed" class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/n2ibPSi47JYkUkFZc334xo/Snake-Design?node-id=0-1&t=a2KOMuhDsIpzszlD-1" allowfullscreen></iframe>
+</section>
+<!-- how did you get to the final code design? -->
+<section class="content-flex-container ">
+    <div class="content">
+        <h1>THE CODE</h1>
+        <p>
+            Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS modules (minus the React section). 
+            I'm more comfortable in Python so programming logic isn't new to me, however, JavaScript syntax definitely still is. I do appreciate 
+            clean, organized, and efficient code so I made an effort to group elements and be concise/descriptive with names.
+            <br>
+            <br>
+            Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to practice my critical 
+            thinking skills and maximize learning. On the other, AI was helpful for discovering JavaScript-specific concepts, coding conventions, 
+            common practices, and for debugging my code.
+        </p>
+    </div>
+    <!-- code editor containing snake-game js file -->
+    <pre><code class="language-js">// Canvas width = 760, height = 460
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+
+// Repeatedly updated elements
+const scoreDisplay = document.getElementById("score");
+const peakDisplay = document.getElementById("peak");
+const spacebar = document.getElementById("spacebar-img");
+const gameCover = document.getElementById("game-overlay");
+
+// Game assets
+const appleImg = new Image();
+const snakeBodyImg = new Image();
+const snakeHeadImg = new Image();
+appleImg.src = "images/apple.svg"; 
+snakeBodyImg.src = "images/snakebody.svg";
+snakeHeadImg.src = "images/snake-head.svg";
+
+// Declare all variables
+let positionX, positionY, velocityX, velocityY, snake, apple, count, intervalId, paused, directionChanged;
+
+// Run initializing function
+restart();
+
+// param: x and y coordinate
+function drawRectangle(x, y) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Apple collision (only head can eat apple)
+    if (x == apple.x && y == apple.y) {
+        apple = generateApple();
+        count += 1;
+        scoreDisplay.textContent = count + "/874";
+        if (count > parseInt(peakDisplay.textContent, 10)) {
+            peakDisplay.textContent = count;
+        }
+    }
+    ctx.drawImage(appleImg, apple.x, apple.y, 20, 20);
+
+    // Boundary check
+    if (
+        positionX < 0 ||
+        positionX + 20 > canvas.width ||
+        positionY < 0 ||
+        positionY + 20 > canvas.height
+    ) {
+        restart();
+    }
+
+    // Update snake body
+    snake.unshift([x, y]);
+    if (snake.length > (count + 1)) {
+        snake.pop();
+    }
+
+    // Self-collision check (skip head)
+    for (let i = 1; i < snake.length; i++) {
+        if (x == snake[i][0] && y == snake[i][1]) {
+            restart();
+        }
+    }
+
+    // Render snake
+    for (let i = 0; i < snake.length; i++) {
+        if (i === 0) {
+            // Draw head with rotation
+            ctx.save();
+            ctx.translate(snake[i][0] + 10, snake[i][1] + 10);
+            let angle = 0;
+            if (velocityX === 20) angle = 0;
+            else if (velocityX === -20) angle = Math.PI;
+            else if (velocityY === -20) angle = -Math.PI / 2;
+            else if (velocityY === 20) angle = Math.PI / 2;
+            ctx.rotate(angle);
+            ctx.drawImage(snakeHeadImg, -10, -10, 26, 20);
+            ctx.restore();
+        } else {
+            ctx.drawImage(snakeBodyImg, snake[i][0], snake[i][1], 20, 20);
+        }
+    }
+}
+// Initializes or resets all game values to their default.
+function restart() {
+    positionX = 200;
+    positionY = 360;
+    velocityX = 20;
+    velocityY = 0;
+    count = 0;
+    snake = [[positionX, positionY]];
+    apple = generateApple();
+    scoreDisplay.textContent = count + "/874";
+    paused = false;
+}
+// Generates new apple coordinates in tiled manner (760/20 = 38, 460/20 = 23 then multiply by 20) 
+function generateApple() {
+    return {
+        x: (Math.floor(Math.random() * 38)) * 20,
+        y: (Math.floor(Math.random() * 23)) * 20
+    };
+}
+// Determines which direction the render the snake in using arrow key input and velocity.
+function playerMovement(e) {
+    if (directionChanged) return; // Only allow one change per frame
+    switch (e.code) {
+        case "ArrowLeft":
+            if (velocityX !== 20) {
+                velocityX = -20;
+                velocityY = 0;
+                directionChanged = true;
+            }
+            break;
+        case "ArrowRight":
+            if (velocityX !== -20) {
+                velocityX = 20;
+                velocityY = 0;
+                directionChanged = true;
+            }
+            break;
+        case "ArrowUp":
+            if (velocityY !== 20) {
+                velocityX = 0;
+                velocityY = -20;
+                directionChanged = true;
+            }
+            break;
+        case "ArrowDown":
+            if (velocityY !== -20) {
+                velocityX = 0;
+                velocityY = 20;
+                directionChanged = true;
+            }
+            break;
+    }
+}
+
+// Game start and stop loops
+function startGameLoop() {
+    if (!intervalId) {
+        intervalId = setInterval(() => {
+            if (!paused) {
+                drawRectangle(positionX += velocityX, positionY += velocityY);
+                directionChanged = false; // Allow direction change for next frame
+            }
+        }, 50);
+    }
+}
+
+function stopGameLoop() {
+    clearInterval(intervalId);
+    intervalId = null;
+}
+// Hash map for rendering arrow keys on the interface
+const keyImageMap = {
+    "ArrowUp": {
+        id: "arrow-up-img",
+        up: "images/up-arrow-up.svg",
+        down: "images/up-arrow-down.svg"
+    },
+    "ArrowDown": {
+        id: "arrow-down-img",
+        up: "images/down-arrow-up.svg",
+        down: "images/down-arrow-down.svg"
+    },
+    "ArrowLeft": {
+        id: "arrow-left-img",
+        up: "images/left-arrow-up.svg",
+        down: "images/left-arrow-down.svg"
+    },
+    "ArrowRight": {
+        id: "arrow-right-img",
+        up: "images/right-arrow-up.svg",
+        down: "images/right-arrow-down.svg"
+    }
+};
+// User inputs
+window.addEventListener('keydown', function(e) {
+    const key = e.code;
+    if (keyImageMap[key]) {
+        document.getElementById(keyImageMap[key].id).src = keyImageMap[key].down;
+    }
+    if (key === "Space") {
+        paused = !paused;
+        if (paused) {
+            stopGameLoop();
+            spacebar.src = "images/spacebar-down.svg";
+            gameCover.style.display = "flex";
+        } else {
+            startGameLoop();
+            spacebar.src = "images/spacebar-up.svg";
+            gameCover.style.display = "none";
+        }
+    }
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(key)) {
+        playerMovement(e);
+    }
+});
+// Only used for rendering the arrow keys on the interface
+window.addEventListener('keyup', function(e) {
+    const key = e.code;
+    if (keyImageMap[key]) {
+        document.getElementById(keyImageMap[key].id).src = keyImageMap[key].up;
+    }
+});
+
+// Start the game loop initially
+startGameLoop();
+</code></pre>
+</section>
+<!-- anything else you'd like to mention? -->
+<section class="stacked-container">
+    <div class="hidden">
+    </div>
+    <video class="desktop" src="/assets/snake-imgs/snake-progress-day6.mp4" autoplay loop muted playsinline>
+        Your browser does not support the video tag.
+    </video>
+</section>
+<section class="content-flex-container ">
+    <div class="content">
+        <h1>RETROSPECTIVE</h1>
+        <p>
+           I wasn't very comfortable using Git when I started this project, so I kept the documentation in a text file. 
+           As I've contributed more to this website, I've become more confident with Git and wish I took full 
+           advantage of the commit history. 
+           <br><br>
+           All the files are public, so feel free to dive into them yourself.
+        </p>
+        <div class="repo-link">
+            <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
+        </div>
+    </div>
+    <video class="desktop" src="/assets/snake-imgs/snake-progress-day3.mp4" autoplay loop muted playsinline>
+        Your browser does not support the video tag.
+    </video>
+</section>
+  </div>
+
+  
+  <footer>
+    <div class="divider"></div>
+    <div class="footer-content-container">
+      <div class="footer-content">
+        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 24 24" width="2rem" fill="white">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        <a class="title-name" href="/">BACK TO PROJECTS</a>
+      </div>
+      <div class="footer-content">
+        <a class="title-name" href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
+        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 24 24" width="2rem" fill="white">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+        </svg>
+      </div>
+    </div>
+  </footer>
+</body>
+    </body>
+</html>
