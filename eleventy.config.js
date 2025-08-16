@@ -14,7 +14,8 @@ export default function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "public"
-    }
+      output: "public",
+    },
+    pathPrefix: "/portfolio/"
   };
 }

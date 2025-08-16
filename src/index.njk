@@ -7,11 +7,11 @@ layout: 'base.njk'
   <div class="header-container"> 
     <div class="title-name"><a href="/">Justin Holmberg</a></div>
     <nav>
-        <ul>
-        <li><a href="#work-link">Projects</a></li>
-        <li><a href="#about-link">About Me</a></li>
-        <li><a href="#contact-link">Connect</a></li>
-        </ul>
+      <ul>
+        <li><a href="{{ '/index.html#work-link' | url }}">Projects</a></li>
+        <li><a href="{{ '/index.html#about-link' | url }}">About Me</a></li>
+        <li><a href="{{ '/index.html#contact-link' | url }}">Connect</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -19,50 +19,21 @@ layout: 'base.njk'
 {# MAIN contains all the projects and footer #}
 <main class="main-content">
 
-  {# PROJECT: "project: kilter" #}
+  {% for project in projects %}
   <div class="projects" id="work-link">
-    <a href="/projects/project-kilter/">
+    <a href="{{ ('/projects/' ~ project.slug ~ '/') | url }}">
       <div class="card">
-        <img src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page"/>
+        <img src="{{ project.img | url }}" alt="{{ project.alt }}"/>
         <div class="desc">
-          <div>UX & UI</div>
-          <h1>PROJECT: KILTER</h1>
-          <div class="oneliner">minimalist spreadsheet application</div>
+          <div>{{ project.role }}</div>
+          <h1>{{ project.title }}</h1>
+          <div class="oneliner">{{ project.oneliner }}</div>
           <div class="divider"></div>
         </div>
       </div>
     </a>
   </div>
-
-  {# PROJECT: "Snake Game" #}
-  <div class="projects" id="work-link">
-    <a href="/projects/snake-game/">
-      <div class="card">
-        <img src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail"/>
-        <div class="desc">
-          <div>Front-End Dev & UI</div>
-          <h1>Snake Game</h1>
-          <div class="oneliner">browser-based arcade classic with custom UI</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
-
-  {# PROJECT: "FaithSelects.com" #}
-  <div class="projects" id="work-link">
-    <a href="/projects/faithselects/">
-      <div class="card">
-        <img src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page"/>
-        <div class="desc">
-          <div>UX & UI</div>
-          <h1>FaithSelects.com</h1>
-          <div class="oneliner">website redesign for FaithSelects, a small herbal business</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
+  {% endfor %}
   
   {# FOOTER contains the ABOUT and WEBSITE description, and the CONTACT links #}
   <div class="content-footer">

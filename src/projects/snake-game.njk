@@ -1,7 +1,7 @@
 ---
 layout: "project.njk"
 # summary section
-coverImg: "/assets/snake-cover-img.png"
+coverImg: "/assets/snake-imgs/snake-cover-img.png"
 altText: "Snake Game interface"
 title: "Snake Game"
 oneLiner: "browser-based arcade classic with custom UI"
@@ -33,9 +33,9 @@ permalink: "/projects/snake-game/"
 <!-- how did you make the design decisions?  -->
 <section class="stacked-container">
     <div class="hidden">
-    </div>
-    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x"/>
-    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x"/>
+    </div> 
+    <img class="img-square" src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}" alt="x"/>
+    <img class="img-square" src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}" alt="x"/>
 </section>
 <section class="content-flex-container">
     <div class="content">
@@ -71,7 +71,7 @@ permalink: "/projects/snake-game/"
 <section class="stacked-container">
     <div class="hidden">
     </div>
-    <video class="desktop" src="/assets/snake-imgs/snake-progress-day6.mp4" autoplay loop muted playsinline>
+    <video class="desktop" src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}" autoplay loop muted playsinline>
         Your browser does not support the video tag.
     </video>
 </section>
@@ -89,7 +89,7 @@ permalink: "/projects/snake-game/"
             <a href="{{ projectRepository }}" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
         </div>
     </div>
-    <video class="desktop" src="/assets/snake-imgs/snake-progress-day3.mp4" autoplay loop muted playsinline>
+    <video class="desktop" src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}" autoplay loop muted playsinline>
         Your browser does not support the video tag.
     </video>
 </section>
