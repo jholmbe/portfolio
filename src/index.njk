@@ -4,13 +4,13 @@ layout: 'base.njk'
 
 {# NAVIGATION links #}
 <header>
-  <div class="header-container"> 
+  <div class="nav-container"> 
     <div class="title-name"><a href="{{ '/' | url }}">Justin Holmberg</a></div>
     <nav>
       <ul>
-        <li><a href="{{ '/index.html#work-link' | url }}">Projects</a></li>
-        <li><a href="{{ '/index.html#about-link' | url }}">About Me</a></li>
-        <li><a href="{{ '/index.html#contact-link' | url }}">Connect</a></li>
+        <li><a href="{{ '/#projects' | url }}">Projects</a></li>
+        <li><a href="{{ '/#about' | url }}">About Me</a></li>
+        <li><a href="{{ '/#connect' | url }}">Connect</a></li>
       </ul>
     </nav>
   </div>
@@ -20,8 +20,8 @@ layout: 'base.njk'
 <main class="main-content">
 
   {% for project in projects %}
-  <div class="projects" id="work-link">
-    <a href="{{ ('/projects/' ~ project.slug ~ '/') | url }}">
+  <div class="projects" id="projects">
+    <a href="{{ project.slug | url }}">
       <div class="card">
         <img src="{{ project.img | url }}" alt="{{ project.alt }}"/>
         <div class="desc">
@@ -40,7 +40,7 @@ layout: 'base.njk'
 
     {# ABOUT description #}
     <div class="about">
-      <h1 id="about-link">about</h1>
+      <h1 id="about"><i>about</i></h1>
       <p>
         I'm a UX engineer and UMD design student. I'm passionate about building products and solving user-centric 
         problems. My process is driven by my empathy and passion for building—designing, coding, collaborating, and planning with 
@@ -48,14 +48,24 @@ layout: 'base.njk'
       </p>
 
       {# WEBSITE description #}
-      <div class="oneliner"><i>website</i></div>
-      <p>This site was built by me as method to learn front-end development and <em>Eleventy/11ty.</em></p>
+      <h1><i>website</i></h1>
+      <p>
+        This site was built by me, using <em>Eleventy/11ty</em> and HTML/CSS. I wanted to learn front-end development and have a place
+        to show my projects.
+      </p>
+      <div class="repo-link">
+        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 24 24" width="1.2rem" fill="white">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+        </svg>
+      </div>
     </div>
 
     {# CONTACT links #}
     <div class="contact">
-      <h1>connect</h1>
-      <ul id="contact-link">
+      <h1><i>connect</i></h1>
+      <ul id="connect">
         <li><div><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></div></li>
         <li><div><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a></div></li>
         <li><div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div></li>
