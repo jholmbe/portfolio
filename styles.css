@@ -13,41 +13,26 @@ body {
 a {
     text-decoration: none;
     color: #ffffff;
+    position: relative;
+}
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    margin: 0;
 }
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+li {
+    letter-spacing: 0.1rem;
+}
 #block-container {
     display: block;
 }
-
-/* ! header section  ! */
-header {
-    width: 25%;
-    text-transform: uppercase;
-    white-space: nowrap;
-    position: relative;
-}
-.header-container {
-    position: sticky;
-    top: 2rem;
-}
-h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 0.05rem;
-    margin: 0;
-}
-nav ul li {
-    letter-spacing: .1rem;
-    margin: .5rem 0;
-}
-.header-container a {
-    position: relative;
-}
-.header-container a::after {
+a::after {
     content: '';
     position: absolute;
     bottom: -.1rem;
@@ -57,8 +42,25 @@ nav ul li {
     background-color: white;
     transition: width 0.4s ease-in-out;
 }
-.header-container a:hover::after {
+a:hover::after {
     width: 100%;
+}
+
+/* ! header section  ! */
+header {
+    width: 25%;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.nav-container {
+    position: sticky;
+    top: 2rem;
+}
+.nav-container ul {
+    padding-top: 0.5rem;
+}
+.nav-container li {
+    margin: 0.5rem 0;
 }
 .title-name {
     font-size: 1.5rem;
@@ -92,10 +94,10 @@ img {
 .contact {
     flex: 1;
 }
-#contact-link {
+#connect {
     margin: 1rem 0;
 }
-#contact-link li {
+#connect li {
     margin: .5rem 0;
 }
 .footer-content {
@@ -184,7 +186,7 @@ img {
     justify-content: space-between;
 }
 .repo-link {
-    font-weight: 200;
+    font-weight: 400;
     display: flex;
     align-items: center;
     gap: .3rem;
