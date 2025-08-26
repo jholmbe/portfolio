@@ -19,6 +19,7 @@ h1 {
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
+    padding: 0;
     margin: 0;
 }
 ul {
@@ -51,10 +52,12 @@ header {
     width: 25%;
     text-transform: uppercase;
     white-space: nowrap;
+    padding: 0;
+    margin: 0;
 }
 .nav-container {
     position: sticky;
-    top: 2rem;
+    top: 1rem;
 }
 .nav-container ul {
     padding-top: 0.5rem;
@@ -201,26 +204,12 @@ video.mobile {
     max-width: 400px;
     aspect-ratio: 9 / 16;
 }
-video.desktop {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-}
-#style-guide {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    padding-bottom: 0;
-}
 .img-square {
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
+    max-width: 49%;
 }
 pre {
     box-sizing: border-box;
-    width: 100%;
-    max-width: 1000px;
+    width: 75%;
     max-height: 700px;
     font-size: .9rem !important;
     overflow: hidden auto !important;
@@ -235,10 +224,6 @@ pre {
 #kilter-figma-embed {
     max-width: 400px;
     aspect-ratio: 9 / 16;
-}
-#snake-figma-embed {
-    max-width: 1000px;
-    aspect-ratio: 16 / 10;
 }
 .tag-list {
     display: flex;

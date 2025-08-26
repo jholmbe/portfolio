@@ -87,15 +87,17 @@ so I thought—why not give it personality?
 
   
   <div>
-    <!-- context -->
-<!-- summary -->
-<!-- how did you make the design decisions?  -->
+    
 <section class="stacked-container">
     <div class="hidden">
     </div> 
-    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x"/>
-    <img class="img-square" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x"/>
+    <div class="product-imgs">
+        <img class="product-img-child" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x"/>
+        <img class="product-img-child" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x"/>
+    </div>
 </section>
+
+
 <section class="content-flex-container">
     <div class="content">
         <h1>UI DESIGN</h1>
@@ -106,9 +108,10 @@ so I thought—why not give it personality?
             our ever decreasing attention spans. The snake and apple pixel art was inspired by other sprite media.
         </p>
     </div>
-    <iframe id="snake-figma-embed" class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/n2ibPSi47JYkUkFZc334xo/Snake-Design?node-id=0-1&t=a2KOMuhDsIpzszlD-1" allowfullscreen></iframe>
+    <img class="project-desc" src="/assets/snake-imgs/snake-figma.png" alt="x"/>
 </section>
-<!-- how did you get to the final code design? -->
+
+
 <section class="content-flex-container ">
     <div class="content">
         <h1>THE CODE</h1>
@@ -123,7 +126,7 @@ so I thought—why not give it personality?
             common practices, and for debugging my code.
         </p>
     </div>
-    <!-- code editor containing snake-game js file -->
+    
     <pre><code class="language-js">// Canvas width = 760, height = 460
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
@@ -332,31 +335,42 @@ window.addEventListener('keyup', function(e) {
 startGameLoop();
 </code></pre>
 </section>
-<!-- anything else you'd like to mention? -->
+
+
+
 <section class="stacked-container">
     <div class="hidden">
     </div>
-    <video class="desktop" src="/assets/snake-imgs/snake-progress-day6.mp4" autoplay loop muted playsinline>
+    <video class="project-desc" 
+        src="/assets/snake-imgs/snake-progress-day6.mp4" 
+        autoplay loop muted playsinline
+        aria-describedby="snake-day6">
         Your browser does not support the video tag.
     </video>
+    <p id="snake-day6" hidden>
+        Day 6 progress — the snake grows and eats, and I added half the interface.
+    </p>
 </section>
+
+
 <section class="content-flex-container ">
     <div class="content">
         <h1>RETROSPECTIVE</h1>
         <p>
            I wasn't very comfortable using Git when I started this project, so I kept the documentation in a text file. 
            As I've contributed more to this website, I've become more confident with Git and wish I took full 
-           advantage of the commit history. 
-           <br><br>
-           All the files are public, so feel free to dive into them yourself.
+           advantage of the commit history.
         </p>
-        <div class="repo-link">
-            <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">Check out the <b>REPOSITORY</b></a>
-        </div>
     </div>
-    <video class="desktop" src="/assets/snake-imgs/snake-progress-day3.mp4" autoplay loop muted playsinline>
-        Your browser does not support the video tag.
+    <video class="project-desc" 
+        src="/assets/snake-imgs/snake-progress-day3.mp4" 
+        autoplay loop muted playsinline
+        aria-describedby="snake-day3">
+    Your browser does not support the video tag.
     </video>
+    <p id="snake-day3" hidden>
+        Day 3 progress — a functional snake!
+    </p>
 </section>
   </div>
 
