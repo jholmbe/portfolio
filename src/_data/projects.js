@@ -1,5 +1,13 @@
 export default [
   {
+    title: "FABRIC",
+    slug: "fabric",
+    img: "/assets/fabric-imgs/fabric-cover-img.png",
+    alt: "FABRIC Landing Page",
+    role: "UX & UI",
+    oneliner: "timeless creative coding archive"
+  },
+  {
     title: "PROJECT: KILTER",
     slug: "project-kilter",
     img: "/assets/kilter-imgs/kilter-cover-img.png",
