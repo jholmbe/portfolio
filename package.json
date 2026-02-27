@@ -5,15 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "eleventy",
-    "start": "eleventy --serve",
-    "build-ghpages": "npx @11ty/eleventy"
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/styles.css",
+    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/styles.css --watch",
+    "build": "npm run build:css && eleventy",
+    "start": "npm run build:css && eleventy --serve & npm run watch:css",
+    "build-ghpages": "npm run build:css && npx @11ty/eleventy"
   },
-  "keywords": ["portfolio", "eleventy"],
+  "keywords": [
+    "portfolio",
+    "eleventy"
+  ],
   "author": "Justin Holmberg",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.1"
+    "@11ty/eleventy": "^3.1.1",
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
   }
 }

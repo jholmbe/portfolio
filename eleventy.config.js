@@ -8,7 +8,6 @@ export default function(eleventyConfig) {
     const idAttr = id ? `id="${id}"` : "";
     return `<iframe ${idAttr} class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=${url}" allowfullscreen></iframe>`;
   });
-  eleventyConfig.addPassthroughCopy("./src/styles.css");
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 
