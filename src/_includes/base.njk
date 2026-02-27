@@ -11,7 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     </head>
-    <body>
+    <body class="flex justify-between mx-16 my-12 gap-8 bg-primary text-secondary text-base font-light font-sans">
+        <header class="flex flex-col gap-5 w-1/4 uppercase tracking-widest">
+            <div><a class="text-xl font-normal" href="{{ '/' | url }}">Justin Holmberg</a></div>
+            <ul class="text-sm space-y-2">
+                <li><a href="{{ '/#projects' | url }}">Projects</a></li>
+                <li><a href="{{ '/#about' | url }}">About Me</a></li>
+                <li><a href="{{ '/#connect' | url }}">Connect</a></li>
+            </ul>
+        </header>
         {{ content | safe }}
     </body>
 </html>

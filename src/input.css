@@ -1,81 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  --primary: #2a2a2a;
-  --secondary: #ffffff;
-  --font: 'Fira Sans', sans-serif;
+  --color-primary: #2a2a2a;
+  --color-secondary: #ffffff;
+  --font-sans: 'Fira Sans', sans-serif;
 }
-body {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    display: flex;
-    background-color: #2a2a2a;
-    color: white;
-    justify-content: space-between;
-    padding: 1.2rem;
-    margin: 0;
-    gap: 1.2rem;
-}
-a {
+@layer base {
+  a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-secondary);
     position: relative;
-}
-h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    padding: 0;
-    margin: 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-li {
-    letter-spacing: 0.1rem;
-}
-#block-container {
-    display: block;
-}
-a::after {
-    content: '';
-    position: absolute;
-    bottom: -.1rem;
-    left: 0;
-    width: 0%;
-    height: 0.1rem;
-    background-color: white;
-    transition: width 0.4s ease-in-out;
-}
-a:hover::after {
-    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      bottom: -0.1rem;
+      height: 1px;
+      width: 0;
+      background-color: var(--color-secondary);
+      transition: width 0.4s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 }
 
-/* ! header section  ! */
-header {
-    width: 25%;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding: 0;
-    margin: 0;
-}
-.nav-container {
-    position: sticky;
-    top: 1rem;
-}
-.nav-container ul {
-    padding-top: 0.5rem;
-}
-.nav-container li {
-    margin: 0.5rem 0;
-}
-.title-name {
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    font-weight: 500;
+#block-container {
+  display: block;
 }
 
 /* ! main section ! */
