@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justin Holmberg</title>
     <link rel="stylesheet" href="{{ '/styles.css' | url }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-    </head>
-    <body class="flex justify-between mx-16 my-12 gap-8 bg-primary text-secondary text-base font-light font-sans">
-        <header class="flex flex-col gap-5 w-1/4 uppercase tracking-widest">
-            <div><a class="text-xl font-normal" href="{{ '/' | url }}">Justin Holmberg</a></div>
-            <ul class="text-sm space-y-2">
-                <li><a href="{{ '/#projects' | url }}">Projects</a></li>
-                <li><a href="{{ '/#about' | url }}">About Me</a></li>
-                <li><a href="{{ '/#connect' | url }}">Connect</a></li>
-            </ul>
-        </header>
-        {{ content | safe }}
-    </body>
+  </head>
+  <body
+    class="bg-primary text-secondary font-sans font-light mx-5
+    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+  >
+    {# MOBILE NAVIGATION #}
+    <div class="sm:hidden">
+      <div class="flex h-[8vh] items-center justify-between">
+        <a class="text-xl font-normal tracking-widest uppercase" href="{{ '/' | url }}"
+          >Justin Holmberg</a
+        >
+        <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
+          <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            class="hidden h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="bg-primary hidden h-[92vh] flex-col items-center 
+        justify-center gap-6 text-lg tracking-widest uppercase 
+        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-center"
+      >
+        <a href="{{ '/#projects' | url }}">projects</a>
+        <a href="{{ '/#about' | url }}">About</a>
+        <a href="{{ '/#connect' | url }}">Connect</a>
+      </nav>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const menuLinks = menu.querySelectorAll("a");
+
+      function closeMenu() {
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
+
+    {# DESKTOP NAVIGATION #}
+    <div class="hidden sm:flex w-1/4 flex-col gap-5 tracking-widest uppercase">
+      <div><a class="text-xl font-normal whitespace-nowrap" href="{{ '/' | url }}">Justin Holmberg</a></div>
+      <ul class="space-y-2 text-sm">
+        <li><a href="{{ '/#projects' | url }}">Projects</a></li>
+        <li><a href="{{ '/#about' | url }}">About Me</a></li>
+        <li><a href="{{ '/#connect' | url }}">Connect</a></li>
+      </ul>
+    </div>
+    
+    {{ content | safe }}
+  </body>
 </html>

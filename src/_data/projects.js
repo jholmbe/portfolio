@@ -5,7 +5,7 @@ export default [
     img: "/assets/fabric-imgs/fabric-cover-img.png",
     alt: "FABRIC Landing Page",
     role: "UX & UI",
-    oneliner: "timeless creative coding archive"
+    oneliner: "timeless creative coding archive",
   },
   {
     title: "PROJECT: KILTER",
@@ -13,7 +13,7 @@ export default [
     img: "/assets/kilter-imgs/kilter-cover-img.png",
     alt: "Project Kilter UI Landing Page",
     role: "UX & UI",
-    oneliner: "minimalist spreadsheet application"
+    oneliner: "minimalist spreadsheet application",
   },
   {
     title: "Snake Game",
@@ -21,7 +21,7 @@ export default [
     img: "/assets/snake-imgs/snake-cover-img.png",
     alt: "Snake Game Thumbnail",
     role: "Front-End Dev & UI",
-    oneliner: "browser-based arcade classic with custom UI"
+    oneliner: "browser-based arcade classic with custom UI",
   },
   {
     title: "FaithSelects.com",
@@ -29,6 +29,6 @@ export default [
     img: "/assets/FS-imgs/FS-cover-img.png",
     alt: "FaithSelects.com Landing Page",
     role: "UX & UI",
-    oneliner: "website redesign for FaithSelects, a small herbal business"
-  }
+    oneliner: "website redesign for FaithSelects, a small herbal business",
+  },
 ];

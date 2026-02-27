@@ -1,15 +1,14 @@
 ---
-layout: 'base.njk'
---- 
+layout: "base.njk"
+---
 
 {# MAIN contains all the projects and footer #}
 <main class="main-content">
-
   {% for project in projects %}
   <div class="projects" id="projects">
     <a href="{{ project.slug | url }}">
       <div class="card">
-        <img src="{{ project.img | url }}" alt="{{ project.alt }}"/>
+        <img src="{{ project.img | url }}" alt="{{ project.alt }}" />
         <div class="desc">
           <div>{{ project.role }}</div>
           <h1>{{ project.title }}</h1>
@@ -19,32 +18,39 @@ layout: 'base.njk'
       </div>
     </a>
   </div>
-  {% endfor %}
-  
-  {# FOOTER contains the ABOUT and WEBSITE description, and the CONTACT links #}
+  {% endfor %} {# FOOTER contains the ABOUT and WEBSITE description, and the CONTACT links #}
   <div class="content-footer">
-
     {# ABOUT description #}
     <div class="about">
       <h1 id="about"><i>about</i></h1>
       <p>
-        I'm a UX design student and self-taught programmer. I'm passionate about building products and 
-        solving user-centric problems. Empathy and a passion for building drives my process—designing, 
-        coding, collaborating, and planning with purpose. Every problem is a project and an opportunity 
-        to grow.
+        I'm a UX design student and self-taught programmer. I'm passionate about building products
+        and solving user-centric problems. Empathy and a passion for building drives my
+        process—designing, coding, collaborating, and planning with purpose. Every problem is a
+        project and an opportunity to grow.
       </p>
 
       {# WEBSITE description #}
       <h1><i>website</i></h1>
       <p>
-        This site was built by me, using <em>Eleventy/11ty</em> and HTML/CSS. I wanted to learn front-end development and have a place
-        to show my projects.
+        This site was built by me, using <em>Eleventy/11ty</em> and HTML/CSS. I wanted to learn
+        front-end development and have a place to show my projects.
       </p>
       <div class="repo-link">
-        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
-        <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 24 24" width="1.2rem" fill="white">
+        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer"
+          >REPOSITORY</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.2rem"
+          viewBox="0 0 24 24"
+          width="1.2rem"
+          fill="white"
+        >
           <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+          <path
+            d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+          />
         </svg>
       </div>
     </div>
@@ -53,9 +59,21 @@ layout: 'base.njk'
     <div class="contact">
       <h1><i>connect</i></h1>
       <ul id="connect">
-        <li><div><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></div></li>
-        <li><div><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a></div></li>
-        <li><div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div></li>
+        <li>
+          <div>
+            <a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank"
+              >linkedin.com/in/justin-holmberg</a
+            >
+          </div>
+        </li>
+        <li>
+          <div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div>
+        </li>
       </ul>
     </div>
   </div>

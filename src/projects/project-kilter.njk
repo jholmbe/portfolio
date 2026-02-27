@@ -16,88 +16,123 @@ projectRepository: "https://www.figma.com/design/c1R8ZvYfWZCdND8tk8jXxa/Justin-H
 # live-demo: product link
 liveDemo: "https://live-demo-link.com"
 
-# context & summary 
-projectDescription: | 
-    <em>project: kilter</em> is a 15-week solo design project for a UMD course, where I focused on my personal passion for weightlifting. 
-    I designed a modular spreadsheet application to give seasoned lifters the streamlined control missing from traditional training tools. 
-    The product centers on a plugin system and an intuitive interface that lets lifters customize their workflow to train more efficiently. 
-    The scope was limited to interface design without coding requirements. Final deliverables included 12-14 polished Figma screens or a 
-    project equal in effort.
+# context & summary
+projectDescription: |
+  <em>project: kilter</em> is a 15-week solo design project for a UMD course, where I focused on my personal passion for weightlifting. 
+  I designed a modular spreadsheet application to give seasoned lifters the streamlined control missing from traditional training tools. 
+  The product centers on a plugin system and an intuitive interface that lets lifters customize their workflow to train more efficiently. 
+  The scope was limited to interface design without coding requirements. Final deliverables included 12-14 polished Figma screens or a 
+  project equal in effort.
 
 # permalink: 11ty internal link
 permalink: "/project-kilter/"
 ---
+
 <!-- context -->
 <!-- summary -->
 <!-- research -->
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>USER VALIDATION</h1>
-        <p>
-            Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback validated my 
-            hypothesis to design simple and adaptable interfaces. 
-        </p>
-    </div>
-    <img class="project-desc" src="{{ '/assets/kilter-imgs/kilter-user-research-summary.png' | url }}" alt="x"/>
+<section class="content-flex-container">
+  <div class="content">
+    <h1>USER VALIDATION</h1>
+    <p>
+      Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback
+      validated my hypothesis to design simple and adaptable interfaces.
+    </p>
+  </div>
+  <img
+    class="project-desc"
+    src="{{ '/assets/kilter-imgs/kilter-user-research-summary.png' | url }}"
+    alt="x"
+  />
 </section>
 <!-- final UI design -->
 <section class="content-flex-container">
-    <div class="content">
-        <h1>MOBILE UI</h1>
-        <p>
-            Most interactions happen during workouts, making mobile the priority. As lifters progress, they require less structure and 
-            more freedom, often favoring simple note-taking tools over rigid fitness apps. A <em>project: kilter</em> file starts as a
-            single column with no grid lines. Users can add columns to define their own spreadsheet size.
-        </p>
-    </div>
-    <video class="mobile" src="{{ '/assets/kilter-imgs/kilter-demo.mp4' | url }}" autoplay loop muted playsinline>
-        Your browser does not support the video tag.
-    </video>
-    {% figmaEmbed "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1", "kilter-figma-embed" %}
+  <div class="content">
+    <h1>MOBILE UI</h1>
+    <p>
+      Most interactions happen during workouts, making mobile the priority. As lifters progress,
+      they require less structure and more freedom, often favoring simple note-taking tools over
+      rigid fitness apps. A <em>project: kilter</em> file starts as a single column with no grid
+      lines. Users can add columns to define their own spreadsheet size.
+    </p>
+  </div>
+  <video
+    class="mobile"
+    src="{{ '/assets/kilter-imgs/kilter-demo.mp4' | url }}"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    Your browser does not support the video tag.
+  </video>
+  {% figmaEmbed
+  "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1",
+  "kilter-figma-embed" %}
 </section>
 <section class="content-flex-container">
-    <div class="content">
-        <h1>DESKTOP UI</h1>
-        <p>
-            Weightlifters often build routines while referencing multiple mediums. A desktop environment allows them to organize 
-            information and structure programs more efficiently compared to mobile. Cross-platform syncing ensures a seamless workflow 
-            between planning and execution.
-        </p>
-    </div>
-    <video class="project-desc" src="{{ '/assets/kilter-imgs/kilter-desktop-demo.mp4' | url }}" autoplay loop muted playsinline>
-        Your browser does not support the video tag.
-    </video>
+  <div class="content">
+    <h1>DESKTOP UI</h1>
+    <p>
+      Weightlifters often build routines while referencing multiple mediums. A desktop environment
+      allows them to organize information and structure programs more efficiently compared to
+      mobile. Cross-platform syncing ensures a seamless workflow between planning and execution.
+    </p>
+  </div>
+  <video
+    class="project-desc"
+    src="{{ '/assets/kilter-imgs/kilter-desktop-demo.mp4' | url }}"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    Your browser does not support the video tag.
+  </video>
 </section>
 
 <!-- PLUGINS -->
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>PLUGIN SYSTEM</h1>
-        <p>
-            Weightlifting goals are highly individual, much like programming or productivity. Accessed via a floating action button,
-            plugins appear in a separate space. However, their functionality can be integrated into the spreadsheet itself — such as
-            context-specific prompting or generating workouts.
-        </p>
-    </div>
-    <img class="project-desc" src="{{ '/assets/kilter-imgs/kilter-plugins-img.png' | url }}" alt="x"/>
+<section class="content-flex-container">
+  <div class="content">
+    <h1>PLUGIN SYSTEM</h1>
+    <p>
+      Weightlifting goals are highly individual, much like programming or productivity. Accessed via
+      a floating action button, plugins appear in a separate space. However, their functionality can
+      be integrated into the spreadsheet itself — such as context-specific prompting or generating
+      workouts.
+    </p>
+  </div>
+  <img
+    class="project-desc"
+    src="{{ '/assets/kilter-imgs/kilter-plugins-img.png' | url }}"
+    alt="x"
+  />
 </section>
 
 <!-- STYLE GUIDE -->
 <section class="stacked-container">
-    <div class="content">
-    </div>
-    <img class="project-desc" src="{{ '/assets/kilter-imgs/kilter-style-guide.png' | url }}" alt="x"/>
+  <div class="content"></div>
+  <img
+    class="project-desc"
+    src="{{ '/assets/kilter-imgs/kilter-style-guide.png' | url }}"
+    alt="x"
+  />
 </section>
 
 <!-- REFLECTION-->
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>REFLECTION</h1>
-        <p>
-            If you're curious, you can explore the Figma file. This project taught me Figma, core UX practices, and the importance of keeping the
-            scope narrow for efficient implementation. It ultimately evolved into a productivity tool that would be too challenging to build with 
-            my current programming skills.
-        </p>
-    </div>
-    <img class="project-desc" src="{{ '/assets/kilter-imgs/kilter-wireframe-grid.png' | url }}" alt="x"/>
+<section class="content-flex-container">
+  <div class="content">
+    <h1>REFLECTION</h1>
+    <p>
+      If you're curious, you can explore the Figma file. This project taught me Figma, core UX
+      practices, and the importance of keeping the scope narrow for efficient implementation. It
+      ultimately evolved into a productivity tool that would be too challenging to build with my
+      current programming skills.
+    </p>
+  </div>
+  <img
+    class="project-desc"
+    src="{{ '/assets/kilter-imgs/kilter-wireframe-grid.png' | url }}"
+    alt="x"
+  />
 </section>

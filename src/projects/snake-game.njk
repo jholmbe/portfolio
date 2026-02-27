@@ -16,94 +16,111 @@ projectRepository: "https://github.com/jholmbe/snake-game"
 # live-demo: product link
 liveDemo: "https://jholmbe.github.io/snake-game/"
 
-# context & summary 
-projectDescription: | 
-    The classic Snake game, built using HTML, CSS, and Vanilla JavaScript, with a fully custom, responsive UI designed from
-    scratch in Figma.
-    I created this project independently, inspired by a 
-    <a href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank">project-based learning repository</a> 
-    that I found. My main objective was to learn javascript fundamentals and produce something tangible. The initial version of the game was rather rudimentary,
-    so I thought—why not give it personality?
+# context & summary
+projectDescription: |
+  The classic Snake game, built using HTML, CSS, and Vanilla JavaScript, with a fully custom, responsive UI designed from
+  scratch in Figma.
+  I created this project independently, inspired by a 
+  <a href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank">project-based learning repository</a> 
+  that I found. My main objective was to learn javascript fundamentals and produce something tangible. The initial version of the game was rather rudimentary,
+  so I thought—why not give it personality?
 
 # permalink: 11ty internal link
 permalink: "/snake-game/"
 ---
+
 {# RETRO-TV images #}
 <section class="stacked-container">
-    <div class="hidden">
-    </div> 
-    <div class="product-imgs">
-        <img class="product-img-child" src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}" alt="x"/>
-        <img class="product-img-child" src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}" alt="x"/>
-    </div>
+  <div class="hidden"></div>
+  <div class="product-imgs">
+    <img
+      class="product-img-child"
+      src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}"
+      alt="x"
+    />
+    <img
+      class="product-img-child"
+      src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}"
+      alt="x"
+    />
+  </div>
 </section>
 
 {# INTERFACE Explanation #}
 <section class="content-flex-container">
-    <div class="content">
-        <h1>UI DESIGN</h1>
-        <p>
-            I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix of 
-            vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those models. 
-            The interactive keys, quicker snake, and pause function were added for more feedback and to match
-            our ever decreasing attention spans. The snake and apple pixel art was inspired by other sprite media.
-        </p>
-    </div>
-    <img class="project-desc" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x"/>
+  <div class="content">
+    <h1>UI DESIGN</h1>
+    <p>
+      I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix
+      of vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those
+      models. The interactive keys, quicker snake, and pause function were added for more feedback
+      and to match our ever decreasing attention spans. The snake and apple pixel art was inspired
+      by other sprite media.
+    </p>
+  </div>
+  <img class="project-desc" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
 </section>
 
 {# JAVASCRIPT embed #}
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>THE CODE</h1>
-        <p>
-            Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS modules (minus the React section). 
-            I'm more comfortable in Python so programming logic isn't new to me, however, JavaScript syntax definitely still is. I do appreciate 
-            clean, organized, and efficient code so I made an effort to group elements and be concise/descriptive with names.
-            <br>
-            <br>
-            Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to practice my critical 
-            thinking skills and maximize learning. On the other, AI was helpful for discovering JavaScript-specific concepts, coding conventions, 
-            common practices, and for debugging my code.
-        </p>
-    </div>
-    {# EMBED #}
-    {% embedJS "src/assets/snake-imgs/snake-script.js" %}
+<section class="content-flex-container">
+  <div class="content">
+    <h1>THE CODE</h1>
+    <p>
+      Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
+      modules (minus the React section). I'm more comfortable in Python so programming logic isn't
+      new to me, however, JavaScript syntax definitely still is. I do appreciate clean, organized,
+      and efficient code so I made an effort to group elements and be concise/descriptive with
+      names.
+      <br />
+      <br />
+      Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to
+      practice my critical thinking skills and maximize learning. On the other, AI was helpful for
+      discovering JavaScript-specific concepts, coding conventions, common practices, and for
+      debugging my code.
+    </p>
+  </div>
+  {# EMBED #} {% embedJS "src/assets/snake-imgs/snake-script.js" %}
 </section>
-
 
 {# PROGRESS VIDEO one #}
 <section class="stacked-container">
-    <div class="hidden">
-    </div>
-    <video class="project-desc" 
-        src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}" 
-        autoplay loop muted playsinline
-        aria-describedby="snake-day6">
-        Your browser does not support the video tag.
-    </video>
-    <p id="snake-day6" hidden>
-        Day 6 progress — the snake grows and eats, and I added half the interface.
-    </p>
+  <div class="hidden"></div>
+  <video
+    class="project-desc"
+    src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    aria-describedby="snake-day6"
+  >
+    Your browser does not support the video tag.
+  </video>
+  <p id="snake-day6" hidden>
+    Day 6 progress — the snake grows and eats, and I added half the interface.
+  </p>
 </section>
 
 {# CONCLUSION #}
-<section class="content-flex-container ">
-    <div class="content">
-        <h1>RETROSPECTIVE</h1>
-        <p>
-           I wasn't very comfortable using Git when I started this project, so I kept the documentation in a text file. 
-           As I've contributed more to this website, I've become more confident with Git and wish I took full 
-           advantage of the commit history.
-        </p>
-    </div>
-    <video class="project-desc" 
-        src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}" 
-        autoplay loop muted playsinline
-        aria-describedby="snake-day3">
-    Your browser does not support the video tag.
-    </video>
-    <p id="snake-day3" hidden>
-        Day 3 progress — a functional snake!
+<section class="content-flex-container">
+  <div class="content">
+    <h1>RETROSPECTIVE</h1>
+    <p>
+      I wasn't very comfortable using Git when I started this project, so I kept the documentation
+      in a text file. As I've contributed more to this website, I've become more confident with Git
+      and wish I took full advantage of the commit history.
     </p>
+  </div>
+  <video
+    class="project-desc"
+    src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}"
+    autoplay
+    loop
+    muted
+    playsinline
+    aria-describedby="snake-day3"
+  >
+    Your browser does not support the video tag.
+  </video>
+  <p id="snake-day3" hidden>Day 3 progress — a functional snake!</p>
 </section>
