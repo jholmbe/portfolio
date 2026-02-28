@@ -96,7 +96,23 @@
         <li><a href="{{ '/#connect' | url }}">Connect</a></li>
       </ul>
     </div>
-    
+
     {{ content | safe }}
+
+    <script>
+      const dividers = document.querySelectorAll(".divider");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-expand");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      dividers.forEach((divider) => observer.observe(divider));
+    </script>
   </body>
 </html>

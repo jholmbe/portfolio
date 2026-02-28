@@ -4,7 +4,15 @@
   --color-primary: #2a2a2a;
   --color-secondary: #ffffff;
   --font-sans: "Fira Sans", sans-serif;
+  --font-mono: "Source Code Pro", monospace;
+  --animate-expand: expand-width 2s ease-in-out forwards;
 }
+
+@keyframes expand-width {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
 @layer base {
   a {
     text-decoration: none;
@@ -28,71 +36,6 @@
   }
 }
 
-/* ! main section ! */
-img {
-  max-width: 100%;
-  padding-bottom: 1rem;
-}
-.projects {
-  padding-bottom: 3rem;
-}
-
-/* ! footer section  ! */
-.content-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-  padding-bottom: 4rem;
-}
-.about {
-  flex: 1;
-  min-width: 50%;
-}
-.contact {
-  flex: 1;
-}
-#connect {
-  margin: 1rem 0;
-}
-#connect li {
-  margin: 0.5rem 0;
-}
-.footer-content {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-.footer-content-container {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-/* ! projects summary section ! */
-
-/* included in homepage && project pages */
-.oneliner {
-  font-family: "Source Code Pro", monospace;
-  font-style: normal;
-  font-size: 1.2rem;
-}
-.divider {
-  background-color: white;
-  height: 0.1rem;
-  width: 0%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  animation: expandWidth 2s ease-in-out forwards;
-}
-
-@keyframes expandWidth {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
 /* ONLY project pages */
 .content-flex-container {
   display: flex;
