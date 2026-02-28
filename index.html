@@ -1,133 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justin Holmberg</title>
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-    </head>
-    <body>
-         
+  </head>
+  <body
+    class="bg-primary text-secondary font-sans font-light mx-5
+    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+  >
+    
+    <div class="sm:hidden">
+      <div class="flex h-[8vh] items-center justify-between">
+        <a class="text-xl font-normal tracking-widest uppercase" href="/"
+          >Justin Holmberg</a
+        >
+        <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
+          <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            class="hidden h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="bg-primary hidden h-[92vh] flex-col items-center 
+        justify-center gap-6 text-lg tracking-widest uppercase 
+        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-center"
+      >
+        <a href="/#projects">projects</a>
+        <a href="/#about">About</a>
+        <a href="/#connect">Connect</a>
+      </nav>
+    </div>
 
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const menuLinks = menu.querySelectorAll("a");
 
-<header>
-  <div class="nav-container"> 
-    <div class="title-name"><a href="/">Justin Holmberg</a></div>
-    <nav>
-      <ul>
+      function closeMenu() {
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
+
+    
+    <div class="hidden sm:flex w-1/4 flex-col gap-5 tracking-widest uppercase">
+      <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
+      <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#about">About Me</a></li>
         <li><a href="/#connect">Connect</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-
-<main class="main-content">
-
-  
-  <div class="projects" id="projects">
-    <a href="fabric">
-      <div class="card">
-        <img src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page"/>
-        <div class="desc">
-          <div>UX &amp; UI</div>
-          <h1>FABRIC</h1>
-          <div class="oneliner">timeless creative coding archive</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
-  
-  <div class="projects" id="projects">
-    <a href="project-kilter">
-      <div class="card">
-        <img src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page"/>
-        <div class="desc">
-          <div>UX &amp; UI</div>
-          <h1>PROJECT: KILTER</h1>
-          <div class="oneliner">minimalist spreadsheet application</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
-  
-  <div class="projects" id="projects">
-    <a href="snake-game">
-      <div class="card">
-        <img src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail"/>
-        <div class="desc">
-          <div>Front-End Dev &amp; UI</div>
-          <h1>Snake Game</h1>
-          <div class="oneliner">browser-based arcade classic with custom UI</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
-  
-  <div class="projects" id="projects">
-    <a href="faithselects">
-      <div class="card">
-        <img src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page"/>
-        <div class="desc">
-          <div>UX &amp; UI</div>
-          <h1>FaithSelects.com</h1>
-          <div class="oneliner">website redesign for FaithSelects, a small herbal business</div>
-          <div class="divider"></div>
-        </div>
-      </div>
-    </a>
-  </div>
-  
-  
-  
-  <div class="content-footer">
+    </div>
 
     
-    <div class="about">
-      <h1 id="about"><i>about</i></h1>
-      <p>
-        I'm a UX design student and self-taught programmer. I'm passionate about building products and 
-        solving user-centric problems. Empathy and a passion for building drives my process—designing, 
-        coding, collaborating, and planning with purpose. Every problem is a project and an opportunity 
-        to grow.
-      </p>
 
-      
-      <h1><i>website</i></h1>
+<div>
+  
+  <div class="pb-6" id="projects">
+    <a href="fabric">
+      <div class="card">
+        <img class="max-w-full pb-4" src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page" />
+        <div>
+          <div class="text-sm font-light">UX &amp; UI</div>
+          <h1 class="text-xl font-medium tracking-wide">FABRIC</h1>
+          <div class="font-mono text-base">timeless creative coding archive</div>
+          <div class="divider my-4 h-px w-0 bg-secondary"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="pb-6" id="projects">
+    <a href="project-kilter">
+      <div class="card">
+        <img class="max-w-full pb-4" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page" />
+        <div>
+          <div class="text-sm font-light">UX &amp; UI</div>
+          <h1 class="text-xl font-medium tracking-wide">PROJECT: KILTER</h1>
+          <div class="font-mono text-base">minimalist spreadsheet application</div>
+          <div class="divider my-4 h-px w-0 bg-secondary"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="pb-6" id="projects">
+    <a href="snake-game">
+      <div class="card">
+        <img class="max-w-full pb-4" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail" />
+        <div>
+          <div class="text-sm font-light">Front-End Dev &amp; UI</div>
+          <h1 class="text-xl font-medium tracking-wide">Snake Game</h1>
+          <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
+          <div class="divider my-4 h-px w-0 bg-secondary"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+  <div class="pb-6" id="projects">
+    <a href="faithselects">
+      <div class="card">
+        <img class="max-w-full pb-4" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page" />
+        <div>
+          <div class="text-sm font-light">UX &amp; UI</div>
+          <h1 class="text-xl font-medium tracking-wide">FaithSelects.com</h1>
+          <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
+          <div class="divider my-4 h-px w-0 bg-secondary"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+   
+  
+  
+  <div class="flex flex-col gap-8 pb-16">
+    
+    
+    <div class="space-y-2">
+      <h1 class="text-xl font-medium tracking-wide italic">about</h1>
       <p>
-        This site was built by me, using <em>Eleventy/11ty</em> and HTML/CSS. I wanted to learn front-end development and have a place
-        to show my projects.
+        Software is a tool that has the ability to greatly affect people's lives, 
+        therefore it should be used responsibly. I'm interested in AI-driven 
+        methods for Product and UX design, frontend development, and the ethical use of 
+        technology to create tools with positive impact.
       </p>
-      <div class="repo-link">
-        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
-        <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" viewBox="0 0 24 24" width="1.2rem" fill="white">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
-        </svg>
+    </div>
+
+    
+    <div class="space-y-2">
+      <h1 class="text-xl font-medium tracking-wide italic">website</h1>
+      <p>
+        Welcome to my portfolio site, built using Eleventy/11ty, Tailwind, and *agentic engineering*. 
+      </p>
+      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center pt-2">
+        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer"
+          >REPOSITORY</a
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+    </svg>
       </div>
     </div>
 
     
-    <div class="contact">
-      <h1><i>connect</i></h1>
-      <ul id="connect">
-        <li><div><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></div></li>
-        <li><div><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a></div></li>
-        <li><div><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a></div></li>
+    <div class="space-y-4">
+      <h1 class="text-xl font-medium tracking-wide italic">connect</h1>
+      <ul id="connect" class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
+        <li><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+    </svg></li>
+        <li><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+    </svg></li>
       </ul>
     </div>
   </div>
-</main>
-<script src="script.js"></script>
-    </body>
+</div>
+
+
+    <script>
+      const dividers = document.querySelectorAll(".divider");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-expand");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+      dividers.forEach((divider) => observer.observe(divider));
+    </script>
+  </body>
 </html>
