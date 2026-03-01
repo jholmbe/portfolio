@@ -13,7 +13,65 @@
   to { width: 100%; }
 }
 
-@layer base {
+/* Enable View Transitions for multi-page navigation */
+@view-transition {
+  navigation: auto;
+}
+
+/* Page content slides out/in while project image morphs in place */
+::view-transition-old(root) {
+  animation: fade-and-slide-out 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+::view-transition-new(root) {
+  animation: fade-and-slide-in 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Project hero image morphs smoothly between pages */
+::view-transition-image-pair(project-hero) {
+  isolation: isolate;
+}
+
+::view-transition-old(project-hero),
+::view-transition-new(project-hero) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-group(project-hero) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fade-and-slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes fade-and-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
+/* @layer base {
   a {
     text-decoration: none;
     color: var(--color-secondary);
@@ -34,9 +92,13 @@
       width: 100%;
     }
   }
-}
 
-/* ONLY project pages */
+  .project-card::after {
+    display: none;
+  }
+} */
+
+/* ONLY project pages
 .content-flex-container {
   display: flex;
   width: 100%;
@@ -57,7 +119,7 @@
   justify-content: end;
   gap: 0.5rem;
 }
-/* .hidden {
+.hidden {
     display: flex;
     visibility: hidden;
     opacity: 0;
@@ -65,7 +127,7 @@
     flex-direction: column;
     justify-content: end;
     gap: 0.5rem;
-} */
+} 
 .content p {
   margin: 0;
 }
@@ -141,4 +203,4 @@ footer {
   flex-direction: column;
   gap: 1.2rem;
   padding-bottom: 4rem;
-}
+} */

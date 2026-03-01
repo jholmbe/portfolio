@@ -4,7 +4,7 @@ export default [
     slug: "fabric",
     img: "/assets/fabric-imgs/fabric-cover-img.png",
     alt: "FABRIC Landing Page",
-    role: "UX & UI",
+    role: "UI/UX | FIGMA | @UMD",
     oneliner: "timeless creative coding archive",
   },
   {
@@ -12,7 +12,7 @@ export default [
     slug: "project-kilter",
     img: "/assets/kilter-imgs/kilter-cover-img.png",
     alt: "Project Kilter UI Landing Page",
-    role: "UX & UI",
+    role: "UI & UX FIGMA @UMD",
     oneliner: "minimalist spreadsheet application",
   },
   {

@@ -3,19 +3,20 @@ layout: "base.njk"
 ---
 
 {# MAIN contains all the projects and footer #}
-<div>
+<div class="sm:w-3/4">
   {% for project in projects %}
   <div class="pb-6" id="projects">
-    <a href="{{ project.slug | url }}">
-      <div class="card">
-        <img class="max-w-full pb-4" src="{{ project.img | url }}" alt="{{ project.alt }}" />
-        <div>
-          <div class="text-sm font-light">{{ project.role }}</div>
-          <h1 class="text-xl font-medium tracking-wide">{{ project.title }}</h1>
-          <div class="font-mono text-base">{{ project.oneliner }}</div>
-          <div class="divider my-4 h-px w-0 bg-secondary"></div>
-        </div>
-      </div>
+    <a class="project-card block" href="{{ project.slug | url }}">
+      {# COVER IMAGE #}
+      <img class="max-w-full pb-4 project-cover-img" src="{{ project.img | url }}" alt="{{ project.alt }}" />
+      {# SKILLS list #}
+      <div class="text-sm font-light">{{ project.role }}</div>
+      {# TITLE product link #}
+      <h1 class="text-xl font-medium tracking-wide pt-0.5">{{ project.title }}</h1>
+      {# ONELINER desciptor #}
+      <div class="font-mono text-base">{{ project.oneliner }}</div>
+      {# DIVIDER #}
+      <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
   {% endfor %} 
@@ -24,7 +25,7 @@ layout: "base.njk"
   <div class="flex flex-col gap-8 pb-16">
     
     {# ABOUT description #}
-    <div class="space-y-2">
+    <div id="about" class="space-y-2">
       <h1 class="text-xl font-medium tracking-wide italic">about</h1>
       <p>
         Software is a tool that has the ability to greatly affect people's lives, 
@@ -49,9 +50,9 @@ layout: "base.njk"
     </div>
 
     {# CONTACT links #}
-    <div class="space-y-4">
+    <div id="connect" class="space-y-4">
       <h1 class="text-xl font-medium tracking-wide italic">connect</h1>
-      <ul id="connect" class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
+      <ul class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
         <li><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a>{% externalLinkIcon "1.1rem", "white" %}</li>
         <li><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a>{% externalLinkIcon "1.1rem", "white" %}</li>
