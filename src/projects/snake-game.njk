@@ -30,26 +30,18 @@ permalink: "/snake-game/"
 ---
 
 {# RETRO-TV images #}
-<section class="stacked-container">
-  <div class="hidden"></div>
-  <div class="product-imgs">
-    <img
-      class="product-img-child"
-      src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}"
-      alt="x"
-    />
-    <img
-      class="product-img-child"
-      src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}"
-      alt="x"
-    />
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
+  <div class="hidden sm:block"></div>
+  <div class="flex gap-4">
+    <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}" alt="x" />
+    <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}" alt="x" />
   </div>
 </section>
 
 {# INTERFACE Explanation #}
-<section class="content-flex-container">
-  <div class="content">
-    <h1>UI DESIGN</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">UI DESIGN</h1>
     <p>
       I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix
       of vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those
@@ -58,13 +50,13 @@ permalink: "/snake-game/"
       by other sprite media.
     </p>
   </div>
-  <img class="project-desc" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
+  <img class="w-full" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
 </section>
 
 {# JAVASCRIPT embed #}
-<section class="content-flex-container">
-  <div class="content">
-    <h1>THE CODE</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">THE CODE</h1>
     <p>
       Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
       modules (minus the React section). I'm more comfortable in Python so programming logic isn't
@@ -83,10 +75,10 @@ permalink: "/snake-game/"
 </section>
 
 {# PROGRESS VIDEO one #}
-<section class="stacked-container">
-  <div class="hidden"></div>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
+  <div class="hidden sm:block"></div>
   <video
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}"
     autoplay
     loop
@@ -102,17 +94,9 @@ permalink: "/snake-game/"
 </section>
 
 {# CONCLUSION #}
-<section class="content-flex-container">
-  <div class="content">
-    <h1>RETROSPECTIVE</h1>
-    <p>
-      I wasn't very comfortable using Git when I started this project, so I kept the documentation
-      in a text file. As I've contributed more to this website, I've become more confident with Git
-      and wish I took full advantage of the commit history.
-    </p>
-  </div>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
   <video
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}"
     autoplay
     loop
@@ -123,4 +107,12 @@ permalink: "/snake-game/"
     Your browser does not support the video tag.
   </video>
   <p id="snake-day3" hidden>Day 3 progress — a functional snake!</p>
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
+    <p>
+      I wasn't very comfortable using Git when I started this project, so I kept the documentation
+      in a text file. As I've contributed more to this website, I've become more confident with Git
+      and wish I took full advantage of the commit history.
+    </p>
+  </div>
 </section>

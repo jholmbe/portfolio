@@ -3,41 +3,34 @@ layout: "base.njk"
 ---
 
 <div class="flex flex-col sm:w-3/4">
-  <div>
-    {# PROJECT SUMMARY & CONTEXT CARD: - cover img - one line desciptor - link for live product
-    (title) - link for file repository - list of skills applied/learned - project description #}
-    <div>
-      <div>
-        {# COVER IMAGE #}
-        <img class="max-w-full pb-4 project-cover-img" src="{{ coverImg | url }}" alt="{{ altText }}" />
+  {# PROJECT SUMMARY & CONTEXT CARD: - cover img - one line desciptor - link for live product
+  (title) - link for file repository - list of skills applied/learned - project description #}
+  {# COVER IMAGE #}
+  <img class="max-w-full pb-4 project-cover-img" src="{{ coverImg | url }}" alt="{{ altText }}" />
 
-        <div>
-          {# SKILLS list #}
-          <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
-            {% for tag in tags %}
-            <li>{{ tag }}{% if not loop.last %} |{% endif %}</li>
-            {% endfor %}
-          </ul>
-          {# TITLE product link #}
-          <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="{{ liveDemo }}">{{ title }}</a></h1>
+  {# SKILLS list #}
+  <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+    {% for tag in tags %}
+    <li>{{ tag }}{% if not loop.last %} |{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {# TITLE product link #}
+  <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="{{ liveDemo }}">{{ title }}</a></h1>
 
-          {# ONELINER desciptor #}
-          <div class="font-mono text-base">{{ oneLiner }}</div>
-        </div>
-        <div class="divider my-4 h-px w-0 bg-secondary"></div>
+  {# ONELINER desciptor #}
+  <div class="font-mono text-base">{{ oneLiner }}</div>
 
-        {# DESCRIPTION p #}
-        <div>
-          <div class="">{{ projectDescription | safe }}</div>
-        </div>
-      </div>
-    </div>
+  <div class="divider my-4 h-px w-0 bg-secondary"></div>
+
+  {# DESCRIPTION p #}
+  <div class="pb-16">
+    {{ projectDescription | safe }}
   </div>
 
   {# CONTENT #}
   <div>{{ content | safe }}</div>
   {# FOOTER: home link, repository link #}
-  <footer class="pb-8">
+  <footer class="pb-16">
     {# DIVIDER #}
     <div class="divider my-4 h-px w-0 bg-secondary"></div>
     <div class="flex flex-row gap-4">

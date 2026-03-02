@@ -31,24 +31,24 @@ permalink: "/project-kilter/"
 <!-- context -->
 <!-- summary -->
 <!-- research -->
-<section class="content-flex-container">
-  <div class="content">
-    <h1>USER VALIDATION</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">USER VALIDATION</h1>
     <p>
       Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback
       validated my hypothesis to design simple and adaptable interfaces.
     </p>
   </div>
   <img
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/kilter-imgs/kilter-user-research-summary.png' | url }}"
     alt="x"
   />
 </section>
 <!-- final UI design -->
-<section class="content-flex-container">
-  <div class="content">
-    <h1>MOBILE UI</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">MOBILE UI</h1>
     <p>
       Most interactions happen during workouts, making mobile the priority. As lifters progress,
       they require less structure and more freedom, often favoring simple note-taking tools over
@@ -56,23 +56,27 @@ permalink: "/project-kilter/"
       lines. Users can add columns to define their own spreadsheet size.
     </p>
   </div>
-  <video
-    class="mobile"
-    src="{{ '/assets/kilter-imgs/kilter-demo.mp4' | url }}"
-    autoplay
-    loop
-    muted
-    playsinline
-  >
-    Your browser does not support the video tag.
-  </video>
-  {% figmaEmbed
-  "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1",
-  "kilter-figma-embed" %}
+  <div class="flex flex-col sm:flex-row gap-4">
+    <video
+      class="w-full max-w-[400px] aspect-9/16 object-cover"
+      src="{{ '/assets/kilter-imgs/kilter-demo.mp4' | url }}"
+      autoplay
+      loop
+      muted
+      playsinline
+    >
+      Your browser does not support the video tag.
+    </video>
+    <div class="w-full min-h-[800px] sm:min-h-0 sm:aspect-9/16 sm:max-w-[400px]">
+      {% figmaEmbed
+      "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1",
+      "kilter-figma-embed" %}
+    </div>
+  </div>
 </section>
-<section class="content-flex-container">
-  <div class="content">
-    <h1>DESKTOP UI</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">DESKTOP UI</h1>
     <p>
       Weightlifters often build routines while referencing multiple mediums. A desktop environment
       allows them to organize information and structure programs more efficiently compared to
@@ -80,7 +84,7 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <video
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/kilter-imgs/kilter-desktop-demo.mp4' | url }}"
     autoplay
     loop
@@ -92,9 +96,9 @@ permalink: "/project-kilter/"
 </section>
 
 <!-- PLUGINS -->
-<section class="content-flex-container">
-  <div class="content">
-    <h1>PLUGIN SYSTEM</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">PLUGIN SYSTEM</h1>
     <p>
       Weightlifting goals are highly individual, much like programming or productivity. Accessed via
       a floating action button, plugins appear in a separate space. However, their functionality can
@@ -103,26 +107,26 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <img
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/kilter-imgs/kilter-plugins-img.png' | url }}"
     alt="x"
   />
 </section>
 
 <!-- STYLE GUIDE -->
-<section class="stacked-container">
-  <div class="content"></div>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
+  <div class="hidden sm:block"></div>
   <img
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/kilter-imgs/kilter-style-guide.png' | url }}"
     alt="x"
   />
 </section>
 
 <!-- REFLECTION-->
-<section class="content-flex-container">
-  <div class="content">
-    <h1>REFLECTION</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
+  <div class="flex flex-col justify-end gap-2">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">REFLECTION</h1>
     <p>
       If you're curious, you can explore the Figma file. This project taught me Figma, core UX
       practices, and the importance of keeping the scope narrow for efficient implementation. It
@@ -131,7 +135,7 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <img
-    class="project-desc"
+    class="w-full"
     src="{{ '/assets/kilter-imgs/kilter-wireframe-grid.png' | url }}"
     alt="x"
   />

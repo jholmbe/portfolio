@@ -2,11 +2,11 @@ import fs from "fs";
 
 export default function(eleventyConfig) {
   eleventyConfig.addShortcode("embedJS", function(path) {
-    return `<pre><code class="language-js">${fs.readFileSync(path, "utf8")}</code></pre>`;
+    return `<pre class="w-full max-h-[300px] sm:max-h-[500px] overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">${fs.readFileSync(path, "utf8")}</code></pre>`;
   });
   eleventyConfig.addShortcode("figmaEmbed", function(url, id = "") {
     const idAttr = id ? `id="${id}"` : "";
-    return `<iframe ${idAttr} class="figma-embed" src="https://www.figma.com/embed?embed_host=share&url=${url}" allowfullscreen></iframe>`;
+    return `<iframe ${idAttr} class="w-full h-full border-0" src="https://www.figma.com/embed?embed_host=share&url=${url}" allowfullscreen></iframe>`;
   });
   eleventyConfig.addShortcode("externalLinkIcon", function(size = "1.2rem", fill = "currentColor") {
     return `<svg xmlns="http://www.w3.org/2000/svg" height="${size}" viewBox="0 0 24 24" width="${size}" fill="${fill}">
