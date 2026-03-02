@@ -7,7 +7,7 @@ title: "project: kilter"
 oneLiner: "minimalist spreadsheet application for weightlifting"
 
 # tags: skills & tech stack
-tags: ["UI/UX", "Figma"]
+tags: ["UI/UX", "FIGMA", "@UMD"]
 timeline: "February - May, 2025"
 
 # project-repository: link for github or figma files
@@ -27,28 +27,22 @@ projectDescription: |
 # permalink: 11ty internal link
 permalink: "/project-kilter/"
 ---
-
-<!-- context -->
-<!-- summary -->
-<!-- research -->
+{# INTERACTIVE PROTOTYPE #}
 <section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">USER VALIDATION</h1>
-    <p>
-      Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback
-      validated my hypothesis to design simple and adaptable interfaces.
-    </p>
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">INTERACTIVE PROTOTYPE</h1>
   </div>
-  <img
-    class="w-full"
-    src="{{ '/assets/kilter-imgs/kilter-user-research-summary.png' | url }}"
-    alt="x"
-  />
+  <div class="w-full min-h-[800px] sm:min-h-0 sm:aspect-9/16 sm:max-w-[400px] order-1 sm:order-2">
+    {% figmaEmbed
+    "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1",
+    "kilter-figma-embed" %}
+  </div>
 </section>
-<!-- final UI design -->
+
+{# FINAL UI DESIGN #}
 <section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">MOBILE UI</h1>
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">MOBILE UI</h1>
     <p>
       Most interactions happen during workouts, making mobile the priority. As lifters progress,
       they require less structure and more freedom, often favoring simple note-taking tools over
@@ -58,7 +52,7 @@ permalink: "/project-kilter/"
   </div>
   <div class="flex flex-col sm:flex-row gap-4">
     <video
-      class="w-full max-w-[400px] aspect-9/16 object-cover"
+      class="w-full max-w-[400px] aspect-9/16 object-cover order-1 sm:order-2"
       src="{{ '/assets/kilter-imgs/kilter-demo.mp4' | url }}"
       autoplay
       loop
@@ -67,16 +61,13 @@ permalink: "/project-kilter/"
     >
       Your browser does not support the video tag.
     </video>
-    <div class="w-full min-h-[800px] sm:min-h-0 sm:aspect-9/16 sm:max-w-[400px]">
-      {% figmaEmbed
-      "https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1",
-      "kilter-figma-embed" %}
-    </div>
   </div>
 </section>
+
+{# DESKTOP UI #}
 <section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">DESKTOP UI</h1>
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">DESKTOP UI</h1>
     <p>
       Weightlifters often build routines while referencing multiple mediums. A desktop environment
       allows them to organize information and structure programs more efficiently compared to
@@ -84,7 +75,7 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <video
-    class="w-full"
+    class="w-full order-1 sm:order-2"
     src="{{ '/assets/kilter-imgs/kilter-desktop-demo.mp4' | url }}"
     autoplay
     loop
@@ -95,10 +86,10 @@ permalink: "/project-kilter/"
   </video>
 </section>
 
-<!-- PLUGINS -->
+{# PLUGIN SYSTEM #}
 <section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">PLUGIN SYSTEM</h1>
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">PLUGIN SYSTEM</h1>
     <p>
       Weightlifting goals are highly individual, much like programming or productivity. Accessed via
       a floating action button, plugins appear in a separate space. However, their functionality can
@@ -107,26 +98,45 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <img
-    class="w-full"
+    class="w-full order-1 sm:order-2"
     src="{{ '/assets/kilter-imgs/kilter-plugins-img.png' | url }}"
     alt="x"
   />
 </section>
 
-<!-- STYLE GUIDE -->
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
+{# STYLE GUIDE #}
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
   <div class="hidden sm:block"></div>
+  <div class="flex flex-col gap-5">
+    <h1 class="text-xl font-medium tracking-wide order-2 sm:order-1">STYLE GUIDE</h1>
+    <img
+      class="w-full order-1 sm:order-2"
+      src="{{ '/assets/kilter-imgs/kilter-style-guide.png' | url }}"
+      alt="x"
+    />
+  </div>
+</section>
+
+{# USER VALIDATION #}
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">USER VALIDATION</h1>
+    <p>
+      Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback
+      validated my hypothesis to design simple and adaptable interfaces.
+    </p>
+  </div>
   <img
-    class="w-full"
-    src="{{ '/assets/kilter-imgs/kilter-style-guide.png' | url }}"
+    class="w-full order-1 sm:order-2"
+    src="{{ '/assets/kilter-imgs/kilter-user-research-summary.png' | url }}"
     alt="x"
   />
 </section>
 
-<!-- REFLECTION-->
+{# REFLECTION #}
 <section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
-  <div class="flex flex-col justify-end gap-2">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">REFLECTION</h1>
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">REFLECTION</h1>
     <p>
       If you're curious, you can explore the Figma file. This project taught me Figma, core UX
       practices, and the importance of keeping the scope narrow for efficient implementation. It
@@ -135,7 +145,7 @@ permalink: "/project-kilter/"
     </p>
   </div>
   <img
-    class="w-full"
+    class="w-full order-1 sm:order-2"
     src="{{ '/assets/kilter-imgs/kilter-wireframe-grid.png' | url }}"
     alt="x"
   />

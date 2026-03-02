@@ -12,7 +12,7 @@ export default [
     slug: "project-kilter",
     img: "/assets/kilter-imgs/kilter-cover-img.png",
     alt: "Project Kilter UI Landing Page",
-    role: "UI & UX FIGMA @UMD",
+    role: "UI/UX | FIGMA | @UMD",
     oneliner: "minimalist spreadsheet application",
   },
   {
@@ -20,7 +20,7 @@ export default [
     slug: "snake-game",
     img: "/assets/snake-imgs/snake-cover-img.png",
     alt: "Snake Game Thumbnail",
-    role: "Front-End Dev & UI",
+    role: "HTML/CSS | JAVASCRIPT | FIGMA",
     oneliner: "browser-based arcade classic with custom UI",
   },
   {
@@ -28,7 +28,7 @@ export default [
     slug: "faithselects",
     img: "/assets/FS-imgs/FS-cover-img.png",
     alt: "FaithSelects.com Landing Page",
-    role: "UX & UI",
+    role: "UX/UI | FREELANCE | SQUARESPACE",
     oneliner: "website redesign for FaithSelects, a small herbal business",
   },
 ];
