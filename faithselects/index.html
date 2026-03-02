@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -98,72 +98,46 @@
     </div>
 
     
-<div class="content-flex-container">
+<div class="flex flex-col sm:w-3/4">
   
-  <div class="project-desc">
-    <div>
-      
-      <img src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects SquareSpace Landing Page" />
+  
+  <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects SquareSpace Landing Page" />
 
-      <div class="project-intro">
-        <div>
-          
-          <h1><a href="https://www.faithselects.com/">FaithSelects.com</a></h1>
+  
+  <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+    
+    <li>UI/UX |</li>
+    
+    <li>Collaboration |</li>
+    
+    <li>Branding |</li>
+    
+    <li>Squarespace</li>
+    
+  </ul>
+  
+  <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://www.faithselects.com/">FaithSelects.com</a></h1>
 
-          
-          <div class="oneliner">website redesign for FaithSelects, a small herbal business</div>
-        </div>
+  
+  <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
 
-        
-        <div class="repo-link">
-          <a href="https://www.faithselects.com/" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1.2rem"
-            viewBox="0 0 24 24"
-            width="1.2rem"
-            fill="white"
-          >
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-            />
-          </svg>
-        </div>
-      </div>
-      <div class="divider my-4 h-1px w-0 bg-secondary"></div>
+  <div class="divider my-4 h-px w-0 bg-secondary"></div>
 
-      
-      <div class="project-desc-tags">
-        <div class="project-desc">Solo freelance project improving a small Squarespace storefront. I streamlined the user flow, 
+  
+  <div class="pb-16">
+    Solo freelance project improving a small Squarespace storefront. I streamlined the user flow, 
 preserved the brand identity, and improved content organization and clarity. FaithSelects is 
 run by two Christian mothers, Faith and Sue, who curate natural wellness remedies. Faith wanted 
 her existing storefront modernized while staying true to its roots.
-</div>
 
-        
-        <ul class="tag-list">
-          
-          <li>UI/UX</li>
-          
-          <li>Collaboration</li>
-          
-          <li>Branding</li>
-          
-          <li>Squarespace</li>
-          
-        </ul>
-      </div>
-    </div>
   </div>
-</div>
 
+  
+  <div>
 
-<div>
-
-<section class="content-flex-container">
-  <div class="content">
-    <h1>PROCESS</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">PROCESS</h1>
     <p>
       Faith's main requirements were to work within Squarespace, keep the original media, and create
       a modern feel. She also encouraged me to use AI, which I applied to refine the written
@@ -171,15 +145,17 @@ her existing storefront modernized while staying true to its roots.
       explaining my decisions each time and incorporating feedback until all requirements were met.
     </p>
   </div>
-  <div class="product-imgs">
-    <img class="product-img-child" src="/assets/FS-imgs/FS-old-home.png" alt="x" />
-    <img class="product-img-child" src="/assets/FS-imgs/FS-new-home.png" alt="x" />
+  <div class="min-w-0 overflow-x-auto sm:overflow-visible order-1 sm:order-2">
+    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max sm:w-full -mx-5 px-5 sm:mx-0 sm:px-0">
+      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-old-home.png" alt="Before: FaithSelects home page" />
+      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-new-home.png" alt="After: FaithSelects home page" />
+    </div>
   </div>
 </section>
 
-<section class="content-flex-container">
-  <div class="content">
-    <h1>DECISIONS</h1>
+<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+    <h1 class="text-xl font-medium tracking-wide">DECISIONS</h1>
     <p>
       I structured the user flow around three priorities: present the brand, prioritize shopping,
       then provide resources for deeper engagement. An interactive hero section leads the page,
@@ -191,49 +167,45 @@ her existing storefront modernized while staying true to its roots.
       scannable grids. The mobile layout was fully reworked to accommodate these changes.
     </p>
   </div>
-  <div class="product-imgs">
-    <img class="product-img-child" src="/assets/FS-imgs/FS-old-about.png" alt="x" />
-    <img class="product-img-child" src="/assets/FS-imgs/FS-new-about.png" alt="x" />
+  <div class="min-w-0 overflow-x-auto sm:overflow-visible order-1 sm:order-2">
+    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max sm:w-full -mx-5 px-5 sm:mx-0 sm:px-0">
+      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-old-about.png" alt="Before: FaithSelects about page" />
+      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-new-about.png" alt="After: FaithSelects about page" />
+    </div>
   </div>
 </section>
 </div>
+  
+  <footer class="pb-16">
+    
+    <div class="divider my-4 h-px w-0 bg-secondary"></div>
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.1rem"
+          viewBox="0 0 24 24"
+          width="1.1rem"
+          fill="white"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+        </svg>
+        <a href="/">PROJECTS</a>
+      </div>
 
-
-<footer>
-  <div class="divider my-4 h-1px w-0 bg-secondary"></div>
-  <div class="footer-content-container">
-    <div class="footer-content">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="2rem"
-        viewBox="0 0 24 24"
-        width="2rem"
-        fill="white"
-      >
-        <path d="M0 0h24v24H0z" fill="none" />
-        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
-      </svg>
-      <a class="title-name" href="/">BACK TO PROJECTS</a>
+      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center">
+        <a href="https://www.faithselects.com/" target="_blank" rel="noopener noreferrer"
+          >REPOSITORY</a
+        >
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+    </svg>
+      </div>
     </div>
-    <div class="footer-content">
-      <a class="title-name" href="https://www.faithselects.com/" target="_blank" rel="noopener noreferrer"
-        >REPOSITORY</a
-      >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="2rem"
-        viewBox="0 0 24 24"
-        width="2rem"
-        fill="white"
-      >
-        <path d="M0 0h24v24H0z" fill="none" />
-        <path
-          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
-        />
-      </svg>
-    </div>
-  </div>
-</footer>
+  </footer>
+</div>
 
 
     <script>
@@ -250,6 +222,37 @@ her existing storefront modernized while staying true to its roots.
         { threshold: 0.5 }
       );
       dividers.forEach((divider) => observer.observe(divider));
+
+      let clickedCard = null;
+
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          clickedCard = card;
+          sessionStorage.setItem("heroTransition", "true");
+        });
+      });
+
+      window.addEventListener("pageswap", (e) => {
+        if (e.viewTransition && clickedCard) {
+          const img = clickedCard.querySelector(".project-cover-img");
+          if (img) img.style.viewTransitionName = "project-hero";
+        }
+      });
+
+      window.addEventListener("pagereveal", async (e) => {
+        if (!e.viewTransition) return;
+        
+        const shouldTransition = sessionStorage.getItem("heroTransition");
+        const projectImg = document.querySelector(".project-cover-img");
+        
+        if (shouldTransition && projectImg) {
+          projectImg.style.viewTransitionName = "project-hero";
+          await e.viewTransition.finished;
+          projectImg.style.viewTransitionName = "";
+        }
+        
+        sessionStorage.removeItem("heroTransition");
+      });
     </script>
   </body>
 </html>

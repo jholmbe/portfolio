@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -99,61 +99,65 @@
 
     
 
-<div>
+<div class="sm:w-3/4">
   
   <div class="pb-6" id="projects">
-    <a href="fabric">
-      <div class="card">
-        <img class="max-w-full pb-4" src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page" />
-        <div>
-          <div class="text-sm font-light">UX &amp; UI</div>
-          <h1 class="text-xl font-medium tracking-wide">FABRIC</h1>
-          <div class="font-mono text-base">timeless creative coding archive</div>
-          <div class="divider my-4 h-px w-0 bg-secondary"></div>
-        </div>
-      </div>
+    <a class="project-card block" href="fabric">
+      
+      <img class="max-w-full pb-4 project-cover-img" src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page" />
+      
+      <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
+      
+      <h1 class="text-xl font-medium tracking-wide pt-0.5">FABRIC</h1>
+      
+      <div class="font-mono text-base">timeless creative coding archive</div>
+      
+      <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
   
   <div class="pb-6" id="projects">
-    <a href="project-kilter">
-      <div class="card">
-        <img class="max-w-full pb-4" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page" />
-        <div>
-          <div class="text-sm font-light">UX &amp; UI</div>
-          <h1 class="text-xl font-medium tracking-wide">PROJECT: KILTER</h1>
-          <div class="font-mono text-base">minimalist spreadsheet application</div>
-          <div class="divider my-4 h-px w-0 bg-secondary"></div>
-        </div>
-      </div>
+    <a class="project-card block" href="project-kilter">
+      
+      <img class="max-w-full pb-4 project-cover-img" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page" />
+      
+      <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
+      
+      <h1 class="text-xl font-medium tracking-wide pt-0.5">PROJECT: KILTER</h1>
+      
+      <div class="font-mono text-base">minimalist spreadsheet application</div>
+      
+      <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
   
   <div class="pb-6" id="projects">
-    <a href="snake-game">
-      <div class="card">
-        <img class="max-w-full pb-4" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail" />
-        <div>
-          <div class="text-sm font-light">Front-End Dev &amp; UI</div>
-          <h1 class="text-xl font-medium tracking-wide">Snake Game</h1>
-          <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
-          <div class="divider my-4 h-px w-0 bg-secondary"></div>
-        </div>
-      </div>
+    <a class="project-card block" href="snake-game">
+      
+      <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail" />
+      
+      <div class="text-sm font-light">HTML/CSS | JAVASCRIPT | FIGMA</div>
+      
+      <h1 class="text-xl font-medium tracking-wide pt-0.5">Snake Game</h1>
+      
+      <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
+      
+      <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
   
   <div class="pb-6" id="projects">
-    <a href="faithselects">
-      <div class="card">
-        <img class="max-w-full pb-4" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page" />
-        <div>
-          <div class="text-sm font-light">UX &amp; UI</div>
-          <h1 class="text-xl font-medium tracking-wide">FaithSelects.com</h1>
-          <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
-          <div class="divider my-4 h-px w-0 bg-secondary"></div>
-        </div>
-      </div>
+    <a class="project-card block" href="faithselects">
+      
+      <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page" />
+      
+      <div class="text-sm font-light">UX/UI | FREELANCE | SQUARESPACE</div>
+      
+      <h1 class="text-xl font-medium tracking-wide pt-0.5">FaithSelects.com</h1>
+      
+      <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
+      
+      <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
    
@@ -162,7 +166,7 @@
   <div class="flex flex-col gap-8 pb-16">
     
     
-    <div class="space-y-2">
+    <div id="about" class="space-y-2">
       <h1 class="text-xl font-medium tracking-wide italic">about</h1>
       <p>
         Software is a tool that has the ability to greatly affect people's lives, 
@@ -190,9 +194,9 @@
     </div>
 
     
-    <div class="space-y-4">
+    <div id="connect" class="space-y-4">
       <h1 class="text-xl font-medium tracking-wide italic">connect</h1>
-      <ul id="connect" class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
+      <ul class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
         <li><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
@@ -222,6 +226,37 @@
         { threshold: 0.5 }
       );
       dividers.forEach((divider) => observer.observe(divider));
+
+      let clickedCard = null;
+
+      document.querySelectorAll(".project-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          clickedCard = card;
+          sessionStorage.setItem("heroTransition", "true");
+        });
+      });
+
+      window.addEventListener("pageswap", (e) => {
+        if (e.viewTransition && clickedCard) {
+          const img = clickedCard.querySelector(".project-cover-img");
+          if (img) img.style.viewTransitionName = "project-hero";
+        }
+      });
+
+      window.addEventListener("pagereveal", async (e) => {
+        if (!e.viewTransition) return;
+        
+        const shouldTransition = sessionStorage.getItem("heroTransition");
+        const projectImg = document.querySelector(".project-cover-img");
+        
+        if (shouldTransition && projectImg) {
+          projectImg.style.viewTransitionName = "project-hero";
+          await e.viewTransition.finished;
+          projectImg.style.viewTransitionName = "";
+        }
+        
+        sessionStorage.removeItem("heroTransition");
+      });
     </script>
   </body>
 </html>
