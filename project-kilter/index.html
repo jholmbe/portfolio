@@ -16,11 +16,11 @@
   </head>
   <body
     class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
-      <div class="flex h-[8vh] items-center justify-between">
+      <div class="flex h-[10vh] items-center justify-between">
         <a class="text-xl font-normal tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -97,54 +97,55 @@
       </ul>
     </div>
 
+    <div class="sm:contents">
+  <div>
     
-<div class="flex flex-col sm:w-3/4">
-  
-  
-  <img class="max-w-full pb-4 project-cover-img" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Three mobile UI mockups of project: kilter standing vertically next to each other." />
+    
+    <img class="max-w-full pb-4 project-cover-img" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Three mobile UI mockups of project: kilter standing vertically next to each other." />
 
-  
-  <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
     
-    <li>UI/UX |</li>
+    <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+      
+      <li>UI/UX |</li>
+      
+      <li>FIGMA |</li>
+      
+      <li>@UMD</li>
+      
+    </ul>
     
-    <li>FIGMA |</li>
-    
-    <li>@UMD</li>
-    
-  </ul>
-  
-  <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://live-demo-link.com">project: kilter</a></h1>
+    <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://live-demo-link.com">project: kilter</a></h1>
 
-  
-  <div class="font-mono text-base">minimalist spreadsheet application for weightlifting</div>
+    
+    <div class="font-mono text-base">minimalist spreadsheet application for weightlifting</div>
 
-  <div class="divider my-4 h-px w-0 bg-secondary"></div>
+    <div class="divider my-4 h-px w-0 bg-secondary"></div>
 
-  
-  <div class="pb-16">
-    <em>project: kilter</em> is a 15-week solo design project for a UMD course, where I focused on my personal passion for weightlifting. 
+    
+    <div class="pb-16">
+      <em>project: kilter</em> is a 15-week solo design project for a UMD course, where I focused on my personal passion for weightlifting. 
 I designed a modular spreadsheet application to give seasoned lifters the streamlined control missing from traditional training tools. 
 The product centers on a plugin system and an intuitive interface that lets lifters customize their workflow to train more efficiently. 
 The scope was limited to interface design without coding requirements. Final deliverables included 12-14 polished Figma screens or a 
 project equal in effort.
 
+    </div>
   </div>
 
+    
   
-  <div>
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">INTERACTIVE PROTOTYPE</h1>
   </div>
-  <div class="w-full min-h-[800px] sm:min-h-0 sm:aspect-9/16 sm:max-w-[400px] order-1 sm:order-2">
+  <div class="w-full min-h-[800px] sm:min-h-0 sm:aspect-9/16 sm:max-w-[400px] order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2">
     <iframe id="kilter-figma-embed" class="w-full h-full border-0" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/c1R8ZvYfWZCdND8tk8jXxa/Justin-Holmberg?node-id=8300-306&t=xpIjGnFzuN5jO3dw-1" allowfullscreen></iframe>
   </div>
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">MOBILE UI</h1>
     <p>
       Most interactions happen during workouts, making mobile the priority. As lifters progress,
@@ -153,9 +154,9 @@ project equal in effort.
       lines. Users can add columns to define their own spreadsheet size.
     </p>
   </div>
-  <div class="flex flex-col sm:flex-row gap-4">
+  <div class="order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2">
     <video
-      class="w-full max-w-[400px] aspect-9/16 object-cover order-1 sm:order-2"
+      class="w-full max-w-[400px] aspect-9/16 object-cover"
       src="/assets/kilter-imgs/kilter-demo.mp4"
       autoplay
       loop
@@ -168,8 +169,8 @@ project equal in effort.
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">DESKTOP UI</h1>
     <p>
       Weightlifters often build routines while referencing multiple mediums. A desktop environment
@@ -178,7 +179,7 @@ project equal in effort.
     </p>
   </div>
   <video
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/kilter-imgs/kilter-desktop-demo.mp4"
     autoplay
     loop
@@ -190,8 +191,8 @@ project equal in effort.
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">PLUGIN SYSTEM</h1>
     <p>
       Weightlifting goals are highly individual, much like programming or productivity. Accessed via
@@ -201,28 +202,27 @@ project equal in effort.
     </p>
   </div>
   <img
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/kilter-imgs/kilter-plugins-img.png"
     alt="x"
   />
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="hidden sm:block"></div>
-  <div class="flex flex-col gap-5">
-    <h1 class="text-xl font-medium tracking-wide order-2 sm:order-1">STYLE GUIDE</h1>
-    <img
-      class="w-full order-1 sm:order-2"
-      src="/assets/kilter-imgs/kilter-style-guide.png"
-      alt="x"
-    />
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">STYLE GUIDE</h1>
   </div>
+  <img
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
+    src="/assets/kilter-imgs/kilter-style-guide.png"
+    alt="x"
+  />
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">USER VALIDATION</h1>
     <p>
       Over the semester, I led recurring interviews with 5 seasoned weightlifters. Their feedback
@@ -230,15 +230,15 @@ project equal in effort.
     </p>
   </div>
   <img
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/kilter-imgs/kilter-user-research-summary.png"
     alt="x"
   />
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">REFLECTION</h1>
     <p>
       If you're curious, you can explore the Figma file. This project taught me Figma, core UX
@@ -248,13 +248,14 @@ project equal in effort.
     </p>
   </div>
   <img
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/kilter-imgs/kilter-wireframe-grid.png"
     alt="x"
   />
 </section>
-</div>
-  
+
+    
+  <div class="hidden sm:block sm:col-start-1"></div>
   <footer class="pb-16">
     
     <div class="divider my-4 h-px w-0 bg-secondary"></div>

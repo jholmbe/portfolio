@@ -16,11 +16,11 @@
   </head>
   <body
     class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
-      <div class="flex h-[8vh] items-center justify-between">
+      <div class="flex h-[10vh] items-center justify-between">
         <a class="text-xl font-normal tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -99,9 +99,9 @@
 
     
 
-<div class="sm:w-3/4">
+<div class="sm:col-start-2" id="projects">
   
-  <div class="pb-6" id="projects">
+  <div class="pb-6">
     <a class="project-card block" href="fabric">
       
       <img class="max-w-full pb-4 project-cover-img" src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page" />
@@ -116,7 +116,7 @@
     </a>
   </div>
   
-  <div class="pb-6" id="projects">
+  <div class="pb-6">
     <a class="project-card block" href="project-kilter">
       
       <img class="max-w-full pb-4 project-cover-img" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page" />
@@ -131,7 +131,7 @@
     </a>
   </div>
   
-  <div class="pb-6" id="projects">
+  <div class="pb-6">
     <a class="project-card block" href="snake-game">
       
       <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail" />
@@ -146,7 +146,7 @@
     </a>
   </div>
   
-  <div class="pb-6" id="projects">
+  <div class="pb-6">
     <a class="project-card block" href="faithselects">
       
       <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page" />
@@ -160,22 +160,21 @@
       <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
-   
   
-  
-  <div class="flex flex-col gap-8 pb-16">
-    
-    
-    <div id="about" class="space-y-2">
-      <h1 class="text-xl font-medium tracking-wide italic">about</h1>
-      <p>
-        Software is a tool that has the ability to greatly affect people's lives, 
-        therefore it should be used responsibly. I'm interested in AI-driven 
-        methods for Product and UX design, frontend development, and the ethical use of 
-        technology to create tools with positive impact.
-      </p>
-    </div>
+</div>
+<div class="hidden sm:block sm:col-start-1"></div>
 
+<div class="flex flex-col gap-8 pb-16 sm:col-start-2">
+    
+  <div id="about" class="space-y-2">
+    <h1 class="text-xl font-medium tracking-wide italic">about</h1>
+    <p>
+      Software is a tool that has the ability to greatly affect people's lives, 
+      therefore it should be used responsibly. I'm interested in AI-driven 
+      methods for Product and UX design, frontend development, and the ethical use of 
+      technology to create tools with positive impact.
+    </p>
+  </div>
     
     <div class="space-y-2">
       <h1 class="text-xl font-medium tracking-wide italic">website</h1>

@@ -16,11 +16,11 @@
   </head>
   <body
     class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
-      <div class="flex h-[8vh] items-center justify-between">
+      <div class="flex h-[10vh] items-center justify-between">
         <a class="text-xl font-normal tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -97,55 +97,55 @@
       </ul>
     </div>
 
+    <div class="sm:contents">
+  <div>
     
-<div class="flex flex-col sm:w-3/4">
-  
-  
-  <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game interface" />
+    
+    <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game interface" />
 
-  
-  <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
     
-    <li>HTML/CSS |</li>
+    <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+      
+      <li>HTML/CSS |</li>
+      
+      <li>JavaScript |</li>
+      
+      <li>Figma</li>
+      
+    </ul>
     
-    <li>JavaScript |</li>
-    
-    <li>Figma</li>
-    
-  </ul>
-  
-  <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://jholmbe.github.io/snake-game/">Snake Game</a></h1>
+    <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://jholmbe.github.io/snake-game/">Snake Game</a></h1>
 
-  
-  <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
+    
+    <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
 
-  <div class="divider my-4 h-px w-0 bg-secondary"></div>
+    <div class="divider my-4 h-px w-0 bg-secondary"></div>
 
-  
-  <div class="pb-16">
-    The classic Snake game, built using HTML, CSS, and vanilla JavaScript, with a fully custom UI designed from
+    
+    <div class="pb-16">
+      The classic Snake game, built using HTML, CSS, and vanilla JavaScript, with a fully custom UI designed from
 scratch in Figma.
 I created this project independently, inspired by a 
 <a class="font-mono text-base uppercase" href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">project-based-learning repository<svg class="inline-block align-middle ml-0.5" xmlns="http://www.w3.org/2000/svg" height="1rem" viewBox="0 0 24 24" width="1rem" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a> 
 that I found. My main objective was to learn javascript fundamentals and produce something tangible. The initial version of the game was rather rudimentary,
 so I thought—why not give it personality?
 
+    </div>
   </div>
 
+    
   
-  <div>
-
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
-  <div class="hidden sm:block"></div>
-  <div class="flex gap-4">
+<section class="grid grid-cols-1 pb-4 sm:contents">
+  <div class="hidden sm:block sm:col-start-1"></div>
+  <div class="flex gap-4 sm:mr-24 order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2">
     <img class="w-1/2" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x" />
     <img class="w-1/2" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x" />
   </div>
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide pt-0.5">UI DESIGN</h1>
     <p>
       I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix
@@ -155,12 +155,12 @@ so I thought—why not give it personality?
       by other sprite media.
     </p>
   </div>
-  <img class="w-full order-1 sm:order-2" src="/assets/snake-imgs/snake-figma.png" alt="x" />
+  <img class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2" src="/assets/snake-imgs/snake-figma.png" alt="x" />
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide pt-0.5">THE CODE</h1>
     <p>
       Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
@@ -176,8 +176,8 @@ so I thought—why not give it personality?
       debugging my code.
     </p>
   </div>
-  <div class="order-1 sm:order-2">
-     <pre class="w-full max-h-[300px] sm:max-h-[500px] overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">// Canvas width = 760, height = 460
+  <div class="order-1 pb-4 sm:pb-0 min-w-0 sm:order-0 sm:col-start-2">
+     <pre class="w-full max-w-full max-h-[300px] sm:max-h-[500px] min-w-0 overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">// Canvas width = 760, height = 460
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -397,10 +397,10 @@ startGameLoop();
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
-  <div class="hidden sm:block"></div>
+<section class="grid grid-cols-1 pb-4 sm:contents">
+  <div class="hidden sm:block sm:col-start-1"></div>
   <video
-    class="w-full"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/snake-imgs/snake-progress-day6.mp4"
     autoplay
     loop
@@ -410,15 +410,20 @@ startGameLoop();
   >
     Your browser does not support the video tag.
   </video>
-  <p id="snake-day6" hidden>
-    Day 6 progress — the snake grows and eats, and I added half the interface.
-  </p>
 </section>
 
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
+    <p>
+      I wasn't very comfortable using Git when I started this project, so I kept the documentation
+      in a text file. As I've contributed more to this website, I've become more confident with Git
+      and wish I took full advantage of the commit history.
+    </p>
+  </div>
   <video
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="/assets/snake-imgs/snake-progress-day3.mp4"
     autoplay
     loop
@@ -428,18 +433,10 @@ startGameLoop();
   >
     Your browser does not support the video tag.
   </video>
-  <p id="snake-day3" hidden>Day 3 progress — a functional snake!</p>
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
-    <p>
-      I wasn't very comfortable using Git when I started this project, so I kept the documentation
-      in a text file. As I've contributed more to this website, I've become more confident with Git
-      and wish I took full advantage of the commit history.
-    </p>
-  </div>
 </section>
-</div>
-  
+
+    
+  <div class="hidden sm:block sm:col-start-1"></div>
   <footer class="pb-16">
     
     <div class="divider my-4 h-px w-0 bg-secondary"></div>

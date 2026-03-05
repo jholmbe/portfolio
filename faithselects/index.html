@@ -16,11 +16,11 @@
   </head>
   <body
     class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
-      <div class="flex h-[8vh] items-center justify-between">
+      <div class="flex h-[10vh] items-center justify-between">
         <a class="text-xl font-normal tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
@@ -88,7 +88,7 @@
     </script>
 
     
-    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="/#projects">Projects</a></li>
@@ -97,46 +97,47 @@
       </ul>
     </div>
 
+    <div class="sm:contents">
+  <div>
     
-<div class="flex flex-col sm:w-3/4">
-  
-  
-  <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects SquareSpace Landing Page" />
+    
+    <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects SquareSpace Landing Page" />
 
-  
-  <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
     
-    <li>UI/UX |</li>
+    <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+      
+      <li>UI/UX |</li>
+      
+      <li>Collaboration |</li>
+      
+      <li>Branding |</li>
+      
+      <li>Squarespace</li>
+      
+    </ul>
     
-    <li>Collaboration |</li>
-    
-    <li>Branding |</li>
-    
-    <li>Squarespace</li>
-    
-  </ul>
-  
-  <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://www.faithselects.com/">FaithSelects.com</a></h1>
+    <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://www.faithselects.com/">FaithSelects.com</a></h1>
 
-  
-  <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
+    
+    <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
 
-  <div class="divider my-4 h-px w-0 bg-secondary"></div>
+    <div class="divider my-4 h-px w-0 bg-secondary"></div>
 
-  
-  <div class="pb-16">
-    Solo freelance project improving a small Squarespace storefront. I streamlined the user flow, 
+    
+    <div class="pb-16">
+      Solo freelance project improving a small Squarespace storefront. I streamlined the user flow, 
 preserved the brand identity, and improved content organization and clarity. FaithSelects is 
 run by two Christian mothers, Faith and Sue, who curate natural wellness remedies. Faith wanted 
 her existing storefront modernized while staying true to its roots.
 
+    </div>
   </div>
 
+    
   
-  <div>
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">PROCESS</h1>
     <p>
       Faith's main requirements were to work within Squarespace, keep the original media, and create
@@ -145,16 +146,16 @@ her existing storefront modernized while staying true to its roots.
       explaining my decisions each time and incorporating feedback until all requirements were met.
     </p>
   </div>
-  <div class="min-w-0 overflow-x-auto sm:overflow-visible order-1 sm:order-2">
-    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max sm:w-full -mx-5 px-5 sm:mx-0 sm:px-0">
-      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-old-home.png" alt="Before: FaithSelects home page" />
-      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-new-home.png" alt="After: FaithSelects home page" />
+  <div class="min-w-0 overflow-x-auto order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2 -mx-5 px-5 sm:mx-0 sm:px-0">
+    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max">
+      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="/assets/FS-imgs/FS-old-home.png" alt="Before: FaithSelects home page" />
+      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="/assets/FS-imgs/FS-new-home.png" alt="After: FaithSelects home page" />
     </div>
   </div>
 </section>
 
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide">DECISIONS</h1>
     <p>
       I structured the user flow around three priorities: present the brand, prioritize shopping,
@@ -167,15 +168,16 @@ her existing storefront modernized while staying true to its roots.
       scannable grids. The mobile layout was fully reworked to accommodate these changes.
     </p>
   </div>
-  <div class="min-w-0 overflow-x-auto sm:overflow-visible order-1 sm:order-2">
-    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max sm:w-full -mx-5 px-5 sm:mx-0 sm:px-0">
-      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-old-about.png" alt="Before: FaithSelects about page" />
-      <img class="flex-shrink-0 w-[85vw] sm:w-1/2 snap-center" src="/assets/FS-imgs/FS-new-about.png" alt="After: FaithSelects about page" />
+  <div class="min-w-0 overflow-x-auto order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2 -mx-5 px-5 sm:mx-0 sm:px-0">
+    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max">
+      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="/assets/FS-imgs/FS-old-about.png" alt="Before: FaithSelects about page" />
+      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="/assets/FS-imgs/FS-new-about.png" alt="After: FaithSelects about page" />
     </div>
   </div>
 </section>
-</div>
-  
+
+    
+  <div class="hidden sm:block sm:col-start-1"></div>
   <footer class="pb-16">
     
     <div class="divider my-4 h-px w-0 bg-secondary"></div>
