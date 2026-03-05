@@ -21,7 +21,7 @@
     
     <div class="sm:hidden">
       <div class="flex h-[10vh] items-center justify-between">
-        <a class="text-xl font-normal tracking-widest uppercase" href="/"
+        <a class="text-xl font-medium tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
         <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
@@ -52,8 +52,8 @@
       <nav
         id="mobile-menu"
         class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-lg tracking-widest uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-center"
+        justify-center gap-6 text-base uppercase 
+        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="/#projects">projects</a>
         <a href="/#about">About</a>
@@ -88,9 +88,9 @@
     </script>
 
     
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
-      <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-sm">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
+      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="/">Justin Holmberg</a></div>
+      <ul class="space-y-2 text-base font-mono">
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#about">About Me</a></li>
         <li><a href="/#connect">Connect</a></li>
@@ -108,7 +108,7 @@
       
       <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
       
-      <h1 class="text-xl font-medium tracking-wide pt-0.5">FABRIC</h1>
+      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">FABRIC</h1>
       
       <div class="font-mono text-base">timeless creative coding archive</div>
       
@@ -123,7 +123,7 @@
       
       <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
       
-      <h1 class="text-xl font-medium tracking-wide pt-0.5">PROJECT: KILTER</h1>
+      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">PROJECT: KILTER</h1>
       
       <div class="font-mono text-base">minimalist spreadsheet application</div>
       
@@ -138,7 +138,7 @@
       
       <div class="text-sm font-light">HTML/CSS | JAVASCRIPT | FIGMA</div>
       
-      <h1 class="text-xl font-medium tracking-wide pt-0.5">Snake Game</h1>
+      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">Snake Game</h1>
       
       <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
       
@@ -153,7 +153,7 @@
       
       <div class="text-sm font-light">UX/UI | FREELANCE | SQUARESPACE</div>
       
-      <h1 class="text-xl font-medium tracking-wide pt-0.5">FaithSelects.com</h1>
+      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">FaithSelects.com</h1>
       
       <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
       
@@ -167,7 +167,7 @@
 <div class="flex flex-col gap-8 pb-16 sm:col-start-2">
     
   <div id="about" class="space-y-2">
-    <h1 class="text-xl font-medium tracking-wide italic">about</h1>
+    <h1 class="text-xl font-medium tracking-wide">ABOUT</h1>
     <p>
       Software is a tool that has the ability to greatly affect people's lives, 
       therefore it should be used responsibly. I'm interested in AI-driven 
@@ -177,7 +177,7 @@
   </div>
     
     <div class="space-y-2">
-      <h1 class="text-xl font-medium tracking-wide italic">website</h1>
+      <h1 class="text-xl font-medium tracking-wide">WEBSITE</h1>
       <p>
         Welcome to my portfolio site, built using Eleventy/11ty, Tailwind, and *agentic engineering*. 
       </p>
@@ -194,7 +194,7 @@
 
     
     <div id="connect" class="space-y-4">
-      <h1 class="text-xl font-medium tracking-wide italic">connect</h1>
+      <h1 class="text-xl font-medium tracking-wide">CONNECT</h1>
       <ul class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
         <li><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
@@ -226,36 +226,6 @@
       );
       dividers.forEach((divider) => observer.observe(divider));
 
-      let clickedCard = null;
-
-      document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          clickedCard = card;
-          sessionStorage.setItem("heroTransition", "true");
-        });
-      });
-
-      window.addEventListener("pageswap", (e) => {
-        if (e.viewTransition && clickedCard) {
-          const img = clickedCard.querySelector(".project-cover-img");
-          if (img) img.style.viewTransitionName = "project-hero";
-        }
-      });
-
-      window.addEventListener("pagereveal", async (e) => {
-        if (!e.viewTransition) return;
-        
-        const shouldTransition = sessionStorage.getItem("heroTransition");
-        const projectImg = document.querySelector(".project-cover-img");
-        
-        if (shouldTransition && projectImg) {
-          projectImg.style.viewTransitionName = "project-hero";
-          await e.viewTransition.finished;
-          projectImg.style.viewTransitionName = "";
-        }
-        
-        sessionStorage.removeItem("heroTransition");
-      });
     </script>
   </body>
 </html>

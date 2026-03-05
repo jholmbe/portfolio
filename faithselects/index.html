@@ -21,7 +21,7 @@
     
     <div class="sm:hidden">
       <div class="flex h-[10vh] items-center justify-between">
-        <a class="text-xl font-normal tracking-widest uppercase" href="/"
+        <a class="text-xl font-medium tracking-widest uppercase" href="/"
           >Justin Holmberg</a
         >
         <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
@@ -52,8 +52,8 @@
       <nav
         id="mobile-menu"
         class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-lg tracking-widest uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-center"
+        justify-center gap-6 text-base uppercase 
+        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="/#projects">projects</a>
         <a href="/#about">About</a>
@@ -88,9 +88,9 @@
     </script>
 
     
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
-      <div><a class="text-xl font-normal whitespace-nowrap" href="/">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-sm">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
+      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="/">Justin Holmberg</a></div>
+      <ul class="space-y-2 text-base font-mono">
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#about">About Me</a></li>
         <li><a href="/#connect">Connect</a></li>
@@ -177,12 +177,12 @@ her existing storefront modernized while staying true to its roots.
 </section>
 
     
-  <div class="hidden sm:block sm:col-start-1"></div>
-  <footer class="pb-16">
+  
+  <footer class="pb-16 sm:col-start-1 sm:col-span-2">
     
     <div class="divider my-4 h-px w-0 bg-secondary"></div>
-    <div class="flex flex-row gap-4">
-      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center">
+    <div class="flex flex-row gap-4 sm:gap-8">
+      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center sm:text-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1.1rem"
@@ -196,7 +196,7 @@ her existing storefront modernized while staying true to its roots.
         <a href="/">PROJECTS</a>
       </div>
 
-      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center">
+      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center sm:text-xl">
         <a href="https://www.faithselects.com/" target="_blank" rel="noopener noreferrer"
           >REPOSITORY</a
         >
@@ -225,36 +225,6 @@ her existing storefront modernized while staying true to its roots.
       );
       dividers.forEach((divider) => observer.observe(divider));
 
-      let clickedCard = null;
-
-      document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          clickedCard = card;
-          sessionStorage.setItem("heroTransition", "true");
-        });
-      });
-
-      window.addEventListener("pageswap", (e) => {
-        if (e.viewTransition && clickedCard) {
-          const img = clickedCard.querySelector(".project-cover-img");
-          if (img) img.style.viewTransitionName = "project-hero";
-        }
-      });
-
-      window.addEventListener("pagereveal", async (e) => {
-        if (!e.viewTransition) return;
-        
-        const shouldTransition = sessionStorage.getItem("heroTransition");
-        const projectImg = document.querySelector(".project-cover-img");
-        
-        if (shouldTransition && projectImg) {
-          projectImg.style.viewTransitionName = "project-hero";
-          await e.viewTransition.finished;
-          projectImg.style.viewTransitionName = "";
-        }
-        
-        sessionStorage.removeItem("heroTransition");
-      });
     </script>
   </body>
 </html>
