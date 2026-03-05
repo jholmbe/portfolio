@@ -31,7 +31,7 @@ permalink: "/snake-game/"
 {# RETRO-TV images #}
 <section class="grid grid-cols-1 pb-4 sm:contents">
   <div class="hidden sm:block sm:col-start-1"></div>
-  <div class="flex gap-4 order-1 pb-4 sm:order-0 sm:col-start-2">
+  <div class="flex gap-4 sm:mr-24 order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2">
     <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}" alt="x" />
     <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}" alt="x" />
   </div>
@@ -49,7 +49,7 @@ permalink: "/snake-game/"
       by other sprite media.
     </p>
   </div>
-  <img class="w-full order-1 pb-4 sm:order-0 sm:col-start-2" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
+  <img class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
 </section>
 
 {# JAVASCRIPT embed #}
@@ -70,7 +70,7 @@ permalink: "/snake-game/"
       debugging my code.
     </p>
   </div>
-  <div class="order-1 pb-4 sm:order-0 sm:col-start-2">
+  <div class="order-1 pb-4 sm:pb-0 min-w-0 sm:order-0 sm:col-start-2">
     {# EMBED #} {% embedJS "src/assets/snake-imgs/snake-script.js" %}
   </div>
 </section>
@@ -79,7 +79,7 @@ permalink: "/snake-game/"
 <section class="grid grid-cols-1 pb-4 sm:contents">
   <div class="hidden sm:block sm:col-start-1"></div>
   <video
-    class="w-full order-1 pb-4 sm:order-0 sm:col-start-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}"
     autoplay
     loop
@@ -89,15 +89,20 @@ permalink: "/snake-game/"
   >
     Your browser does not support the video tag.
   </video>
-  <p id="snake-day6" hidden>
-    Day 6 progress — the snake grows and eats, and I added half the interface.
-  </p>
 </section>
 
 {# CONCLUSION #}
 <section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
+    <p>
+      I wasn't very comfortable using Git when I started this project, so I kept the documentation
+      in a text file. As I've contributed more to this website, I've become more confident with Git
+      and wish I took full advantage of the commit history.
+    </p>
+  </div>
   <video
-    class="w-full order-1 pb-4 sm:order-0 sm:col-start-2"
+    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
     src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}"
     autoplay
     loop
@@ -107,13 +112,4 @@ permalink: "/snake-game/"
   >
     Your browser does not support the video tag.
   </video>
-  <p id="snake-day3" hidden>Day 3 progress — a functional snake!</p>
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
-    <p>
-      I wasn't very comfortable using Git when I started this project, so I kept the documentation
-      in a text file. As I've contributed more to this website, I've become more confident with Git
-      and wish I took full advantage of the commit history.
-    </p>
-  </div>
 </section>

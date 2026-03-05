@@ -2,7 +2,7 @@ import fs from "fs";
 
 export default function(eleventyConfig) {
   eleventyConfig.addShortcode("embedJS", function(path) {
-    return `<pre class="w-full max-h-[300px] sm:max-h-[500px] overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">${fs.readFileSync(path, "utf8")}</code></pre>`;
+    return `<pre class="w-full max-w-full max-h-[300px] sm:max-h-[500px] min-w-0 overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">${fs.readFileSync(path, "utf8")}</code></pre>`;
   });
   eleventyConfig.addShortcode("figmaEmbed", function(url, id = "") {
     const idAttr = id ? `id="${id}"` : "";
