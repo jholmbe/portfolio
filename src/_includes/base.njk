@@ -114,36 +114,6 @@
       );
       dividers.forEach((divider) => observer.observe(divider));
 
-      let clickedCard = null;
-
-      document.querySelectorAll(".project-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          clickedCard = card;
-          sessionStorage.setItem("heroTransition", "true");
-        });
-      });
-
-      window.addEventListener("pageswap", (e) => {
-        if (e.viewTransition && clickedCard) {
-          const img = clickedCard.querySelector(".project-cover-img");
-          if (img) img.style.viewTransitionName = "project-hero";
-        }
-      });
-
-      window.addEventListener("pagereveal", async (e) => {
-        if (!e.viewTransition) return;
-        
-        const shouldTransition = sessionStorage.getItem("heroTransition");
-        const projectImg = document.querySelector(".project-cover-img");
-        
-        if (shouldTransition && projectImg) {
-          projectImg.style.viewTransitionName = "project-hero";
-          await e.viewTransition.finished;
-          projectImg.style.viewTransitionName = "";
-        }
-        
-        sessionStorage.removeItem("heroTransition");
-      });
     </script>
   </body>
 </html>
