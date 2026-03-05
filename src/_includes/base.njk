@@ -21,7 +21,7 @@
     {# MOBILE NAVIGATION #}
     <div class="sm:hidden">
       <div class="flex h-[10vh] items-center justify-between">
-        <a class="text-xl font-normal tracking-widest uppercase" href="{{ '/' | url }}"
+        <a class="text-xl font-medium tracking-widest uppercase" href="{{ '/' | url }}"
           >Justin Holmberg</a
         >
         <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
@@ -52,8 +52,8 @@
       <nav
         id="mobile-menu"
         class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-lg tracking-widest uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-center"
+        justify-center gap-6 text-base uppercase 
+        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="{{ '/#projects' | url }}">projects</a>
         <a href="{{ '/#about' | url }}">About</a>
@@ -88,9 +88,9 @@
     </script>
 
     {# DESKTOP NAVIGATION #}
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
-      <div><a class="text-xl font-normal whitespace-nowrap" href="{{ '/' | url }}">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-sm">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
+      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="{{ '/' | url }}">Justin Holmberg</a></div>
+      <ul class="space-y-2 text-base font-mono">
         <li><a href="{{ '/#projects' | url }}">Projects</a></li>
         <li><a href="{{ '/#about' | url }}">About Me</a></li>
         <li><a href="{{ '/#connect' | url }}">Connect</a></li>

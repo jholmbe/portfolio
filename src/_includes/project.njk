@@ -31,12 +31,12 @@ layout: "base.njk"
     {# CONTENT #}
   {{ content | safe }}
     {# FOOTER: home link, repository link #}
-  <div class="hidden sm:block sm:col-start-1"></div>
-  <footer class="pb-16">
+  {# <div class="hidden sm:block sm:col-start-1"></div> #}
+  <footer class="pb-16 sm:col-start-1 sm:col-span-2">
     {# DIVIDER #}
     <div class="divider my-4 h-px w-0 bg-secondary"></div>
-    <div class="flex flex-row gap-4">
-      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center">
+    <div class="flex flex-row gap-4 sm:gap-8">
+      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center sm:text-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1.1rem"
@@ -50,7 +50,7 @@ layout: "base.njk"
         <a href="{{ '/' | url }}">PROJECTS</a>
       </div>
 
-      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center">
+      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center sm:text-xl">
         <a href="{{projectRepository}}" target="_blank" rel="noopener noreferrer"
           >REPOSITORY</a
         >
