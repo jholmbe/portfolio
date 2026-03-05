@@ -28,19 +28,18 @@ projectDescription: |
 # permalink: 11ty internal link
 permalink: "/snake-game/"
 ---
-
 {# RETRO-TV images #}
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
-  <div class="hidden sm:block"></div>
-  <div class="flex gap-4">
+<section class="grid grid-cols-1 pb-4 sm:contents">
+  <div class="hidden sm:block sm:col-start-1"></div>
+  <div class="flex gap-4 order-1 pb-4 sm:order-0 sm:col-start-2">
     <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-1.jpg' | url }}" alt="x" />
     <img class="w-1/2" src="{{ '/assets/snake-imgs/retro-tv-img-2.jpg' | url }}" alt="x" />
   </div>
 </section>
 
 {# INTERFACE Explanation #}
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide pt-0.5">UI DESIGN</h1>
     <p>
       I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix
@@ -50,12 +49,12 @@ permalink: "/snake-game/"
       by other sprite media.
     </p>
   </div>
-  <img class="w-full order-1 sm:order-2" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
+  <img class="w-full order-1 pb-4 sm:order-0 sm:col-start-2" src="{{ '/assets/snake-imgs/snake-figma.png' | url }}" alt="x" />
 </section>
 
 {# JAVASCRIPT embed #}
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-16">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide pt-0.5">THE CODE</h1>
     <p>
       Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
@@ -71,16 +70,16 @@ permalink: "/snake-game/"
       debugging my code.
     </p>
   </div>
-  <div class="order-1 sm:order-2">
+  <div class="order-1 pb-4 sm:order-0 sm:col-start-2">
     {# EMBED #} {% embedJS "src/assets/snake-imgs/snake-script.js" %}
   </div>
 </section>
 
 {# PROGRESS VIDEO one #}
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-4">
-  <div class="hidden sm:block"></div>
+<section class="grid grid-cols-1 pb-4 sm:contents">
+  <div class="hidden sm:block sm:col-start-1"></div>
   <video
-    class="w-full"
+    class="w-full order-1 pb-4 sm:order-0 sm:col-start-2"
     src="{{ '/assets/snake-imgs/snake-progress-day6.mp4' | url }}"
     autoplay
     loop
@@ -96,9 +95,9 @@ permalink: "/snake-game/"
 </section>
 
 {# CONCLUSION #}
-<section class="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-5 pb-8">
+<section class="grid grid-cols-1 pb-8 sm:contents">
   <video
-    class="w-full order-1 sm:order-2"
+    class="w-full order-1 pb-4 sm:order-0 sm:col-start-2"
     src="{{ '/assets/snake-imgs/snake-progress-day3.mp4' | url }}"
     autoplay
     loop
@@ -109,7 +108,7 @@ permalink: "/snake-game/"
     Your browser does not support the video tag.
   </video>
   <p id="snake-day3" hidden>Day 3 progress — a functional snake!</p>
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-1">
+  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
     <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
     <p>
       I wasn't very comfortable using Git when I started this project, so I kept the documentation

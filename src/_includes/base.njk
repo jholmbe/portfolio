@@ -16,7 +16,7 @@
   </head>
   <body
     class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:flex sm:gap-8 sm:justify-between"
+    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     {# MOBILE NAVIGATION #}
     <div class="sm:hidden">
@@ -88,7 +88,7 @@
     </script>
 
     {# DESKTOP NAVIGATION #}
-    <div class="hidden sm:flex min-w-1/4 flex-col gap-5 tracking-widest uppercase">
+    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 tracking-widest uppercase">
       <div><a class="text-xl font-normal whitespace-nowrap" href="{{ '/' | url }}">Justin Holmberg</a></div>
       <ul class="space-y-2 text-sm">
         <li><a href="{{ '/#projects' | url }}">Projects</a></li>

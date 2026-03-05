@@ -2,10 +2,10 @@
 layout: "base.njk"
 ---
 
-{# MAIN contains all the projects and footer #}
-<div class="sm:w-3/4">
+{# MAIN: single block in right column, inline with nav on left #}
+<div class="sm:col-start-2" id="projects">
   {% for project in projects %}
-  <div class="pb-6" id="projects">
+  <div class="pb-6">
     <a class="project-card block" href="{{ project.slug | url }}">
       {# COVER IMAGE #}
       <img class="max-w-full pb-4 project-cover-img" src="{{ project.img | url }}" alt="{{ project.alt }}" />
@@ -19,22 +19,21 @@ layout: "base.njk"
       <div class="divider my-4 h-px w-0 bg-secondary"></div>
     </a>
   </div>
-  {% endfor %} 
-  
-  {# FOOTER contains the ABOUT and WEBSITE description, and the CONTACT links #}
-  <div class="flex flex-col gap-8 pb-16">
-    
+  {% endfor %}
+</div>
+<div class="hidden sm:block sm:col-start-1"></div>
+{# FOOTER #}
+<div class="flex flex-col gap-8 pb-16 sm:col-start-2">
     {# ABOUT description #}
-    <div id="about" class="space-y-2">
-      <h1 class="text-xl font-medium tracking-wide italic">about</h1>
-      <p>
-        Software is a tool that has the ability to greatly affect people's lives, 
-        therefore it should be used responsibly. I'm interested in AI-driven 
-        methods for Product and UX design, frontend development, and the ethical use of 
-        technology to create tools with positive impact.
-      </p>
-    </div>
-
+  <div id="about" class="space-y-2">
+    <h1 class="text-xl font-medium tracking-wide italic">about</h1>
+    <p>
+      Software is a tool that has the ability to greatly affect people's lives, 
+      therefore it should be used responsibly. I'm interested in AI-driven 
+      methods for Product and UX design, frontend development, and the ethical use of 
+      technology to create tools with positive impact.
+    </p>
+  </div>
     {# WEBSITE description #}
     <div class="space-y-2">
       <h1 class="text-xl font-medium tracking-wide italic">website</h1>
