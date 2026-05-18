@@ -1,42 +1,40 @@
 ---
 layout: "base.njk"
 ---
+
 <div class="sm:contents">
   <div>
-    {# PROJECT SUMMARY & CONTEXT CARD: - cover img - one line desciptor - link for live product
-    (title) - link for file repository - list of skills applied/learned - project description #}
-    {# COVER IMAGE #}
-    <img class="max-w-full pb-4 project-cover-img" src="{{ coverImg | url }}" alt="{{ altText }}" />
+    <img class="project-cover-img max-w-full pb-4" src="{{ coverImg | url }}" alt="{{ altText }}" />
 
-    {# SKILLS list #}
-    <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
-      {% for tag in tags %}
-      <li>{{ tag }}{% if not loop.last %} |{% endif %}</li>
-      {% endfor %}
-    </ul>
-    {# TITLE product link #}
-    <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="{{ liveDemo }}">{{ title }}</a></h1>
-
-    {# ONELINER desciptor #}
-    <div class="font-mono text-base">{{ oneLiner }}</div>
-
-    <div class="divider my-4 h-px w-0 bg-secondary"></div>
-
-    {# DESCRIPTION p #}
-    <div class="pb-16">
-      {{ projectDescription | safe }}
+    <div class="flex flex-row items-center justify-between gap-4 text-sm font-light uppercase">
+      <ul class="flex flex-row flex-wrap items-center gap-1">
+        {% for tag in tags %}
+        <li>{{ tag }}{% if not loop.last %} |{% endif %}</li>
+        {% endfor %}
+      </ul>
+      {% if timeline %}
+      <span class="shrink-0">{{ timeline }}</span>
+      {% endif %}
     </div>
+
+    <h1 class="pt-0.5 text-xl font-medium tracking-wide">
+      {% if liveDemo %}
+      <a href="{{ liveDemo }}" target="_blank" rel="noopener noreferrer">{{ title }}</a>
+      {% else %} {{ title }} {% endif %}
+    </h1>
+
+    <div class="font-mono text-base">{{ oneLiner }}</div>
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
+
+    <div class="pb-16">{{ projectDescription | safe }}</div>
   </div>
 
-    {# CONTENT #}
   {{ content | safe }}
-    {# FOOTER: home link, repository link #}
-  {# <div class="hidden sm:block sm:col-start-1"></div> #}
-  <footer class="pb-16 sm:col-start-1 sm:col-span-2">
-    {# DIVIDER #}
-    <div class="divider my-4 h-px w-0 bg-secondary"></div>
+
+  <footer class="pb-16 sm:col-span-2 sm:col-start-1">
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
     <div class="flex flex-row gap-4 sm:gap-8">
-      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center sm:text-xl">
+      <div class="flex flex-row items-center gap-2 font-mono text-base uppercase sm:text-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1.1rem"
@@ -50,10 +48,8 @@ layout: "base.njk"
         <a href="{{ '/' | url }}">PROJECTS</a>
       </div>
 
-      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center sm:text-xl">
-        <a href="{{projectRepository}}" target="_blank" rel="noopener noreferrer"
-          >REPOSITORY</a
-        >
+      <div class="flex flex-row items-center gap-1 font-mono text-base uppercase sm:text-xl">
+        <a href="{{ projectRepository }}" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
         {% externalLinkIcon "1.1rem", "white" %}
       </div>
     </div>

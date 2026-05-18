@@ -17,6 +17,12 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 
+  eleventyConfig.addCollection("projects", (collection) => {
+    return collection
+      .getFilteredByGlob("src/projects/*.njk")
+      .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+  });
+
   return {
     dir: {
       input: "src",

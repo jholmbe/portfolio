@@ -15,8 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
   </head>
   <body
-    class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
+    class="bg-primary text-secondary mx-5 font-sans font-light sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     {# MOBILE NAVIGATION #}
     <div class="sm:hidden">
@@ -51,9 +50,7 @@
       </div>
       <nav
         id="mobile-menu"
-        class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-base uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
+        class="bg-primary *:border-secondary hidden h-[92vh] flex-col items-center justify-center gap-6 text-base uppercase *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="{{ '/#projects' | url }}">projects</a>
         <a href="{{ '/#about' | url }}">About</a>
@@ -88,9 +85,13 @@
     </script>
 
     {# DESKTOP NAVIGATION #}
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
-      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="{{ '/' | url }}">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-base font-mono">
+    <div class="hidden flex-col gap-5 uppercase sm:col-start-1 sm:flex">
+      <div>
+        <a class="text-xl font-medium tracking-widest whitespace-nowrap" href="{{ '/' | url }}"
+          >Justin Holmberg</a
+        >
+      </div>
+      <ul class="space-y-2 font-mono text-base">
         <li><a href="{{ '/#projects' | url }}">Projects</a></li>
         <li><a href="{{ '/#about' | url }}">About Me</a></li>
         <li><a href="{{ '/#connect' | url }}">Connect</a></li>
@@ -110,10 +111,9 @@
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 },
       );
       dividers.forEach((divider) => observer.observe(divider));
-
     </script>
   </body>
 </html>

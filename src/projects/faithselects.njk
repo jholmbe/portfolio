@@ -1,69 +1,77 @@
 ---
 layout: "project.njk"
-# summary section
+order: 4
 coverImg: "/assets/FS-imgs/FS-cover-img.png"
 altText: "FaithSelects SquareSpace Landing Page"
 title: "FaithSelects.com"
 oneLiner: "website redesign for FaithSelects, a small herbal business"
-
-# tags: skills & tech stack
 tags: ["UI/UX", "Collaboration", "Branding", "Squarespace"]
-timeline: "June 2025"
-
-# project-repository: link for github or figma files
+homepageTags: ["UX/UI", "FREELANCE", "SQUARESPACE"]
+timeline: "JUNE 25'"
 projectRepository: "https://www.faithselects.com/"
-
-# live-demo: product link
 liveDemo: "https://www.faithselects.com/"
-
-# context & summary
 projectDescription: |
-  Solo freelance project improving a small Squarespace storefront. I streamlined the user flow, 
-  preserved the brand identity, and improved content organization and clarity. FaithSelects is 
-  run by two Christian mothers, Faith and Sue, who curate natural wellness remedies. Faith wanted 
+  Solo freelance project improving a small Squarespace storefront. I streamlined the user flow,
+  preserved the brand identity, and improved content organization and clarity. FaithSelects is
+  run by two Christian mothers, Faith and Sue, who curate natural wellness remedies. Faith wanted
   her existing storefront modernized while staying true to its roots.
-
-# permalink: 11ty internal link
 permalink: "/faithselects/"
 ---
 
-{# DESIGN PROCESS #}
-<section class="grid grid-cols-1 pb-16 sm:contents">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide">PROCESS</h1>
-    <p>
-      Faith's main requirements were to work within Squarespace, keep the original media, and create
-      a modern feel. She also encouraged me to use AI, which I applied to refine the written
-      content. Working solely in Squarespace, I iterated on the site through three rounds,
-      explaining my decisions each time and incorporating feedback until all requirements were met.
-    </p>
+{% from "macros/section.njk" import sectionGrid %} {% call sectionGrid() %}
+<div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+  <h1 class="text-xl font-medium tracking-wide">PROCESS</h1>
+  <p>
+    Faith's main requirements were to work within Squarespace, keep the original media, and create a
+    modern feel. She also encouraged me to use AI, which I applied to refine the written content.
+    Working solely in Squarespace, I iterated on the site through three rounds, explaining my
+    decisions each time and incorporating feedback until all requirements were met.
+  </p>
+</div>
+<div
+  class="order-1 -mx-5 min-w-0 overflow-x-auto px-5 pb-4 sm:order-0 sm:col-start-2 sm:mx-0 sm:px-0 sm:pb-0"
+>
+  <div class="flex w-max snap-x snap-mandatory flex-row flex-nowrap gap-4 pb-4 sm:pb-0">
+    <img
+      class="w-[85vw] shrink-0 snap-center sm:w-[min(500px,45vw)]"
+      src="{{ '/assets/FS-imgs/FS-old-home.png' | url }}"
+      alt="Before: FaithSelects home page"
+    />
+    <img
+      class="w-[85vw] shrink-0 snap-center sm:w-[min(500px,45vw)]"
+      src="{{ '/assets/FS-imgs/FS-new-home.png' | url }}"
+      alt="After: FaithSelects home page"
+    />
   </div>
-  <div class="min-w-0 overflow-x-auto order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2 -mx-5 px-5 sm:mx-0 sm:px-0">
-    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max">
-      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="{{ '/assets/FS-imgs/FS-old-home.png' | url }}" alt="Before: FaithSelects home page" />
-      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="{{ '/assets/FS-imgs/FS-new-home.png' | url }}" alt="After: FaithSelects home page" />
-    </div>
+</div>
+{% endcall %} {% call sectionGrid() %}
+<div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+  <h1 class="text-xl font-medium tracking-wide">DECISIONS</h1>
+  <p>
+    I structured the user flow around three priorities: present the brand, prioritize shopping, then
+    provide resources for deeper engagement. An interactive hero section leads the page, followed by
+    the best-selling products to encourage conversions. Site-wide content was rewritten with AI
+    assistance to make it concise, clear, and aligned with the original meaning. Brand identity was
+    maintained through earthy tones, re-used written material and imagery, and the existing
+    Squarespace template. The site layout uses clearly labeled sections with color changes and
+    borders for easy scanning, while shop and blog pages were reorganized into scannable grids. The
+    mobile layout was fully reworked to accommodate these changes.
+  </p>
+</div>
+<div
+  class="order-1 -mx-5 min-w-0 overflow-x-auto px-5 pb-4 sm:order-0 sm:col-start-2 sm:mx-0 sm:px-0 sm:pb-0"
+>
+  <div class="flex w-max snap-x snap-mandatory flex-row flex-nowrap gap-4 pb-4 sm:pb-0">
+    <img
+      class="w-[85vw] shrink-0 snap-center sm:w-[min(500px,45vw)]"
+      src="{{ '/assets/FS-imgs/FS-old-about.png' | url }}"
+      alt="Before: FaithSelects about page"
+    />
+    <img
+      class="w-[85vw] shrink-0 snap-center sm:w-[min(500px,45vw)]"
+      src="{{ '/assets/FS-imgs/FS-new-about.png' | url }}"
+      alt="After: FaithSelects about page"
+    />
   </div>
-</section>
-{# DESIGN DECISIONS #}
-<section class="grid grid-cols-1 pb-16 sm:contents">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide">DECISIONS</h1>
-    <p>
-      I structured the user flow around three priorities: present the brand, prioritize shopping,
-      then provide resources for deeper engagement. An interactive hero section leads the page,
-      followed by the best-selling products to encourage conversions. Site-wide content was
-      rewritten with AI assistance to make it concise, clear, and aligned with the original meaning.
-      Brand identity was maintained through earthy tones, re-used written material and imagery, and
-      the existing Squarespace template. The site layout uses clearly labeled sections with color
-      changes and borders for easy scanning, while shop and blog pages were reorganized into
-      scannable grids. The mobile layout was fully reworked to accommodate these changes.
-    </p>
-  </div>
-  <div class="min-w-0 overflow-x-auto order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2 -mx-5 px-5 sm:mx-0 sm:px-0">
-    <div class="flex flex-row flex-nowrap gap-4 pb-4 sm:pb-0 snap-x snap-mandatory w-max">
-      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="{{ '/assets/FS-imgs/FS-old-about.png' | url }}" alt="Before: FaithSelects about page" />
-      <img class="shrink-0 w-[85vw] sm:w-[min(500px,45vw)] snap-center" src="{{ '/assets/FS-imgs/FS-new-about.png' | url }}" alt="After: FaithSelects about page" />
-    </div>
-  </div>
-</section>
+</div>
+{% endcall %}

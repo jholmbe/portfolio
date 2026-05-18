@@ -1,0 +1,26 @@
+{# Case-study section layouts (desktop: text col 1, media col 2). Usage in project templates: {%
+from "macros/section.njk" import section, sectionImageOnly, sectionGrid %} #} {% macro
+section(title, imageSrc, imageAlt="", pbClass="pb-16") %}
+<section class="grid grid-cols-1 {{ pbClass }} sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">{{ title }}</h1>
+    {{ caller() }}
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="{{ imageSrc | url }}"
+    alt="{{ imageAlt }}"
+  />
+</section>
+{% endmacro %} {% macro sectionImageOnly(imageSrc, imageAlt="", pbClass="pb-4") %}
+<section class="grid grid-cols-1 {{ pbClass }} sm:contents">
+  <div class="hidden sm:col-start-1 sm:block"></div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="{{ imageSrc | url }}"
+    alt="{{ imageAlt }}"
+  />
+</section>
+{% endmacro %} {% macro sectionGrid(pbClass="pb-16") %}
+<section class="grid grid-cols-1 {{ pbClass }} sm:contents">{{ caller() }}</section>
+{% endmacro %}
