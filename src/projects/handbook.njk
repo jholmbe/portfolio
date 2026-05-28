@@ -1,0 +1,53 @@
+---
+layout: "project.njk"
+order: 1
+coverImg: "/assets/handbook-imgs/handbook-cover.png"
+altText: "TODO: cover image alt text"
+title: "DOING GOOD HANDBOOK"
+oneLiner: "Student engagement handbook for the UMD Center for Community Engagement"
+tags: ["IA | CAPSTONE | NOTION | @UMD"]
+timeline: "SPRING SEMESTER 26'"
+projectRepository: "https://healthy-cross-196.notion.site/Doing-Good-Handbook-7659e806403082ec990a818c277ce98d"
+projectDescription: |
+  The Doing Good Handbook is a capstone project created in collaboration with the University of Maryland Center 
+  for Community Engagement (UMD CCE). As the primary product designer on a 4-person team, I led the design and 
+  implementation of a modular Notion-based platform that helped students engage more thoughtfully with surrounding 
+  communities through curated opportunities, contextual learning, engagement toolkits, and structured reflection systems.
+permalink: "/handbook/"
+---
+{% from "macros/section.njk" import section, sectionImageOnly %} 
+{% call section("CLIENT & PROBLEM", "/assets/handbook-imgs/handbook-CCE.png", "TODO alt") %}
+<p>The UMD CCE aims to help students engage with communities on and around campus through volunteering, civic 
+  engagement, and community initiatives. However, many students struggle to find opportunities, navigate 
+  fragmented information, or approach community work with sufficient context and awareness. <br><br>The original 
+  scope focused on designing two digital toolkits: “Running a Drive” and “Planning a Good Neighbor Day 
+  Project,” aimed at guiding students through UMD-specific logistics and community engagement resources. 
+  Over time, the project evolved into a broader handbook system after recognizing the need for a more 
+  centralized and scalable platform.</p>
+{% endcall %} 
+{% call section("FEATURES & PURPOSE", "/assets/handbook-imgs/handbook-cover2.png", "TODO alt", "pb-8") %}
+{% endcall %}
+{% call section("LEARNING MODULES", "/assets/handbook-imgs/handbook-mindset.png", "TODO alt", "pb-8") %}
+<p>Through curated readings and reflection prompts, students start by exploring essential concepts like 
+  solidarity, systems thinking, humility, and sustained engagement. The goal was to encourage more 
+  thoughtful and context-aware participation in community work.</p>
+{% endcall %}
+{% call section("VOLUNTEER OPPORTUNITIES", "/assets/handbook-imgs/handbook-opportunity.png", "TODO alt", "pb-8") %}
+<p>A curated collection of actionable opportunities to get involved in community work at and around College Park.</p>
+{% endcall %}
+{% call section("COMMUNITY CONTEXT", "/assets/handbook-imgs/handbook-context.png", "TODO alt", "pb-8") %}
+<p>A repository of local data sources, research materials, and community references intended to help 
+  students better understand the social context surrounding the University of Maryland and College Park area.</p>
+{% endcall %}
+{{ sectionImageOnly("/assets/handbook-imgs/handbook-drive.png", "TODO alt")}} 
+{% call section("TOOLKITS", "/assets/handbook-imgs/handbook-neighbor.png", "TODO alt", "pb-8") %}
+<p>As the project evolved from creating standalone toolkits into building a broader platform for 
+  engagement resources, the “Running a Drive” toolkit currently exists as a wireframe concept for 
+  future capstone teams to expand upon. The “Plan a Good Neighbor Day” toolkit was fully implemented 
+  by my teammate, Caleb Nebiyu.</p>
+{% endcall %}
+{% call section("PERSONAL JOURNAL", "/assets/handbook-imgs/handbook-journal.png", "TODO alt", "pb-8") %}
+<p>A structured journaling and reflection space designed to help students document volunteering 
+  experiences, track personal growth over time, and critically reflect on community engagement 
+  through reusable templates and guided prompts.</p>
+{% endcall %}
