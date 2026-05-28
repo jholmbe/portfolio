@@ -15,8 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
   </head>
   <body
-    class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
+    class="bg-primary text-secondary mx-5 font-sans font-light sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
@@ -51,9 +50,7 @@
       </div>
       <nav
         id="mobile-menu"
-        class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-base uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
+        class="bg-primary *:border-secondary hidden h-[92vh] flex-col items-center justify-center gap-6 text-base uppercase *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="/#projects">projects</a>
         <a href="/#about">About</a>
@@ -88,96 +85,113 @@
     </script>
 
     
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
-      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="/">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-base font-mono">
+    <div class="hidden flex-col gap-5 uppercase sm:col-start-1 sm:flex">
+      <div>
+        <a class="text-xl font-medium tracking-widest whitespace-nowrap" href="/"
+          >Justin Holmberg</a
+        >
+      </div>
+      <ul class="space-y-2 font-mono text-base">
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#about">About Me</a></li>
         <li><a href="/#connect">Connect</a></li>
       </ul>
     </div>
 
-    <div class="sm:contents">
+    
+<div class="sm:contents">
   <div>
-    
-    
-    <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game interface" />
+    <img class="project-cover-img max-w-full pb-4" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game interface" />
 
-    
-    <ul class="flex flex-row items-center gap-1 text-sm font-light uppercase">
+    <div class="flex flex-row items-center justify-between gap-4 text-sm font-light uppercase">
+      <ul class="flex flex-row flex-wrap items-center gap-1">
+        
+        <li>HTML/CSS |</li>
+        
+        <li>JavaScript |</li>
+        
+        <li>Figma</li>
+        
+      </ul>
       
-      <li>HTML/CSS |</li>
+      <span class="shrink-0">June 2025</span>
       
-      <li>JavaScript |</li>
-      
-      <li>Figma</li>
-      
-    </ul>
-    
-    <h1 class="text-xl font-medium tracking-wide pt-0.5"><a href="https://jholmbe.github.io/snake-game/">Snake Game</a></h1>
+    </div>
 
-    
+    <h1 class="pt-0.5 text-xl font-medium tracking-wide">
+      
+      <a href="https://jholmbe.github.io/snake-game/" target="_blank" rel="noopener noreferrer">Snake Game</a>
+      
+    </h1>
+
     <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
 
-    <div class="divider my-4 h-px w-0 bg-secondary"></div>
-
-    
-    <div class="pb-16">
-      The classic Snake game, built using HTML, CSS, and vanilla JavaScript, with a fully custom UI designed from
+    <div class="pb-16">The classic Snake game, built using HTML, CSS, and vanilla JavaScript, with a fully custom UI designed from
 scratch in Figma.
-I created this project independently, inspired by a 
-<a class="font-mono text-base uppercase" href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">project-based-learning repository<svg class="inline-block align-middle ml-0.5" xmlns="http://www.w3.org/2000/svg" height="1rem" viewBox="0 0 24 24" width="1rem" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a> 
+I created this project independently, inspired by a
+<a class="font-mono text-base uppercase" href="https://github.com/practical-tutorials/project-based-learning?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">project-based-learning repository<svg class="inline-block align-middle ml-0.5" xmlns="http://www.w3.org/2000/svg" height="1rem" viewBox="0 0 24 24" width="1rem" fill="white"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
 that I found. My main objective was to learn javascript fundamentals and produce something tangible. The initial version of the game was rather rudimentary,
 so I thought—why not give it personality?
-
-    </div>
+</div>
   </div>
 
-    
   
+ 
 <section class="grid grid-cols-1 pb-4 sm:contents">
-  <div class="hidden sm:block sm:col-start-1"></div>
-  <div class="flex gap-4 sm:mr-24 order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2">
-    <img class="w-1/2" src="/assets/snake-imgs/retro-tv-img-1.jpg" alt="x" />
-    <img class="w-1/2" src="/assets/snake-imgs/retro-tv-img-2.jpg" alt="x" />
-  </div>
+<div class="hidden sm:col-start-1 sm:block"></div>
+<div class="order-1 flex gap-4 pb-4 sm:order-0 sm:col-start-2 sm:mr-24 sm:pb-0">
+  <img
+    class="w-1/2"
+    src="/assets/snake-imgs/retro-tv-img-1.jpg"
+    alt="Retro TV reference 1"
+  />
+  <img
+    class="w-1/2"
+    src="/assets/snake-imgs/retro-tv-img-2.jpg"
+    alt="Retro TV reference 2"
+  />
+</div>
 </section>
-
-
+ 
 <section class="grid grid-cols-1 pb-16 sm:contents">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">UI DESIGN</h1>
-    <p>
-      I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix
-      of vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those
-      models. The interactive keys, quicker snake, and pause function were added for more feedback
-      and to match our ever decreasing attention spans. The snake and apple pixel art was inspired
-      by other sprite media.
-    </p>
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">UI DESIGN</h1>
+    
+<p>
+  I leaned into a nostalgic and retro vibe—using a 2000s-era TV model. The colors are from a mix of
+  vintage photos. The logo mimics the metallic, embossed brand tags commonly found on those models.
+  The interactive keys, quicker snake, and pause function were added for more feedback and to match
+  our ever decreasing attention spans. The snake and apple pixel art was inspired by other sprite
+  media.
+</p>
+
   </div>
-  <img class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2" src="/assets/snake-imgs/snake-figma.png" alt="x" />
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/snake-imgs/snake-figma.png"
+    alt=""
+  />
 </section>
-
-
+ 
 <section class="grid grid-cols-1 pb-16 sm:contents">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">THE CODE</h1>
-    <p>
-      Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
-      modules (minus the React section). I'm more comfortable in Python so programming logic isn't
-      new to me, however, JavaScript syntax definitely still is. I do appreciate clean, organized,
-      and efficient code so I made an effort to group elements and be concise/descriptive with
-      names.
-      <br />
-      <br />
-      Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to
-      practice my critical thinking skills and maximize learning. On the other, AI was helpful for
-      discovering JavaScript-specific concepts, coding conventions, common practices, and for
-      debugging my code.
-    </p>
-  </div>
-  <div class="order-1 pb-4 sm:pb-0 min-w-0 sm:order-0 sm:col-start-2">
-     <pre class="w-full max-w-full max-h-[300px] sm:max-h-[500px] min-w-0 overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">// Canvas width = 760, height = 460
+<div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+  <h1 class="pt-0.5 text-xl font-medium tracking-wide">THE CODE</h1>
+  <p>
+    Prior to starting this project, I worked through the MDN Web Docs on core HTML/CSS and JS
+    modules (minus the React section). I'm more comfortable in Python so programming logic isn't new
+    to me, however, JavaScript syntax definitely still is. I do appreciate clean, organized, and
+    efficient code so I made an effort to group elements and be concise/descriptive with names.
+    <br />
+    <br />
+    Furthermore, I kept a balanced approach when using AI tools. On one hand, I avoided them to
+    practice my critical thinking skills and maximize learning. On the other, AI was helpful for
+    discovering JavaScript-specific concepts, coding conventions, common practices, and for
+    debugging my code.
+  </p>
+</div>
+<div class="order-1 min-w-0 pb-4 sm:order-0 sm:col-start-2 sm:pb-0">
+  <pre class="w-full max-w-full max-h-[300px] sm:max-h-[500px] min-w-0 overflow-auto !text-xs sm:!text-sm !m-0"><code class="language-js !text-xs sm:!text-sm">// Canvas width = 760, height = 460
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -393,55 +407,52 @@ window.addEventListener("keyup", function (e) {
 // Start the game loop initially
 startGameLoop();
 </code></pre>
-  </div>
+</div>
 </section>
-
-
+ 
 <section class="grid grid-cols-1 pb-4 sm:contents">
-  <div class="hidden sm:block sm:col-start-1"></div>
-  <video
-    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
-    src="/assets/snake-imgs/snake-progress-day6.mp4"
-    autoplay
-    loop
-    muted
-    playsinline
-    aria-describedby="snake-day6"
-  >
-    Your browser does not support the video tag.
-  </video>
+<div class="hidden sm:col-start-1 sm:block"></div>
+<video
+  class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+  src="/assets/snake-imgs/snake-progress-day6.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+  aria-describedby="snake-day6"
+>
+  Your browser does not support the video tag.
+</video>
 </section>
-
-
+ 
 <section class="grid grid-cols-1 pb-8 sm:contents">
-  <div class="flex flex-col justify-end gap-2 order-2 sm:order-0 sm:col-start-1">
-    <h1 class="text-xl font-medium tracking-wide pt-0.5">RETROSPECTIVE</h1>
-    <p>
-      I wasn't very comfortable using Git when I started this project, so I kept the documentation
-      in a text file. As I've contributed more to this website, I've become more confident with Git
-      and wish I took full advantage of the commit history.
-    </p>
-  </div>
-  <video
-    class="w-full order-1 pb-4 sm:pb-0 sm:order-0 sm:col-start-2"
-    src="/assets/snake-imgs/snake-progress-day3.mp4"
-    autoplay
-    loop
-    muted
-    playsinline
-    aria-describedby="snake-day3"
-  >
-    Your browser does not support the video tag.
-  </video>
+<div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+  <h1 class="pt-0.5 text-xl font-medium tracking-wide">RETROSPECTIVE</h1>
+  <p>
+    I wasn't very comfortable using Git when I started this project, so I kept the documentation in
+    a text file. As I've contributed more to this website, I've become more confident with Git and
+    wish I took full advantage of the commit history.
+  </p>
+</div>
+<video
+  class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+  src="/assets/snake-imgs/snake-progress-day3.mp4"
+  autoplay
+  loop
+  muted
+  playsinline
+  aria-describedby="snake-day3"
+>
+  Your browser does not support the video tag.
+</video>
 </section>
 
-    
-  
-  <footer class="pb-16 sm:col-start-1 sm:col-span-2">
-    
-    <div class="divider my-4 h-px w-0 bg-secondary"></div>
+
+
+  <footer class="pb-16 sm:col-span-2 sm:col-start-1">
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
     <div class="flex flex-row gap-4 sm:gap-8">
-      <div class="flex flex-row gap-2 font-mono text-base uppercase items-center sm:text-xl">
+      <div class="flex flex-row items-center gap-2 font-mono text-base uppercase sm:text-lg">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1.1rem"
@@ -455,10 +466,8 @@ startGameLoop();
         <a href="/">PROJECTS</a>
       </div>
 
-      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center sm:text-xl">
-        <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer"
-          >REPOSITORY</a
-        >
+      <div class="flex flex-row items-center gap-1 font-mono text-base uppercase sm:text-lg">
+        <a href="https://github.com/jholmbe/snake-game" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
         <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
       <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
@@ -480,10 +489,9 @@ startGameLoop();
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 },
       );
       dividers.forEach((divider) => observer.observe(divider));
-
     </script>
   </body>
 </html>

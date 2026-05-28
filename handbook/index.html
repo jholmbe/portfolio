@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Justin Holmberg</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  </head>
+  <body
+    class="bg-primary text-secondary mx-5 font-sans font-light sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
+  >
+    
+    <div class="sm:hidden">
+      <div class="flex h-[10vh] items-center justify-between">
+        <a class="text-xl font-medium tracking-widest uppercase" href="/"
+          >Justin Holmberg</a
+        >
+        <button id="menu-toggle" class="py-2 pl-2" aria-label="Toggle menu">
+          <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            class="hidden h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="bg-primary *:border-secondary hidden h-[92vh] flex-col items-center justify-center gap-6 text-base uppercase *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
+      >
+        <a href="/#projects">projects</a>
+        <a href="/#about">About</a>
+        <a href="/#connect">Connect</a>
+      </nav>
+    </div>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+      const menuLinks = menu.querySelectorAll("a");
+
+      function closeMenu() {
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+        menuIcon.classList.remove("hidden");
+        closeIcon.classList.add("hidden");
+      }
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
+
+    
+    <div class="hidden flex-col gap-5 uppercase sm:col-start-1 sm:flex">
+      <div>
+        <a class="text-xl font-medium tracking-widest whitespace-nowrap" href="/"
+          >Justin Holmberg</a
+        >
+      </div>
+      <ul class="space-y-2 font-mono text-base">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#about">About Me</a></li>
+        <li><a href="/#connect">Connect</a></li>
+      </ul>
+    </div>
+
+    
+<div class="sm:contents">
+  <div>
+    <img class="project-cover-img max-w-full pb-4" src="/assets/handbook-imgs/handbook-cover.png" alt="TODO: cover image alt text" />
+
+    <div class="flex flex-row items-center justify-between gap-4 text-sm font-light uppercase">
+      <ul class="flex flex-row flex-wrap items-center gap-1">
+        
+        <li>IA | CAPSTONE | NOTION | @UMD</li>
+        
+      </ul>
+      
+      <span class="shrink-0">SPRING SEMESTER 26&#39;</span>
+      
+    </div>
+
+    <h1 class="pt-0.5 text-xl font-medium tracking-wide">
+       DOING GOOD HANDBOOK 
+    </h1>
+
+    <div class="font-mono text-base">Student engagement handbook for the UMD Center for Community Engagement</div>
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
+
+    <div class="pb-16">The Doing Good Handbook is a capstone project created in collaboration with the University of Maryland Center 
+for Community Engagement (UMD CCE). As the primary product designer on a 4-person team, I led the design and 
+implementation of a modular Notion-based platform that helped students engage more thoughtfully with surrounding 
+communities through curated opportunities, contextual learning, engagement toolkits, and structured reflection systems.
+</div>
+  </div>
+
+   
+
+<section class="grid grid-cols-1 pb-16 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">CLIENT &amp; PROBLEM</h1>
+    
+<p>The UMD CCE aims to help students engage with communities on and around campus through volunteering, civic 
+  engagement, and community initiatives. However, many students struggle to find opportunities, navigate 
+  fragmented information, or approach community work with sufficient context and awareness. <br><br>The original 
+  scope focused on designing two digital toolkits: “Running a Drive” and “Planning a Good Neighbor Day 
+  Project,” aimed at guiding students through UMD-specific logistics and community engagement resources. 
+  Over time, the project evolved into a broader handbook system after recognizing the need for a more 
+  centralized and scalable platform.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-CCE.png"
+    alt="TODO alt"
+  />
+</section>
+ 
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">FEATURES &amp; PURPOSE</h1>
+    
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-cover2.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">LEARNING MODULES</h1>
+    
+<p>Through curated readings and reflection prompts, students start by exploring essential concepts like 
+  solidarity, systems thinking, humility, and sustained engagement. The goal was to encourage more 
+  thoughtful and context-aware participation in community work.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-mindset.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">VOLUNTEER OPPORTUNITIES</h1>
+    
+<p>A curated collection of actionable opportunities to get involved in community work at and around College Park.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-opportunity.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">COMMUNITY CONTEXT</h1>
+    
+<p>A repository of local data sources, research materials, and community references intended to help 
+  students better understand the social context surrounding the University of Maryland and College Park area.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-context.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+<section class="grid grid-cols-1 pb-4 sm:contents">
+  <div class="hidden sm:col-start-1 sm:block"></div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-drive.png"
+    alt="TODO alt"
+  />
+</section>
+ 
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">TOOLKITS</h1>
+    
+<p>As the project evolved from creating standalone toolkits into building a broader platform for 
+  engagement resources, the “Running a Drive” toolkit currently exists as a wireframe concept for 
+  future capstone teams to expand upon. The “Plan a Good Neighbor Day” toolkit was fully implemented 
+  by my teammate, Caleb Nebiyu.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-neighbor.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+<section class="grid grid-cols-1 pb-8 sm:contents">
+  <div class="order-2 flex flex-col justify-end gap-2 sm:order-0 sm:col-start-1">
+    <h1 class="text-xl font-medium tracking-wide">PERSONAL JOURNAL</h1>
+    
+<p>A structured journaling and reflection space designed to help students document volunteering 
+  experiences, track personal growth over time, and critically reflect on community engagement 
+  through reusable templates and guided prompts.</p>
+
+  </div>
+  <img
+    class="order-1 w-full pb-4 sm:order-0 sm:col-start-2 sm:pb-0"
+    src="/assets/handbook-imgs/handbook-journal.png"
+    alt="TODO alt"
+  />
+</section>
+
+
+  <footer class="pb-16 sm:col-span-2 sm:col-start-1">
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
+    <div class="flex flex-row gap-4 sm:gap-8">
+      <div class="flex flex-row items-center gap-2 font-mono text-base uppercase sm:text-lg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.1rem"
+          viewBox="0 0 24 24"
+          width="1.1rem"
+          fill="white"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+        </svg>
+        <a href="/">PROJECTS</a>
+      </div>
+
+      <div class="flex flex-row items-center gap-1 font-mono text-base uppercase sm:text-lg">
+        <a href="https://healthy-cross-196.notion.site/Doing-Good-Handbook-7659e806403082ec990a818c277ce98d" target="_blank" rel="noopener noreferrer">REPOSITORY</a>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+    </svg>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+    <script>
+      const dividers = document.querySelectorAll(".divider");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-expand");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      dividers.forEach((divider) => observer.observe(divider));
+    </script>
+  </body>
+</html>

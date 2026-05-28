@@ -15,8 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
   </head>
   <body
-    class="bg-primary text-secondary font-sans font-light mx-5
-    sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
+    class="bg-primary text-secondary mx-5 font-sans font-light sm:mx-16 sm:my-12 sm:grid sm:grid-cols-[1fr_3fr] sm:gap-8"
   >
     
     <div class="sm:hidden">
@@ -51,9 +50,7 @@
       </div>
       <nav
         id="mobile-menu"
-        class="bg-primary hidden h-[92vh] flex-col items-center 
-        justify-center gap-6 text-base uppercase 
-        *:border-secondary *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
+        class="bg-primary *:border-secondary hidden h-[92vh] flex-col items-center justify-center gap-6 text-base uppercase *:mx-4 *:w-9/10 *:border-b *:pb-2 *:text-start *:font-mono"
       >
         <a href="/#projects">projects</a>
         <a href="/#about">About</a>
@@ -88,9 +85,13 @@
     </script>
 
     
-    <div class="hidden sm:flex sm:col-start-1 flex-col gap-5 uppercase">
-      <div><a class="text-xl font-medium whitespace-nowrap tracking-widest" href="/">Justin Holmberg</a></div>
-      <ul class="space-y-2 text-base font-mono">
+    <div class="hidden flex-col gap-5 uppercase sm:col-start-1 sm:flex">
+      <div>
+        <a class="text-xl font-medium tracking-widest whitespace-nowrap" href="/"
+          >Justin Holmberg</a
+        >
+      </div>
+      <ul class="space-y-2 font-mono text-base">
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#about">About Me</a></li>
         <li><a href="/#connect">Connect</a></li>
@@ -102,111 +103,153 @@
 <div class="sm:col-start-2" id="projects">
   
   <div class="pb-6">
-    <a class="project-card block" href="fabric">
-      
-      <img class="max-w-full pb-4 project-cover-img" src="/assets/fabric-imgs/fabric-cover-img.png" alt="FABRIC Landing Page" />
-      
-      <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
-      
-      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">FABRIC</h1>
-      
+    <a class="project-card block" href="/handbook/">
+      <img
+        class="project-cover-img max-w-full pb-4"
+        src="/assets/handbook-imgs/handbook-cover.png"
+        alt="TODO: cover image alt text"
+      />
+      <div class="text-sm font-light">
+        
+        IA | CAPSTONE | NOTION | @UMD 
+      </div>
+      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">DOING GOOD HANDBOOK</h1>
+      <div class="font-mono text-base">Student engagement handbook for the UMD Center for Community Engagement</div>
+      <div class="divider bg-secondary my-4 h-px w-0"></div>
+    </a>
+  </div>
+  
+  <div class="pb-6">
+    <a class="project-card block" href="/fabric/">
+      <img
+        class="project-cover-img max-w-full pb-4"
+        src="/assets/fabric-imgs/fabric-cover-img.png"
+        alt="FABRIC landing page"
+      />
+      <div class="text-sm font-light">
+        
+        UI/UX | FIGMA | @UMD 
+      </div>
+      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">FABRIC</h1>
       <div class="font-mono text-base">timeless creative coding archive</div>
-      
-      <div class="divider my-4 h-px w-0 bg-secondary"></div>
+      <div class="divider bg-secondary my-4 h-px w-0"></div>
     </a>
   </div>
   
   <div class="pb-6">
-    <a class="project-card block" href="project-kilter">
-      
-      <img class="max-w-full pb-4 project-cover-img" src="/assets/kilter-imgs/kilter-cover-img.png" alt="Project Kilter UI Landing Page" />
-      
-      <div class="text-sm font-light">UI/UX | FIGMA | @UMD</div>
-      
-      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">PROJECT: KILTER</h1>
-      
-      <div class="font-mono text-base">minimalist spreadsheet application</div>
-      
-      <div class="divider my-4 h-px w-0 bg-secondary"></div>
+    <a class="project-card block" href="/project-kilter/">
+      <img
+        class="project-cover-img max-w-full pb-4"
+        src="/assets/kilter-imgs/kilter-cover-img.png"
+        alt="Three mobile UI mockups of project: kilter standing vertically next to each other."
+      />
+      <div class="text-sm font-light">
+        
+        UI/UX | FIGMA | @UMD 
+      </div>
+      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">project: kilter</h1>
+      <div class="font-mono text-base">minimalist spreadsheet application for weightlifting</div>
+      <div class="divider bg-secondary my-4 h-px w-0"></div>
     </a>
   </div>
   
   <div class="pb-6">
-    <a class="project-card block" href="snake-game">
-      
-      <img class="max-w-full pb-4 project-cover-img" src="/assets/snake-imgs/snake-cover-img.png" alt="Snake Game Thumbnail" />
-      
-      <div class="text-sm font-light">HTML/CSS | JAVASCRIPT | FIGMA</div>
-      
-      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">Snake Game</h1>
-      
+    <a class="project-card block" href="/snake-game/">
+      <img
+        class="project-cover-img max-w-full pb-4"
+        src="/assets/snake-imgs/snake-cover-img.png"
+        alt="Snake Game interface"
+      />
+      <div class="text-sm font-light">
+        
+        HTML/CSS | JavaScript | Figma 
+      </div>
+      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">Snake Game</h1>
       <div class="font-mono text-base">browser-based arcade classic with custom UI</div>
-      
-      <div class="divider my-4 h-px w-0 bg-secondary"></div>
+      <div class="divider bg-secondary my-4 h-px w-0"></div>
     </a>
   </div>
   
   <div class="pb-6">
-    <a class="project-card block" href="faithselects">
-      
-      <img class="max-w-full pb-4 project-cover-img" src="/assets/FS-imgs/FS-cover-img.png" alt="FaithSelects.com Landing Page" />
-      
-      <div class="text-sm font-light">UX/UI | FREELANCE | SQUARESPACE</div>
-      
-      <h1 class="text-xl font-medium tracking-wide pt-0.5 uppercase">FaithSelects.com</h1>
-      
+    <a class="project-card block" href="/faithselects/">
+      <img
+        class="project-cover-img max-w-full pb-4"
+        src="/assets/FS-imgs/FS-cover-img.png"
+        alt="FaithSelects SquareSpace Landing Page"
+      />
+      <div class="text-sm font-light">
+         UX/UI | FREELANCE | SQUARESPACE 
+      </div>
+      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">FaithSelects.com</h1>
       <div class="font-mono text-base">website redesign for FaithSelects, a small herbal business</div>
-      
-      <div class="divider my-4 h-px w-0 bg-secondary"></div>
+      <div class="divider bg-secondary my-4 h-px w-0"></div>
     </a>
   </div>
   
 </div>
-<div class="hidden sm:block sm:col-start-1"></div>
+<div class="hidden sm:col-start-1 sm:block"></div>
 
 <div class="flex flex-col gap-8 pb-16 sm:col-start-2">
-    
+  
+  <div class="w-[50vw] shrink-0 sm:w-64 md:w-72 lg:w-80 xl:w-96">
+    <img
+      class="aspect-3/4 w-full object-cover object-top"
+      src="/assets/pfp.jpg"
+      alt="Justin Holmberg"
+    />
+  </div>
+  
   <div id="about" class="space-y-2">
     <h1 class="text-xl font-medium tracking-wide">ABOUT</h1>
     <p>
-      Software is a tool that has the ability to greatly affect people's lives, 
-      therefore it should be used responsibly. I'm interested in AI-driven 
-      methods for Product and UX design, frontend development, and the ethical use of 
-      technology to create tools with positive impact.
+      Hi, I recently graduated from the University of Maryland, College Park, with a degree in 
+      Technology & Information Design (May, 2026). I'm interested in AI-driven methods for Product 
+      and UX design, frontend development, and the ethical use of technology to create tools with 
+      positive impact. I believe that software is a tool that has the ability to greatly affect 
+      people's lives and therefore should be used responsibly. Currently reading 
+      <a href="https://www.goodreads.com/en/book/show/171681821-the-anxious-generation" 
+      target="_blank" rel="noopener noreferrer">"The Anxious Generation"</a> by Jonathan Haidt.
     </p>
   </div>
-    
-    <div class="space-y-2">
-      <h1 class="text-xl font-medium tracking-wide">WEBSITE</h1>
-      <p>
-        Welcome to my portfolio site, built using Eleventy/11ty, Tailwind, and *agentic engineering*. 
-      </p>
-      <div class="flex flex-row gap-1 font-mono text-base uppercase items-center pt-2">
-        <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer"
-          >REPOSITORY</a
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+  
+  <div class="space-y-2">
+    <h1 class="text-xl font-medium tracking-wide">WEBSITE</h1>
+    <p>
+      Welcome to my portfolio site, built using Eleventy/11ty, Tailwind, and *agentic engineering*.
+    </p>
+    <div class="flex flex-row items-center gap-1 pt-2 font-mono text-base uppercase">
+      <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer"
+        >REPOSITORY</a
+      >
+      <svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
       <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
     </svg>
-      </div>
     </div>
+  </div>
 
-    
-    <div id="connect" class="space-y-4">
-      <h1 class="text-xl font-medium tracking-wide">CONNECT</h1>
-      <ul class="space-y-2 font-mono text-base uppercase *:flex *:items-center *:gap-1 *:flex-row">
-        <li><a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">linkedin.com/in/justin-holmberg</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+  
+  <div id="connect" class="space-y-4">
+    <h1 class="text-xl font-medium tracking-wide">CONNECT</h1>
+    <ul class="space-y-2 font-mono text-base uppercase *:flex *:flex-row *:items-center *:gap-1">
+      <li>
+        <a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank"
+          >linkedin.com/in/justin-holmberg</a
+        ><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
       <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-    </svg></li>
-        <li><a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
+    </svg>
+      </li>
+      <li>
+        <a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a><svg xmlns="http://www.w3.org/2000/svg" height="1.1rem" viewBox="0 0 24 24" width="1.1rem" fill="white">
       <path d="M0 0h24v24H0z" fill="none"/>
       <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
-    </svg></li>
-      </ul>
-    </div>
+    </svg>
+      </li>
+    </ul>
   </div>
 </div>
 
@@ -222,10 +265,9 @@
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 },
       );
       dividers.forEach((divider) => observer.observe(divider));
-
     </script>
   </body>
 </html>
