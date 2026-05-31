@@ -20,6 +20,9 @@
     --font-weight-medium: 500;
     --tracking-wide: 0.025em;
     --tracking-widest: 0.1em;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #2a2a2a;
@@ -462,29 +465,9 @@
       margin-inline: calc(var(--spacing) * 4);
     }
   }
-  .\*\:flex {
-    :is(& > *) {
-      display: flex;
-    }
-  }
   .\*\:w-9\/10 {
     :is(& > *) {
       width: calc(9 / 10 * 100%);
-    }
-  }
-  .\*\:flex-row {
-    :is(& > *) {
-      flex-direction: row;
-    }
-  }
-  .\*\:items-center {
-    :is(& > *) {
-      align-items: center;
-    }
-  }
-  .\*\:gap-1 {
-    :is(& > *) {
-      gap: calc(var(--spacing) * 1);
     }
   }
   .\*\:border-b {
@@ -664,6 +647,30 @@
     width: 100%;
   }
 }
+@layer components {
+  .nav-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 0);
+  }
+  .nav-link::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: calc(var(--spacing) * 0);
+    background-color: var(--color-secondary);
+    transition-property: width;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  .nav-link:hover::after, .nav-link:focus-visible::after {
+    width: 100%;
+  }
+}
 @property --tw-scroll-snap-strictness {
   syntax: "*";
   inherits: false;
@@ -687,6 +694,14 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -695,6 +710,8 @@
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
     }
   }
 }
