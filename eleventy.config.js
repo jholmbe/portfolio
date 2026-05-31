@@ -17,10 +17,24 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("CNAME");
 
+  const sortByOrder = (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0);
+  const projectItems = (collection) =>
+    collection.getFilteredByGlob("src/projects/*.njk");
+
   eleventyConfig.addCollection("projects", (collection) => {
-    return collection
-      .getFilteredByGlob("src/projects/*.njk")
-      .sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+    return projectItems(collection).sort(sortByOrder);
+  });
+
+  eleventyConfig.addCollection("projectsActive", (collection) => {
+    return projectItems(collection)
+      .filter((item) => !item.data.archived)
+      .sort(sortByOrder);
+  });
+
+  eleventyConfig.addCollection("projectsArchived", (collection) => {
+    return projectItems(collection)
+      .filter((item) => item.data.archived)
+      .sort(sortByOrder);
   });
 
   return {

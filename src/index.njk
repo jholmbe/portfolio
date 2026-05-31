@@ -4,24 +4,26 @@ layout: "base.njk"
 
 {# MAIN: single block in right column, inline with nav on left #}
 <div class="sm:col-start-2" id="projects">
-  {% for project in collections.projects %}
-  <div class="pb-6">
-    <a class="project-card block" href="{{ project.url }}">
-      <img
-        class="project-cover-img max-w-full pb-4"
-        src="{{ project.data.coverImg | url }}"
-        alt="{{ project.data.altText }}"
-      />
-      <div class="text-sm font-light">
-        {% if project.data.homepageTags %} {{ project.data.homepageTags | join(" | ") }} {% else %}
-        {{ project.data.tags | join(" | ") }} {% endif %}
-      </div>
-      <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">{{ project.data.title }}</h1>
-      <div class="font-mono text-base">{{ project.data.oneLiner }}</div>
-      <div class="divider bg-secondary my-4 h-px w-0"></div>
+  {% for project in collections.projectsActive %} {% include "partials/project-card.njk" %} {%
+  endfor %}
+  <div class="flex justify-end pb-16">
+    <a class="nav-link text-base font-mono uppercase" href="{{ '/archive/' | url }}">
+      <span class="flex flex-row items-center gap-2">
+        PROJECT ARCHIVE
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.1rem"
+          viewBox="0 0 24 24"
+          width="1.1rem"
+          fill="white"
+          aria-hidden="true"
+        >
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+        </svg>
+      </span>
     </a>
   </div>
-  {% endfor %}
 </div>
 <div class="hidden sm:col-start-1 sm:block"></div>
 {# FOOTER #}
@@ -38,13 +40,19 @@ layout: "base.njk"
   <div id="about" class="space-y-2">
     <h1 class="text-xl font-medium tracking-wide">ABOUT</h1>
     <p>
-      Hi, I recently graduated from the University of Maryland, College Park, with a degree in 
-      Technology & Information Design (May, 2026). I'm interested in AI-driven methods for Product 
-      and UX design, frontend development, and the ethical use of technology to create tools with 
-      positive impact. I believe that software is a tool that has the ability to greatly affect 
-      people's lives and therefore should be used responsibly. Currently reading 
-      <a href="https://www.goodreads.com/en/book/show/171681821-the-anxious-generation" 
-      target="_blank" rel="noopener noreferrer">"The Anxious Generation"</a> by Jonathan Haidt.
+      Hi, I recently graduated from the University of Maryland, College Park, with a degree in
+      Technology & Information Design (May, 2026). I'm interested in AI-driven methods for Product
+      and UX design, frontend development, and the ethical use of technology to create tools with
+      positive impact. I believe that software is a tool that has the ability to greatly affect
+      people's lives and therefore should be used responsibly. Currently reading
+      <a
+        class="nav-link"
+        href="https://www.goodreads.com/en/book/show/171681821-the-anxious-generation"
+        target="_blank"
+        rel="noopener noreferrer"
+        >"The Anxious Generation"</a
+      >
+      by Jonathan Haidt.
     </p>
   </div>
   {# WEBSITE description #}
@@ -53,29 +61,42 @@ layout: "base.njk"
     <p>
       Welcome to my portfolio site, built using Eleventy/11ty, Tailwind, and *agentic engineering*.
     </p>
-    <div class="flex flex-row items-center gap-1 pt-2 font-mono text-base uppercase">
-      <a href="https://github.com/jholmbe/portfolio" target="_blank" rel="noopener noreferrer"
-        >REPOSITORY</a
+    <div class="pt-2 font-mono text-base uppercase">
+      <a
+        class="nav-link"
+        href="https://github.com/jholmbe/portfolio"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-      {% externalLinkIcon "1.1rem", "white" %}
+        <span class="flex flex-row items-center gap-1">
+          REPOSITORY {% externalLinkIcon "1.1rem", "white" %}
+        </span>
+      </a>
     </div>
   </div>
 
   {# CONTACT links #}
   <div id="connect" class="space-y-4">
     <h1 class="text-xl font-medium tracking-wide">CONNECT</h1>
-    <ul class="space-y-2 font-mono text-base uppercase *:flex *:flex-row *:items-center *:gap-1">
+    <ul class="space-y-4 font-mono text-base uppercase">
       <li>
-        <a href="mailto:justindholmberg@gmail.com" target="_blank">justindholmberg@gmail.com</a>
+        <a class="nav-link" href="mailto:justindholmberg@gmail.com" target="_blank"
+          >justindholmberg@gmail.com</a
+        >
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/justin-holmberg/" target="_blank"
-          >linkedin.com/in/justin-holmberg</a
-        >{% externalLinkIcon "1.1rem", "white" %}
+        <a class="nav-link" href="https://www.linkedin.com/in/justin-holmberg/" target="_blank">
+          <span class="flex flex-row items-center gap-1">
+            linkedin.com/in/justin-holmberg {% externalLinkIcon "1.1rem", "white" %}
+          </span>
+        </a>
       </li>
       <li>
-        <a href="https://github.com/jholmbe" target="_blank">github/jholmbe</a>{% externalLinkIcon
-        "1.1rem", "white" %}
+        <a class="nav-link" href="https://github.com/jholmbe" target="_blank">
+          <span class="flex flex-row items-center gap-1">
+            github/jholmbe {% externalLinkIcon "1.1rem", "white" %}
+          </span>
+        </a>
       </li>
     </ul>
   </div>

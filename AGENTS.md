@@ -47,23 +47,26 @@ jholm-11ty-portfolio/
 ├── package.json
 ├── CNAME
 ├── src/
-│   ├── index.njk             ← homepage (loops collections.projects)
+│   ├── index.njk             ← homepage (loops collections.projectsActive)
+│   ├── archive.njk           ← archived projects (collections.projectsArchived)
 │   ├── input.css
 │   ├── _includes/
 │   │   ├── base.njk
 │   │   ├── project.njk
+│   │   ├── partials/
+│   │   │   └── project-card.njk
 │   │   └── macros/
 │   │       └── section.njk   ← case-study section layouts
 │   ├── projects/             ← canonical project metadata + case-study body
 │   │   ├── fabric.njk
 │   │   ├── project-kilter.njk
-│   │   ├── snake-game.njk    ← user may remove soon
+│   │   ├── snake-game.njk    ← archived (`archived: true`)
 │   │   └── faithselects.njk
 │   └── assets/
 └── .github/workflows/gh-pages.yml
 ```
 
-There is **no** `src/_data/projects.js`. Homepage cards come from the `projects` collection.
+There is **no** `src/_data/projects.js`. Homepage and archive cards come from filtered project collections.
 
 ---
 
@@ -71,7 +74,13 @@ There is **no** `src/_data/projects.js`. Homepage cards come from the `projects`
 
 **Directories:** `input: src`, `output: public`, `pathPrefix: "/"`.
 
-**Collection `projects`:** all `src/projects/*.njk`, sorted by front matter `order` (ascending). Used on the homepage via `collections.projects`.
+**Collections (projects):** all `src/projects/*.njk`, sorted by front matter `order` (ascending).
+
+| Collection | Filter | Used by |
+|------------|--------|---------|
+| `projects` | none | compatibility / all case studies |
+| `projectsActive` | `!archived` | [`src/index.njk`](src/index.njk) |
+| `projectsArchived` | `archived: true` | [`src/archive.njk`](src/archive.njk) |
 
 **Passthrough copy:** `src/assets`, `CNAME`.
 
@@ -91,12 +100,12 @@ There is **no** `src/_data/projects.js`. Homepage cards come from the `projects`
 
 Each case study is **one file**: `src/projects/<slug>.njk`.
 
-- **Front matter** → `project.njk` layout (summary header) + homepage card (via collection).
+- **Front matter** → `project.njk` layout (summary header) + homepage/archive card (via collection).
 - **Body** → case-study sections (macros + custom markup).
 
-### Homepage (`src/index.njk`)
+### Homepage (`src/index.njk`) and archive (`src/archive.njk`)
 
-Loops `{% for project in collections.projects %}` and reads `project.data.*`:
+Homepage loops `collections.projectsActive`; archive loops `collections.projectsArchived`. Both use `{% include "partials/project-card.njk" %}` and read `project.data.*`:
 
 | Field | Purpose |
 |-------|---------|
@@ -122,6 +131,7 @@ Link: `{{ project.url }}` (from `permalink` in front matter).
 | `timeline` | Optional | Shown under one-liner when set |
 | `liveDemo` | Optional | If set, title links externally; otherwise plain text |
 | `homepageTags` | Optional | Homepage-only skill line |
+| `archived` | Optional | If `true`, card appears on `/archive/` only (case-study URL unchanged) |
 
 ---
 
@@ -174,6 +184,7 @@ Case-study sections: macros encode the `sm:contents` two-column grid. FaithSelec
 4. Set `order` relative to existing projects.
 5. Use `homepageTags` only if the homepage skills line should differ from `tags`.
 6. Run `npm run build` and verify homepage card + project page.
+7. To retire a project from the homepage, set `archived: true` — it moves to `/archive/` but keeps its permalink.
 
 ---
 
@@ -185,12 +196,20 @@ Case-study sections: macros encode the `sm:contents` two-column grid. FaithSelec
 
 ## Current projects
 
+**Homepage (active)**
+
 | order | File | permalink | liveDemo |
 |-------|------|-----------|----------|
-| 1 | `fabric.njk` | `/fabric/` | — |
-| 2 | `project-kilter.njk` | `/project-kilter/` | — |
-| 3 | `snake-game.njk` | `/snake-game/` | GitHub Pages (may be removed) |
-| 4 | `faithselects.njk` | `/faithselects/` | faithselects.com |
+| 1 | `handbook.njk` | `/handbook/` | — |
+| 2 | `fabric.njk` | `/fabric/` | — |
+| 3 | `project-kilter.njk` | `/project-kilter/` | — |
+| 5 | `faithselects.njk` | `/faithselects/` | faithselects.com |
+
+**Archive (`archived: true`)**
+
+| order | File | permalink | liveDemo |
+|-------|------|-----------|----------|
+| 4 | `snake-game.njk` | `/snake-game/` | GitHub Pages |
 
 ---
 
@@ -204,4 +223,4 @@ Case-study sections: macros encode the `sm:contents` two-column grid. FaithSelec
 
 ---
 
-*Architecture: projects collection + section macros. Updated after metadata unification refactor.*
+*Architecture: filtered project collections + section macros + project-card partial.*

@@ -1,0 +1,16 @@
+<div class="pb-6">
+  <a class="project-card block" href="{{ project.url }}">
+    <img
+      class="project-cover-img max-w-full pb-4"
+      src="{{ project.data.coverImg | url }}"
+      alt="{{ project.data.altText }}"
+    />
+    <div class="text-sm font-light">
+      {% if project.data.homepageTags %} {{ project.data.homepageTags | join(" | ") }} {% else %} {{
+      project.data.tags | join(" | ") }} {% endif %}
+    </div>
+    <h1 class="pt-0.5 text-xl font-medium tracking-wide uppercase">{{ project.data.title }}</h1>
+    <div class="font-mono text-base">{{ project.data.oneLiner }}</div>
+    <div class="divider bg-secondary my-4 h-px w-0"></div>
+  </a>
+</div>

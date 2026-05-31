@@ -1,0 +1,9 @@
+---
+layout: "base.njk"
+permalink: /archive/
+---
+
+<div class="sm:col-start-2">
+  {% for project in collections.projectsArchived %} {% include "partials/project-card.njk" %} {%
+  endfor %}
+</div>
