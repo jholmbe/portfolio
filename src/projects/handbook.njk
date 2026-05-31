@@ -2,10 +2,10 @@
 layout: "project.njk"
 order: 1
 coverImg: "/assets/handbook-imgs/handbook-cover.png"
-altText: "TODO: cover image alt text"
+altText: "Doing Good Handbook cover showing the Notion-based volunteer resource"
 title: "DOING GOOD HANDBOOK"
-oneLiner: "Student engagement handbook for the UMD Center for Community Engagement"
-tags: ["IA | CAPSTONE | NOTION | @UMD"]
+oneLiner: "student volunteering resource created for the UMD CCE"
+tags: ["IA | NOTION | @UMD"]
 timeline: "SPRING SEMESTER 26'"
 projectRepository: "https://healthy-cross-196.notion.site/Doing-Good-Handbook-7659e806403082ec990a818c277ce98d"
 projectDescription: |
@@ -16,7 +16,7 @@ projectDescription: |
 permalink: "/handbook/"
 ---
 {% from "macros/section.njk" import section, sectionImageOnly %} 
-{% call section("CLIENT & PROBLEM", "/assets/handbook-imgs/handbook-CCE.png", "TODO alt") %}
+{% call section("CLIENT & PROBLEM", "/assets/handbook-imgs/handbook-CCE.png", "UMD Center for Community Engagement overview used to frame the project problem") %}
 <p>The UMD CCE aims to help students engage with communities on and around campus through volunteering, civic 
   engagement, and community initiatives. However, many students struggle to find opportunities, navigate 
   fragmented information, or approach community work with sufficient context and awareness. <br><br>The original 
@@ -25,29 +25,43 @@ permalink: "/handbook/"
   Over time, the project evolved into a broader handbook system after recognizing the need for a more 
   centralized and scalable platform.</p>
 {% endcall %} 
-{% call section("FEATURES & PURPOSE", "/assets/handbook-imgs/handbook-cover2.png", "TODO alt", "pb-8") %}
+{% call section("FEATURES & PURPOSE", "/assets/handbook-imgs/handbook-cover2.png", "Handbook home view highlighting core features and navigation", "pb-8") %}
 {% endcall %}
-{% call section("LEARNING MODULES", "/assets/handbook-imgs/handbook-mindset.png", "TODO alt", "pb-8") %}
+{% call section("LEARNING MODULES", "/assets/handbook-imgs/handbook-mindset.png", "Learning module page with readings and reflection prompts on community engagement mindset", "pb-8") %}
 <p>Through curated readings and reflection prompts, students start by exploring essential concepts like 
   solidarity, systems thinking, humility, and sustained engagement. The goal was to encourage more 
   thoughtful and context-aware participation in community work.</p>
 {% endcall %}
-{% call section("VOLUNTEER OPPORTUNITIES", "/assets/handbook-imgs/handbook-opportunity.png", "TODO alt", "pb-8") %}
+{% call section("VOLUNTEER OPPORTUNITIES", "/assets/handbook-imgs/handbook-opportunity.png", "Volunteer opportunities listing curated community engagement options around College Park", "pb-8") %}
 <p>A curated collection of actionable opportunities to get involved in community work at and around College Park.</p>
 {% endcall %}
-{% call section("COMMUNITY CONTEXT", "/assets/handbook-imgs/handbook-context.png", "TODO alt", "pb-8") %}
+{% call section("COMMUNITY CONTEXT", "/assets/handbook-imgs/handbook-context.png", "Community context resources page with local data and research references", "pb-8") %}
 <p>A repository of local data sources, research materials, and community references intended to help 
   students better understand the social context surrounding the University of Maryland and College Park area.</p>
 {% endcall %}
-{{ sectionImageOnly("/assets/handbook-imgs/handbook-drive.png", "TODO alt")}} 
-{% call section("TOOLKITS", "/assets/handbook-imgs/handbook-neighbor.png", "TODO alt", "pb-8") %}
+{{ sectionImageOnly("/assets/handbook-imgs/handbook-drive.png", "Wireframe concept for the Running a Drive toolkit")}} 
+{% call section("TOOLKITS", "/assets/handbook-imgs/handbook-neighbor.png", "Good Neighbor Day planning toolkit page implemented in Notion", "pb-8") %}
 <p>As the project evolved from creating standalone toolkits into building a broader platform for 
   engagement resources, the “Running a Drive” toolkit currently exists as a wireframe concept for 
   future capstone teams to expand upon. The “Plan a Good Neighbor Day” toolkit was fully implemented 
   by my teammate, Caleb Nebiyu.</p>
 {% endcall %}
-{% call section("PERSONAL JOURNAL", "/assets/handbook-imgs/handbook-journal.png", "TODO alt", "pb-8") %}
+{% call section("PERSONAL JOURNAL", "/assets/handbook-imgs/handbook-journal.png", "Personal journal template for documenting volunteer experiences and reflections", "pb-8") %}
 <p>A structured journaling and reflection space designed to help students document volunteering 
   experiences, track personal growth over time, and critically reflect on community engagement 
   through reusable templates and guided prompts.</p>
+{% endcall %}
+{% call section("CHOOSING NOTION", "/assets/handbook-imgs/handbook-presentation.png", "Presentation slide explaining the decision to use Notion for the handbook", "pb-8") %}
+<p>Compared with a website or slide deck, Notion's cloud-based and accessibility-friendly structure
+   was a natural fit. Its support for pages, databases, tables, and collapsible content allowed us 
+   to organize information without requiring extensive custom development. Additionally, students 
+   already have access to Notion Premium through the university, and the client was interested in 
+   exploring Notion as a long-term student engagement platform.</p>
+{% endcall %}
+{% call section("TRADEOFFS", "", "", "pb-8") %}
+<p>External links, opportunities, and community resources, long-term usefulness depend on ongoing 
+  maintenance and curation. While Notion offers an intuitive user experience, students may still 
+  experience friction navigating large amounts of information without careful design and structure. 
+  Using Notion also introduced a dependency on a third-party platform rather than a self-hosted 
+  solution.</p>
 {% endcall %}
