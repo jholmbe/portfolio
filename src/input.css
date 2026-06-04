@@ -24,7 +24,7 @@
 
   .nav-link::after {
     content: "";
-    @apply block h-px w-0 bg-secondary transition-[width] duration-500 ease-in-out;
+    @apply bg-secondary block h-px w-0 transition-[width] duration-500 ease-in-out;
   }
 
   .nav-link:hover::after,
