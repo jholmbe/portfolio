@@ -2,7 +2,7 @@
 
 You are working on **Justin Holmberg’s personal portfolio** — a static case-study site, not a web app with a backend, API, or component framework. Read this file before making changes. Prefer minimal diffs that match existing patterns.
 
-**Live site:** [jholm.me](https://jholm.me) (custom domain via `CNAME`)  
+**Live site:** [justin.holmberg.dev](https://justin.holmberg.dev) (custom domain via `CNAME`)  
 **Source repo (linked on site):** [github.com/jholmbe/portfolio](https://github.com/jholmbe/portfolio)  
 **Deploy:** GitHub Pages from `main` → build output in `public/` → `gh-pages` branch
 
